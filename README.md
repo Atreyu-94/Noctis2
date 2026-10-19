@@ -1,6 +1,6 @@
 # Noctis2 (personal fork)
 
-Personal, independent fork of Noctis by Liviu Schera. This branch prepares an output-equivalent TypeScript generator migration. No new extension release has been published. See [BUILD-GUIDE.md](BUILD-GUIDE.md) for validation and known limitations. The original theme names and publisher metadata are retained pending a separate distribution step.
+Personal, independent fork of Noctis by Liviu Schera. This branch includes a verified TypeScript migration and palette-preserving semantic highlighting with Typst/Tinymist and Julia refinements. No new extension release has been published. See [BUILD-GUIDE.md](BUILD-GUIDE.md) for generator validation and [HIGHLIGHTING.md](HIGHLIGHTING.md) for language checks and known limitations. The original theme names and publisher metadata are retained pending a separate distribution step.
 
 <p align="center">
    <img width="170" src="/images/logo.png" />
