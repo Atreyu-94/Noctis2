@@ -15,7 +15,7 @@ const manifest = JSON.parse(await readFile(new URL('../package.json', import.met
 const hash = text => createHash('sha256').update(text.replace(/\r\n/g, '\n')).digest('hex');
 const run = directory => spawnSync(process.execPath, ['dist/build.js', directory], {cwd:root, encoding:'utf8'});
 
-test('all 11 themes preserve upstream structure except documented names and light foregrounds', async () => {
+test('all 11 themes preserve upstream palettes and original TextMate rules', async () => {
  assert.equal(baseline.themes.length, 11);
  assert.deepEqual(manifest.contributes.themes, baseline.themes.map(({sha256, ...entry}) => ({...entry, label: entry.label.replace(/^Noctis\b/, 'Noctis2')})));
  const directory = await mkdtemp(join(tmpdir(), 'noctis2-equivalence-'));
@@ -28,22 +28,10 @@ test('all 11 themes preserve upstream structure except documented names and ligh
     const filename = entry.path.split('/').at(-1);
     const generated = await readFile(join(directory, filename), 'utf8');
     const parsed = JSON.parse(generated);
-    const { semanticHighlighting, semanticTokenColors, ...legacy } = structuredClone(parsed);
+    const { semanticHighlighting, semanticTokenColors, ...legacy } = parsed;
     assert.equal(parsed.name, entry.label.replace(/^Noctis\b/, 'Noctis2'));
     legacy.name = entry.label;
     legacy.tokenColors = legacy.tokenColors.slice(0, 19);
-    const variant = filename.replace('.json', '');
-    const originalPalette = baseline.lightPalettes[variant];
-    if (originalPalette) {
-     const roles = new Map(Object.entries(originalPalette).map(([role, color]) => [role.toLowerCase(), {role, color}]));
-     for (const rule of legacy.tokenColors) {
-      const original = roles.get(rule.name.toLowerCase());
-      if (original) {
-       assert.equal(rule.settings.foreground, COLORS[variant][original.role], filename + ': incorrect palette role');
-       rule.settings.foreground = original.color;
-      }
-     }
-    }
     assert.equal(hash(JSON.stringify(legacy, null, 3)), entry.sha256, `${filename}: upstream palette or legacy rule changed`);
     assert.equal(semanticHighlighting, true);
     assert.ok(Object.keys(semanticTokenColors).length > 0);

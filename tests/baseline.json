@@ -68,55 +68,5 @@
       "path": "./themes/minimus.json",
       "sha256": "b784342b482591ca728ce8f1d7558639f6eb1a66367acbb7ea9f01eb2c23d782"
     }
-  ],
-  "lightPalettes": {
-    "lux": {
-      "comment": "#8ca6a6",
-      "text": "#004d57",
-      "keyword": "#ff5792",
-      "variable": "#fa8900",
-      "annotation": "#b3694d",
-      "constant": "#a88c00",
-      "tag": "#e64100",
-      "string": "#00b368",
-      "stringInterpolated": "#009456",
-      "number": "#5842ff",
-      "function": "#0095a8",
-      "support": "#00bdd6",
-      "misc": "#0094f0",
-      "invalid": "#ff530f"
-    },
-    "hibernus": {
-      "comment": "#8ca6a6",
-      "text": "#004d57",
-      "keyword": "#ff5792",
-      "variable": "#fa8900",
-      "annotation": "#b3694d",
-      "constant": "#a88c00",
-      "tag": "#e64100",
-      "string": "#00b368",
-      "stringInterpolated": "#009456",
-      "number": "#5842ff",
-      "function": "#0095a8",
-      "support": "#00bdd6",
-      "misc": "#0094f0",
-      "invalid": "#ff530f"
-    },
-    "lilac": {
-      "comment": "#9995b7",
-      "text": "#0c006b",
-      "keyword": "#ff5792",
-      "variable": "#fa8900",
-      "annotation": "#b3694d",
-      "constant": "#a88c00",
-      "tag": "#e64100",
-      "string": "#00b368",
-      "stringInterpolated": "#009456",
-      "number": "#5842ff",
-      "function": "#0095a8",
-      "support": "#00bdd6",
-      "misc": "#0094f0",
-      "invalid": "#ff530f"
-    }
-  }
+  ]
 }
