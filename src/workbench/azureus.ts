@@ -24,7 +24,6 @@ export default (syntax: TokenRule[]): Theme => ({
     // Activity Bar
     // ---------------------------
     "activityBar.background": "#07273b",
-    "activityBar.dropBackground": "#61a6d165",
     "activityBar.border": "#0f1315",
     "activityBar.foreground": "#1679b6",
     "activityBar.inactiveForeground": "#1679b677",

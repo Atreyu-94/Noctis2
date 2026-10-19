@@ -42,9 +42,16 @@ test('all 11 themes preserve upstream content except documented corrections', as
      assert.ok(Object.hasOwn(parsed.colors, current));
      assert.equal(Object.hasOwn(parsed.colors, previous), false);
     }
-    // Restore key names only; the upstream hash still checks exact values and order.
+    assert.equal(Object.hasOwn(parsed.colors, 'activityBar.dropBackground'), false);
+    assert.equal(Object.hasOwn(parsed.colors, 'activityBar.dropBorder'), false);
+    // Restore renamed keys and the removed legacy background only in the baseline projection.
     legacy.colors = Object.fromEntries(Object.entries(legacy.colors)
-     .map(([key, value]) => [legacyColorKeys[key] ?? key, value]));
+     .flatMap(([key, value]) => {
+      const current = [legacyColorKeys[key] ?? key, value];
+      return key === 'activityBar.background'
+       ? [current, ['activityBar.dropBackground', baseline.legacyActivityBarDropBackground[filename]]]
+       : [current];
+     }));
     if (filename === 'lilac.json') {
      assert.equal(parsed.type, 'light');
      assert.equal(parsed.colors['inputValidation.infoBackground'], '#dedbf5');

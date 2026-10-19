@@ -68,5 +68,18 @@
       "path": "./themes/minimus.json",
       "sha256": "b784342b482591ca728ce8f1d7558639f6eb1a66367acbb7ea9f01eb2c23d782"
     }
-  ]
+  ],
+  "legacyActivityBarDropBackground": {
+    "lux.json": "#0099ad65",
+    "hibernus.json": "#0099ad65",
+    "lilac.json": "#7060eb65",
+    "noctis.json": "#929ea065",
+    "azureus.json": "#61a6d165",
+    "bordo.json": "#bb778f65",
+    "obscuro.json": "#929ea065",
+    "sereno.json": "#929ea065",
+    "uva.json": "#7a70c265",
+    "viola.json": "#996bc765",
+    "minimus.json": "#6496b465"
+  }
 }
