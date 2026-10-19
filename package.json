@@ -35,7 +35,8 @@
         "audit:compatibility": "node scripts/audit-compatibility.mjs",
         "inspect:tinymist": "node scripts/inspect-tinymist.mjs",
         "test:languages": "npm run build && node scripts/validate-languages.mjs",
-        "package:vsix": "vsce package --no-dependencies"
+        "package:vsix": "vsce package --no-dependencies",
+        "inspect:vsix": "node scripts/inspect-vsix.mjs"
     },
     "categories": [
         "Themes"
