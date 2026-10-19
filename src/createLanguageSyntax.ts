@@ -10,7 +10,7 @@ export function createLanguageSyntax(p: Palette): TokenRule[] {
       { name: 'Typst references', scope: ['string.other.reference.typst', 'markup.other.reference.typst'], settings: { foreground: p.misc } },
       { name: 'Typst raw', scope: ['markup.raw.inline.typst', 'markup.raw.block.typst', 'markup.other.raw.typst'], settings: { foreground: p.string } },
       { name: 'Typst math text', scope: ['markup.math.typst'], settings: { foreground: p.string } },
-      { name: 'Typst math delimiters', scope: ['punctuation.definition.string.begin.math.typst', 'punctuation.definition.string.end.math.typst', 'punctuation.definition.math.typst'], settings: { foreground: p.keyword } },
+      { name: 'Typst math delimiters', scope: ['punctuation.definition.string.begin.math.typst', 'punctuation.definition.string.end.math.typst', 'punctuation.definition.math.typst'], settings: { foreground: p.string } },
       { name: 'Typst math operators', scope: ['punctuation.math.operator.typst', 'keyword.operator.math.typst'], settings: { foreground: p.keyword } },
       { name: 'Typst math punctuation', scope: ['markup.math.typst markup.content.brace.typst', 'markup.math.typst meta.brace.round.typst', 'markup.math.typst punctuation.separator.comma.typst'], settings: { foreground: p.misc } },
       { name: 'Typst emphasis', scope: ['markup.italic.typst'], settings: { fontStyle: 'italic' } },

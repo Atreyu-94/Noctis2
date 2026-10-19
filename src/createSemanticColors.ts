@@ -24,7 +24,7 @@ export function createSemanticColors(p: Palette): SemanticRules {
          marker: p.keyword, term: { foreground: p.annotation, bold: true },
          delim: p.text, pol: p.variable, error: p.invalid,
          // Math context colors must not replace function, string or embedded-code categories.
-         'text.math': p.string, 'delim.math': p.keyword,
+         'text.math': p.string, 'delim.math': p.string,
          'operator.math': p.keyword, 'punct.math': p.misc,
          '*.strong': { bold: true }, '*.emph': { italic: true },
          '*.strong.emph': { bold: true, italic: true },

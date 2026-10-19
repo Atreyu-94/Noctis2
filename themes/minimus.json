@@ -1181,7 +1181,7 @@
             "punctuation.definition.math.typst"
          ],
          "settings": {
-            "foreground": "#c88da2"
+            "foreground": "#72c09f"
          }
       },
       {
@@ -1284,7 +1284,7 @@
       "pol:typst": "#d3b692",
       "error:typst": "#b16a4e",
       "text.math:typst": "#72c09f",
-      "delim.math:typst": "#c88da2",
+      "delim.math:typst": "#72c09f",
       "operator.math:typst": "#c88da2",
       "punct.math:typst": "#5998c0",
       "*.strong:typst": {
@@ -1320,7 +1320,7 @@
       "pol:typst-code": "#d3b692",
       "error:typst-code": "#b16a4e",
       "text.math:typst-code": "#72c09f",
-      "delim.math:typst-code": "#c88da2",
+      "delim.math:typst-code": "#72c09f",
       "operator.math:typst-code": "#c88da2",
       "punct.math:typst-code": "#5998c0",
       "*.strong:typst-code": {
