@@ -29,6 +29,7 @@ test('all 11 themes preserve upstream palettes and original TextMate rules', asy
     const generated = await readFile(join(directory, filename), 'utf8');
     const parsed = JSON.parse(generated);
     const { semanticHighlighting, semanticTokenColors, ...legacy } = parsed;
+    legacy.tokenColors = legacy.tokenColors.slice(0, 19);
     assert.equal(hash(JSON.stringify(legacy, null, 3)), entry.sha256, `${filename}: upstream palette or legacy rule changed`);
     assert.equal(semanticHighlighting, true);
     assert.ok(Object.keys(semanticTokenColors).length > 0);

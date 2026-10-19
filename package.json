@@ -25,7 +25,8 @@
         "compile": "tsc",
         "build": "npm run compile && node dist/build.js",
         "test": "npm run compile && node --test tests/*.test.mjs",
-        "check": "npm run typecheck && npm test"
+        "check": "npm run typecheck && npm test",
+        "inspect:tinymist": "node scripts/inspect-tinymist.mjs"
     },
     "categories": [
         "Themes",

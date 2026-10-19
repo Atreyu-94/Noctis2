@@ -14,5 +14,19 @@ export function createSemanticColors(p: Palette): SemanticRules {
       comment: p.comment, string: p.string, number: p.number,
       keyword: p.keyword, operator: p.keyword, regexp: p.stringInterpolated,
    };
+   // Tinymist uses custom token types. Keep them scoped to its language IDs.
+   for (const language of ['typst', 'typst-code']) {
+      const custom: SemanticRules = {
+         bool: p.number, punct: p.text, escape: p.misc,
+         link: { foreground: p.misc, underline: true },
+         raw: p.string, label: p.constant, ref: p.misc,
+         heading: { foreground: p.misc, bold: true },
+         marker: p.keyword, term: { foreground: p.annotation, bold: true },
+         delim: p.text, pol: p.variable, error: p.invalid,
+         '*.strong': { bold: true }, '*.emph': { italic: true },
+         '*.strong.emph': { bold: true, italic: true },
+      };
+      for (const [selector, value] of Object.entries(custom)) rules[`${selector}:${language}`] = value;
+   }
    return rules;
 }

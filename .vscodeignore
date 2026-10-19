@@ -11,3 +11,5 @@ tests/**
 tsconfig.json
 package-lock.json
 BUILD-GUIDE.md
+scripts/**
+test-results/**

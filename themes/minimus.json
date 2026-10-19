@@ -1104,6 +1104,84 @@
          "settings": {
             "fontStyle": "strikethrough"
          }
+      },
+      {
+         "name": "Typst text",
+         "scope": [
+            "source.typst",
+            "source.typst-code"
+         ],
+         "settings": {
+            "foreground": "#c5cdd3"
+         }
+      },
+      {
+         "name": "Typst headings",
+         "scope": [
+            "markup.heading.typst"
+         ],
+         "settings": {
+            "foreground": "#5998c0",
+            "fontStyle": "bold"
+         }
+      },
+      {
+         "name": "Typst labels",
+         "scope": [
+            "string.other.label.typst"
+         ],
+         "settings": {
+            "foreground": "#a88c00"
+         }
+      },
+      {
+         "name": "Typst references",
+         "scope": [
+            "string.other.reference.typst",
+            "markup.other.reference.typst"
+         ],
+         "settings": {
+            "foreground": "#5998c0"
+         }
+      },
+      {
+         "name": "Typst raw",
+         "scope": [
+            "markup.raw.inline.typst",
+            "markup.raw.block.typst",
+            "markup.other.raw.typst"
+         ],
+         "settings": {
+            "foreground": "#72c09f"
+         }
+      },
+      {
+         "name": "Typst emphasis",
+         "scope": [
+            "markup.italic.typst"
+         ],
+         "settings": {
+            "fontStyle": "italic"
+         }
+      },
+      {
+         "name": "Typst strong",
+         "scope": [
+            "markup.bold.typst"
+         ],
+         "settings": {
+            "fontStyle": "bold"
+         }
+      },
+      {
+         "name": "Typst strong emphasis",
+         "scope": [
+            "markup.bold.typst markup.italic.typst",
+            "markup.italic.typst markup.bold.typst"
+         ],
+         "settings": {
+            "fontStyle": "bold italic"
+         }
       }
    ],
    "semanticHighlighting": true,
@@ -1132,6 +1210,70 @@
       "number": "#7068b1",
       "keyword": "#c88da2",
       "operator": "#c88da2",
-      "regexp": "#3f8d6c"
+      "regexp": "#3f8d6c",
+      "bool:typst": "#7068b1",
+      "punct:typst": "#c5cdd3",
+      "escape:typst": "#5998c0",
+      "link:typst": {
+         "foreground": "#5998c0",
+         "underline": true
+      },
+      "raw:typst": "#72c09f",
+      "label:typst": "#a88c00",
+      "ref:typst": "#5998c0",
+      "heading:typst": {
+         "foreground": "#5998c0",
+         "bold": true
+      },
+      "marker:typst": "#c88da2",
+      "term:typst": {
+         "foreground": "#be856f",
+         "bold": true
+      },
+      "delim:typst": "#c5cdd3",
+      "pol:typst": "#d3b692",
+      "error:typst": "#b16a4e",
+      "*.strong:typst": {
+         "bold": true
+      },
+      "*.emph:typst": {
+         "italic": true
+      },
+      "*.strong.emph:typst": {
+         "bold": true,
+         "italic": true
+      },
+      "bool:typst-code": "#7068b1",
+      "punct:typst-code": "#c5cdd3",
+      "escape:typst-code": "#5998c0",
+      "link:typst-code": {
+         "foreground": "#5998c0",
+         "underline": true
+      },
+      "raw:typst-code": "#72c09f",
+      "label:typst-code": "#a88c00",
+      "ref:typst-code": "#5998c0",
+      "heading:typst-code": {
+         "foreground": "#5998c0",
+         "bold": true
+      },
+      "marker:typst-code": "#c88da2",
+      "term:typst-code": {
+         "foreground": "#be856f",
+         "bold": true
+      },
+      "delim:typst-code": "#c5cdd3",
+      "pol:typst-code": "#d3b692",
+      "error:typst-code": "#b16a4e",
+      "*.strong:typst-code": {
+         "bold": true
+      },
+      "*.emph:typst-code": {
+         "italic": true
+      },
+      "*.strong.emph:typst-code": {
+         "bold": true,
+         "italic": true
+      }
    }
 }
