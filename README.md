@@ -171,7 +171,9 @@ The color names were matched using the excellent online tools [Name that Color](
 
 ## Installation
 
-No Noctis2 VSIX candidate has been prepared yet. When a candidate is available, use **Extensions: Install from VSIX...** in an isolated profile, then select one of the eleven **Noctis2** themes with **Preferences: Color Theme**. Packaging and public distribution remain separate steps.
+The validation workflow is configured to build an inspected VSIX candidate from a fresh CI checkout after Windows and Linux checks pass. It stores the VSIX and its commit, file inventory and SHA-256 integrity report in a workflow artifact; it does not publish a release or upload to Marketplace/Open VSX. No remote packaging run has been performed yet.
+
+When a workflow artifact is available, download its VSIX and use **Extensions: Install from VSIX...** in an isolated profile. Select one of the eleven **Noctis2** themes with **Preferences: Color Theme**. Installation from the candidate still needs separate acceptance; a successful package inspection does not prove editor behavior.
 
 ## Development
 
