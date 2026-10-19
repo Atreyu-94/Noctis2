@@ -297,7 +297,7 @@
             "punctuation.definition.strikethrough.markdown"
          ],
          "settings": {
-            "foreground": "#9995b7"
+            "foreground": "#6c6982"
          }
       },
       {
@@ -398,7 +398,7 @@
             "keyword.control.def.ruby"
          ],
          "settings": {
-            "foreground": "#ff5792"
+            "foreground": "#b63e68"
          }
       },
       {
@@ -463,7 +463,7 @@
             "markup.fenced_code.block"
          ],
          "settings": {
-            "foreground": "#fa8900"
+            "foreground": "#9e5700"
          }
       },
       {
@@ -528,7 +528,7 @@
             "entity.name.type"
          ],
          "settings": {
-            "foreground": "#b3694d"
+            "foreground": "#965740"
          }
       },
       {
@@ -569,7 +569,7 @@
             "meta.definition.attribute-entry punctuation.separator"
          ],
          "settings": {
-            "foreground": "#a88c00"
+            "foreground": "#7d6800"
          }
       },
       {
@@ -630,7 +630,7 @@
             "source.zig keyword.structure"
          ],
          "settings": {
-            "foreground": "#e64100"
+            "foreground": "#c63800"
          }
       },
       {
@@ -647,7 +647,7 @@
             "source.tf entity.name"
          ],
          "settings": {
-            "foreground": "#00b368"
+            "foreground": "#007443"
          }
       },
       {
@@ -667,7 +667,7 @@
             "text.tex markup.raw"
          ],
          "settings": {
-            "foreground": "#009456"
+            "foreground": "#00663b"
          }
       },
       {
@@ -716,7 +716,7 @@
             "source.tf support.class"
          ],
          "settings": {
-            "foreground": "#0095a8"
+            "foreground": "#006f7e"
          }
       },
       {
@@ -753,7 +753,7 @@
             "entity.name.scope-resolution.function.call"
          ],
          "settings": {
-            "foreground": "#00bdd6"
+            "foreground": "#007787"
          }
       },
       {
@@ -808,7 +808,7 @@
             "source.cs entity.name.type"
          ],
          "settings": {
-            "foreground": "#0094f0"
+            "foreground": "#006fb5"
          }
       },
       {
@@ -818,7 +818,7 @@
             "invalid.illegal"
          ],
          "settings": {
-            "foreground": "#ff530f"
+            "foreground": "#c13e0b"
          }
       },
       {
@@ -1111,7 +1111,7 @@
             "variable.interpolation.julia"
          ],
          "settings": {
-            "foreground": "#009456"
+            "foreground": "#00663b"
          }
       },
       {
@@ -1130,7 +1130,7 @@
             "markup.heading.typst"
          ],
          "settings": {
-            "foreground": "#0094f0",
+            "foreground": "#006fb5",
             "fontStyle": "bold"
          }
       },
@@ -1140,7 +1140,7 @@
             "string.other.label.typst"
          ],
          "settings": {
-            "foreground": "#a88c00"
+            "foreground": "#7d6800"
          }
       },
       {
@@ -1150,7 +1150,7 @@
             "markup.other.reference.typst"
          ],
          "settings": {
-            "foreground": "#0094f0"
+            "foreground": "#006fb5"
          }
       },
       {
@@ -1161,7 +1161,7 @@
             "markup.other.raw.typst"
          ],
          "settings": {
-            "foreground": "#00b368"
+            "foreground": "#007443"
          }
       },
       {
@@ -1195,53 +1195,53 @@
    ],
    "semanticHighlighting": true,
    "semanticTokenColors": {
-      "namespace": "#b3694d",
-      "type": "#b3694d",
-      "class": "#b3694d",
-      "interface": "#b3694d",
-      "struct": "#b3694d",
-      "enum": "#b3694d",
-      "typeParameter": "#b3694d",
-      "parameter": "#fa8900",
-      "variable": "#fa8900",
-      "property": "#b3694d",
-      "enumMember": "#a88c00",
-      "variable.readonly": "#a88c00",
-      "property.readonly": "#a88c00",
-      "function": "#0095a8",
-      "method": "#00bdd6",
-      "function.declaration": "#e64100",
-      "method.declaration": "#e64100",
-      "macro": "#0094f0",
-      "decorator": "#0094f0",
-      "comment": "#9995b7",
-      "string": "#00b368",
+      "namespace": "#965740",
+      "type": "#965740",
+      "class": "#965740",
+      "interface": "#965740",
+      "struct": "#965740",
+      "enum": "#965740",
+      "typeParameter": "#965740",
+      "parameter": "#9e5700",
+      "variable": "#9e5700",
+      "property": "#965740",
+      "enumMember": "#7d6800",
+      "variable.readonly": "#7d6800",
+      "property.readonly": "#7d6800",
+      "function": "#006f7e",
+      "method": "#007787",
+      "function.declaration": "#c63800",
+      "method.declaration": "#c63800",
+      "macro": "#006fb5",
+      "decorator": "#006fb5",
+      "comment": "#6c6982",
+      "string": "#007443",
       "number": "#5842ff",
-      "keyword": "#ff5792",
-      "operator": "#ff5792",
-      "regexp": "#009456",
+      "keyword": "#b63e68",
+      "operator": "#b63e68",
+      "regexp": "#00663b",
       "bool:typst": "#5842ff",
       "punct:typst": "#0c006b",
-      "escape:typst": "#0094f0",
+      "escape:typst": "#006fb5",
       "link:typst": {
-         "foreground": "#0094f0",
+         "foreground": "#006fb5",
          "underline": true
       },
-      "raw:typst": "#00b368",
-      "label:typst": "#a88c00",
-      "ref:typst": "#0094f0",
+      "raw:typst": "#007443",
+      "label:typst": "#7d6800",
+      "ref:typst": "#006fb5",
       "heading:typst": {
-         "foreground": "#0094f0",
+         "foreground": "#006fb5",
          "bold": true
       },
-      "marker:typst": "#ff5792",
+      "marker:typst": "#b63e68",
       "term:typst": {
-         "foreground": "#b3694d",
+         "foreground": "#965740",
          "bold": true
       },
       "delim:typst": "#0c006b",
-      "pol:typst": "#fa8900",
-      "error:typst": "#ff530f",
+      "pol:typst": "#9e5700",
+      "error:typst": "#c13e0b",
       "*.strong:typst": {
          "bold": true
       },
@@ -1254,26 +1254,26 @@
       },
       "bool:typst-code": "#5842ff",
       "punct:typst-code": "#0c006b",
-      "escape:typst-code": "#0094f0",
+      "escape:typst-code": "#006fb5",
       "link:typst-code": {
-         "foreground": "#0094f0",
+         "foreground": "#006fb5",
          "underline": true
       },
-      "raw:typst-code": "#00b368",
-      "label:typst-code": "#a88c00",
-      "ref:typst-code": "#0094f0",
+      "raw:typst-code": "#007443",
+      "label:typst-code": "#7d6800",
+      "ref:typst-code": "#006fb5",
       "heading:typst-code": {
-         "foreground": "#0094f0",
+         "foreground": "#006fb5",
          "bold": true
       },
-      "marker:typst-code": "#ff5792",
+      "marker:typst-code": "#b63e68",
       "term:typst-code": {
-         "foreground": "#b3694d",
+         "foreground": "#965740",
          "bold": true
       },
       "delim:typst-code": "#0c006b",
-      "pol:typst-code": "#fa8900",
-      "error:typst-code": "#ff530f",
+      "pol:typst-code": "#9e5700",
+      "error:typst-code": "#c13e0b",
       "*.strong:typst-code": {
          "bold": true
       },

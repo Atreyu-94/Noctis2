@@ -33,3 +33,32 @@ test('Tinymist custom selectors are language-scoped and retain text fallback and
  assert.equal(rules['*'],undefined);
  assert.equal(rules['*.strong'],undefined);
 });
+
+// Protect readable light-theme text without changing the original hue families.
+test('light palettes meet normal-text contrast and retain their original hues', async () => {
+ const { readFile } = await import('node:fs/promises');
+ const baseline = JSON.parse(await readFile(new URL('./baseline.json', import.meta.url), 'utf8'));
+ const rgb = hex => hex.slice(1).match(/../g).map(channel => parseInt(channel, 16) / 255);
+ const luminance = hex => rgb(hex)
+  .map(channel => channel <= 0.04045 ? channel / 12.92 : ((channel + 0.055) / 1.055) ** 2.4)
+  .reduce((sum, channel, index) => sum + channel * [0.2126, 0.7152, 0.0722][index], 0);
+ const hue = hex => {
+  const [r, g, b] = rgb(hex), max = Math.max(r, g, b), min = Math.min(r, g, b), delta = max - min;
+  if (delta === 0) return 0;
+  const sector = max === r ? (g - b) / delta : max === g ? (b - r) / delta + 2 : (r - g) / delta + 4;
+  return (sector * 60 + 360) % 360;
+ };
+ for (const [variant, original] of Object.entries(baseline.lightPalettes)) {
+  const theme = JSON.parse(await readFile(new URL(`../themes/${variant}.json`, import.meta.url), 'utf8'));
+  const background = luminance(theme.colors['editor.background']);
+  for (const [role, color] of Object.entries(COLORS[variant])) {
+   const foreground = luminance(color);
+   const contrast = (Math.max(background, foreground) + 0.05) / (Math.min(background, foreground) + 0.05);
+   assert.ok(contrast >= 4.5, `${variant}/${role}: ${contrast.toFixed(3)} contrast`);
+   const difference = Math.abs(hue(color) - hue(original[role]));
+   assert.ok(Math.min(difference, 360 - difference) <= 2, `${variant}/${role}: original hue changed`);
+  }
+  assert.notEqual(COLORS[variant].string, COLORS[variant].stringInterpolated);
+  assert.notEqual(COLORS[variant].function, COLORS[variant].support);
+ }
+});
