@@ -14,7 +14,7 @@ test('semantic colors and language additions use only their own palette, in all 
   }
   for(const rule of createLanguageSyntax(palette)){
    if(rule.settings.foreground)assert.ok(allowed.has(rule.settings.foreground));
-   for(const scope of rule.scope)assert.match(scope,/\.(?:typst|typst-code|julia)(?: |$)/);
+   for(const scope of rule.scope)assert.match(scope,/\.(?:typst|typst-code|julia|markdown)(?: |$)/);
   }
  }
 });

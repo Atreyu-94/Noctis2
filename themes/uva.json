@@ -1105,6 +1105,16 @@
          }
       },
       {
+         "name": "Markdown strong emphasis",
+         "scope": [
+            "markup.bold.markdown markup.italic.markdown",
+            "markup.italic.markdown markup.bold.markdown"
+         ],
+         "settings": {
+            "fontStyle": "bold italic"
+         }
+      },
+      {
          "name": "Julia interpolation",
          "scope": [
             "variable.interpolation.julia"
