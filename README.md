@@ -1,3 +1,7 @@
+# Noctis2 (personal fork)
+
+Personal, independent fork of Noctis by Liviu Schera. This branch prepares an output-equivalent TypeScript generator migration. No new extension release has been published. See [BUILD-GUIDE.md](BUILD-GUIDE.md) for validation and known limitations. The original theme names and publisher metadata are retained pending a separate distribution step.
+
 <p align="center">
    <img width="170" src="/images/logo.png" />
 </p>
@@ -165,9 +169,9 @@ Noctis can be installed by clicking on Ctrl + Shift + X on Windows or ⇧ + ⌘ 
 
 Beginning with v7.21.0 the theme building process has been simplified. I started off with the idea used in [Lucy](https://marketplace.visualstudio.com/items?itemName=juliettepretot.lucy-vscode) theme and came up with this theme generator powered by Node.js. This will allow me or any contributor to easily add/suggest new theme variants or changes to the existing ones. In `./src/` folder you will find:
 
--   `syntax.mjs` &rarr; syntax tokens based on the language grammar installed
--   `colors.mjs` &rarr; the colors used for syntax highlighting
--   `./src/workbench/` &rarr; all eight theme versions containing Workbench/UI colors
+-   `syntax.ts` &rarr; syntax tokens based on the language grammar installed
+-   `colors.ts` &rarr; the colors used for syntax highlighting
+-   `./src/workbench/` &rarr; all eleven theme versions containing Workbench/UI colors
 
 After you make a change in any of the above files you need to use `npm run build` command. The build output folder is `./themes/`
 

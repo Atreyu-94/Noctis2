@@ -1,3 +1,4 @@
+import type { Palette, ThemeId } from './types.js';
 export default {
    lux: {
       comment: "#8ca6a6",
@@ -175,4 +176,4 @@ export default {
       misc: "#49ace9",
       invalid: "#e3541c"
    }
-};
+} satisfies Record<ThemeId, Palette>;

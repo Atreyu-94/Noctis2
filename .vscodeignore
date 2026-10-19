@@ -4,3 +4,10 @@ palette.css
 JavaScript.js
 TypeScript.ts
 vscodecustom.css
+
+dist/**
+tests/**
+.github/**
+tsconfig.json
+package-lock.json
+BUILD-GUIDE.md

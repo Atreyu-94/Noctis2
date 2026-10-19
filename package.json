@@ -21,10 +21,11 @@
         "url": "https://github.com/liviuschera/noctis"
     },
     "scripts": {
-        "build": "node src/build.mjs",
-        "release:major---": "npm run build && git add . && git commit -m 🆕10.0.0🆕 && npm version major & vsce publish && git push",
-        "release:minor": "npm run build && git add . && git commit -m 10.43.0 && npm version minor & vsce publish && git push",
-        "release:patch": "npm run build && git add . && git commit -m 10.43.3 && npm version patch & vsce publish && git push"
+        "typecheck": "tsc --noEmit",
+        "compile": "tsc",
+        "build": "npm run compile && node dist/build.js",
+        "test": "npm run compile && node --test tests/*.test.mjs",
+        "check": "npm run typecheck && npm test"
     },
     "categories": [
         "Themes",
@@ -101,5 +102,10 @@
         "id": "d4e2a48f-0b88-4540-92c5-a4ab4dd2c813",
         "publisherId": "676e5383-8870-48a9-80bb-67ae23e9228c",
         "publisherDisplayName": "Liviu Schera"
+    },
+    "type": "module",
+    "devDependencies": {
+        "@types/node": "26.6.5",
+        "typescript": "7.0.2"
     }
 }
