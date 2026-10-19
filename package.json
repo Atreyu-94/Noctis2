@@ -26,7 +26,8 @@
         "build": "npm run compile && node dist/build.js",
         "test": "npm run compile && node --test tests/*.test.mjs",
         "check": "npm run typecheck && npm test",
-        "inspect:tinymist": "node scripts/inspect-tinymist.mjs"
+        "inspect:tinymist": "node scripts/inspect-tinymist.mjs",
+        "test:languages": "npm run build && node scripts/validate-languages.mjs"
     },
     "categories": [
         "Themes",
@@ -107,6 +108,8 @@
     "type": "module",
     "devDependencies": {
         "@types/node": "26.6.5",
-        "typescript": "7.0.2"
+        "typescript": "7.0.2",
+        "vscode-oniguruma": "2.0.1",
+        "vscode-textmate": "9.3.2"
     }
 }

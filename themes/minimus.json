@@ -1106,6 +1106,15 @@
          }
       },
       {
+         "name": "Julia interpolation",
+         "scope": [
+            "variable.interpolation.julia"
+         ],
+         "settings": {
+            "foreground": "#3f8d6c"
+         }
+      },
+      {
          "name": "Typst text",
          "scope": [
             "source.typst",
