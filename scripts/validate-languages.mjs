@@ -13,7 +13,7 @@ const tiny = process.env.TINYMIST_EXTENSION, julia = process.env.JULIA_EXTENSION
 if (!tiny || !julia) throw new Error('Set TINYMIST_EXTENSION and JULIA_EXTENSION to installed extension directories.');
 const sources = [
  {language:'typst', path:join(tiny,'out/typst.tmLanguage.json'), fixture:'tests/fixtures/highlighting.typ', extension:tiny,
-  cases:[['Heading','misc'],['<intro>','constant'],['intro','misc'],['raw code','string'],['hello','string'],['true','number'],['$','keyword',13],['x','annotation',13],['^','keyword',13],['frac','function',13],['alpha','variable',13],['(','misc',13],[',','misc',13],['1','number',25],['where','string',25]]},
+  cases:[['Heading','misc'],['<intro>','constant'],['intro','misc'],['raw code','string'],['hello','string'],['true','number'],['$','keyword',13],['x','string',13],['^','keyword',13],['frac','function',13],['alpha','variable',13],['(','misc',13],[',','misc',13],['1','number',25],['where','string',25]]},
  {language:'julia', path:join(julia,'syntaxes/julia_vscode.json'), fixture:'tests/fixtures/highlighting.jl', extension:julia,
   cases:[['@info','misc'],['value=','string'],['sample','stringInterpolated',11],['true','number'],['Number','annotation']]},
 ];

@@ -1170,7 +1170,7 @@
             "markup.math.typst"
          ],
          "settings": {
-            "foreground": "#b3694d"
+            "foreground": "#00b368"
          }
       },
       {
@@ -1283,7 +1283,7 @@
       "delim:typst": "#0c006b",
       "pol:typst": "#fa8900",
       "error:typst": "#ff530f",
-      "text.math:typst": "#b3694d",
+      "text.math:typst": "#00b368",
       "delim.math:typst": "#ff5792",
       "operator.math:typst": "#ff5792",
       "punct.math:typst": "#0094f0",
@@ -1319,7 +1319,7 @@
       "delim:typst-code": "#0c006b",
       "pol:typst-code": "#fa8900",
       "error:typst-code": "#ff530f",
-      "text.math:typst-code": "#b3694d",
+      "text.math:typst-code": "#00b368",
       "delim.math:typst-code": "#ff5792",
       "operator.math:typst-code": "#ff5792",
       "punct.math:typst-code": "#0094f0",
