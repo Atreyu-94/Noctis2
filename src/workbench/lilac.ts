@@ -1,7 +1,7 @@
 import type { Theme, TokenRule } from '../types.js';
 export default (syntax: TokenRule[]): Theme => ({
   name: "Noctis2 Lilac",
-  type: "dark",
+  type: "light",
   colors: {
     // ---------------------------
     // Editor Base Colors
