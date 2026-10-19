@@ -16,3 +16,14 @@ $ x^2 + frac(1, 2) = alpha $
 ```typst
 #let value = 2
 ```
+
+// Math and emphasis regression samples.
+_*reverse*_
+*$ x_1^2 / alpha $*
+_*Sequence $frac(1, 2)$*_
+$ mat(1, 2; 3, 4) + vec(x, y) $
+$ #(1 + 2) + "where" $
+#strong[function strong] #emph[function emph]
+$
+  sum_(i=1)^n x_i = integral_0^1 f(x) dif x
+$

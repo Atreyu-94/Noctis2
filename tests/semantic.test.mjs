@@ -26,10 +26,11 @@ test('Tinymist custom selectors are language-scoped and retain text fallback and
   assert.equal(rules[`bool:${language}`],COLORS.noctis.number);
   assert.equal(rules[`ref:${language}`],COLORS.noctis.misc);
   assert.equal(rules[`label:${language}`],COLORS.noctis.constant);
-  // Tinymist sends generic text over raw and math; do not hide TextMate coloring.
+  // Plain/raw text keeps fallback; math is styled only within its own context.
   assert.equal(rules[`text:${language}`],undefined);
  }
  for(const type of ['heading','marker','term','pol','bool','raw','text','ref'])assert.equal(rules[type],undefined);
+ assert.equal(rules['*.math'],undefined);
  assert.equal(rules['*'],undefined);
  assert.equal(rules['*.strong'],undefined);
 });

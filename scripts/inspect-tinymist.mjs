@@ -38,6 +38,16 @@ try {
  assert.equal(find('<intro>')?.type, 'label');
  assert.equal(find('@intro')?.type, 'ref');
  assert.deepEqual(find('both')?.modifiers, ['strong', 'emph']);
+ assert.deepEqual(find('reverse')?.modifiers, ['strong', 'emph']);
+ assert.deepEqual(find('frac', 23)?.modifiers, ['strong', 'emph', 'math']);
+ assert.equal(find('frac', 23)?.type, 'function');
+ assert.equal(find('function strong')?.type, 'text');
+ assert.deepEqual(find('function strong')?.modifiers, []);
+ for (const [text, type] of [['$', 'delim'], ['x', 'text'], ['^', 'operator'], ['frac', 'function'], ['alpha', 'pol']]) {
+  assert.equal(find(text, 13)?.type, type);
+  assert.ok(find(text, 13)?.modifiers.includes('math'));
+ }
+ assert.equal(find('1', 25)?.type, 'number');
  assert.equal(find('raw code')?.type, 'text');
  assert.equal(find('twice', 2)?.type, 'function');
  assert.equal(find('twice', 12)?.type, 'function');

@@ -1165,6 +1165,47 @@
          }
       },
       {
+         "name": "Typst math text",
+         "scope": [
+            "markup.math.typst"
+         ],
+         "settings": {
+            "foreground": "#b3694d"
+         }
+      },
+      {
+         "name": "Typst math delimiters",
+         "scope": [
+            "punctuation.definition.string.begin.math.typst",
+            "punctuation.definition.string.end.math.typst",
+            "punctuation.definition.math.typst"
+         ],
+         "settings": {
+            "foreground": "#ff5792"
+         }
+      },
+      {
+         "name": "Typst math operators",
+         "scope": [
+            "punctuation.math.operator.typst",
+            "keyword.operator.math.typst"
+         ],
+         "settings": {
+            "foreground": "#ff5792"
+         }
+      },
+      {
+         "name": "Typst math punctuation",
+         "scope": [
+            "markup.math.typst markup.content.brace.typst",
+            "markup.math.typst meta.brace.round.typst",
+            "markup.math.typst punctuation.separator.comma.typst"
+         ],
+         "settings": {
+            "foreground": "#0094f0"
+         }
+      },
+      {
          "name": "Typst emphasis",
          "scope": [
             "markup.italic.typst"
@@ -1242,6 +1283,10 @@
       "delim:typst": "#0c006b",
       "pol:typst": "#fa8900",
       "error:typst": "#ff530f",
+      "text.math:typst": "#b3694d",
+      "delim.math:typst": "#ff5792",
+      "operator.math:typst": "#ff5792",
+      "punct.math:typst": "#0094f0",
       "*.strong:typst": {
          "bold": true
       },
@@ -1274,6 +1319,10 @@
       "delim:typst-code": "#0c006b",
       "pol:typst-code": "#fa8900",
       "error:typst-code": "#ff530f",
+      "text.math:typst-code": "#b3694d",
+      "delim.math:typst-code": "#ff5792",
+      "operator.math:typst-code": "#ff5792",
+      "punct.math:typst-code": "#0094f0",
       "*.strong:typst-code": {
          "bold": true
       },
