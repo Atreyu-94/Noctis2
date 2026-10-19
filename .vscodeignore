@@ -1,14 +1,9 @@
-.gitignore
-src/**/*
-palette.css
-JavaScript.js
-TypeScript.ts
-vscodecustom.css
-
-dist/**
-tests/**
-.github/**
-tsconfig.json
-package-lock.json
-scripts/**
-test-results/**
+# Include only distributable theme resources.
+**
+!package.json
+!README.md
+!CHANGELOG.md
+!LICENSE.md
+!themes/**
+!images/[!._]*.png
+!images/color-previews/*.svg
