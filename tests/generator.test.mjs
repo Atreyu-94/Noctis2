@@ -15,7 +15,7 @@ const manifest = JSON.parse(await readFile(new URL('../package.json', import.met
 const hash = text => createHash('sha256').update(text.replace(/\r\n/g, '\n')).digest('hex');
 const run = directory => spawnSync(process.execPath, ['dist/build.js', directory], {cwd:root, encoding:'utf8'});
 
-test('all 11 themes preserve upstream palettes and original TextMate rules', async () => {
+test('all 11 themes preserve upstream content except documented corrections', async () => {
  assert.equal(baseline.themes.length, 11);
  assert.deepEqual(manifest.contributes.themes, baseline.themes.map(({sha256, ...entry}) => ({...entry, label: entry.label.replace(/^Noctis\b/, 'Noctis2')})));
  const directory = await mkdtemp(join(tmpdir(), 'noctis2-equivalence-'));
@@ -32,6 +32,12 @@ test('all 11 themes preserve upstream palettes and original TextMate rules', asy
     assert.equal(parsed.name, entry.label.replace(/^Noctis\b/, 'Noctis2'));
     legacy.name = entry.label;
     legacy.tokenColors = legacy.tokenColors.slice(0, 19);
+    if (filename === 'lilac.json') {
+     assert.equal(parsed.colors['inputValidation.infoBackground'], '#dedbf5');
+     assert.equal(parsed.colors['inputValidation.infoBackground'], parsed.colors['editorWidget.background']);
+     // Restore only the corrected upstream typo for the immutable baseline comparison.
+     legacy.colors = { ...legacy.colors, 'inputValidation.infoBackground': '#00c6ea599ff' };
+    }
     assert.equal(hash(JSON.stringify(legacy, null, 3)), entry.sha256, `${filename}: upstream palette or legacy rule changed`);
     assert.equal(semanticHighlighting, true);
     assert.ok(Object.keys(semanticTokenColors).length > 0);
@@ -39,13 +45,8 @@ test('all 11 themes preserve upstream palettes and original TextMate rules', asy
     const theme = JSON.parse(generated);
     // TODO: Fix upstream Lilac type mismatch in a separate visual change.
     assert.equal(theme.type, filename === 'lilac.json' ? 'dark' : entry.uiTheme === 'vs' ? 'light' : 'dark');
-    for (const [key, color] of Object.entries(theme.colors)) {
-     // TODO: Correct this pre-existing Lilac typo in a separate visual change.
-     if (filename === 'lilac.json' && key === 'inputValidation.infoBackground') {
-      assert.equal(color, '#00c6ea599ff');
-     } else {
-      assert.match(color, /^#(?:[\da-f]{3}|[\da-f]{4}|[\da-f]{6}|[\da-f]{8})$/i);
-     }
+    for (const color of Object.values(theme.colors)) {
+     assert.match(color, /^#(?:[\da-f]{3}|[\da-f]{4}|[\da-f]{6}|[\da-f]{8})$/i);
     }
    }
   }

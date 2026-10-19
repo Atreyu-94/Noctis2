@@ -140,7 +140,7 @@ export default (syntax: TokenRule[]): Theme => ({
     "inputOption.activeBorder": "#7060eb",
     "inputValidation.errorBackground": "#ff400041",
     "inputValidation.errorBorder": "#ff4000",
-    "inputValidation.infoBackground": "#00c6ea599ff",
+    "inputValidation.infoBackground": "#dedbf5",
     "inputValidation.infoBorder": "#00c6e0",
     "inputValidation.warningBackground": "#ffa587cc",
     "inputValidation.warningBorder": "#ffa487",
