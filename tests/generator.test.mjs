@@ -32,17 +32,19 @@ test('all 11 themes preserve upstream content except documented corrections', as
     assert.equal(parsed.name, entry.label.replace(/^Noctis\b/, 'Noctis2'));
     legacy.name = entry.label;
     legacy.tokenColors = legacy.tokenColors.slice(0, 19);
-    const legacyGuideKeys = {
+    const legacyColorKeys = {
      'editorIndentGuide.background1': 'editorIndentGuide.background',
-     'editorIndentGuide.activeBackground1': 'editorIndentGuide.activeBackground'
+     'editorIndentGuide.activeBackground1': 'editorIndentGuide.activeBackground',
+     'welcomePage.tileBackground': 'welcomePage.buttonBackground',
+     'welcomePage.tileHoverBackground': 'welcomePage.buttonHoverBackground'
     };
-    for (const [current, previous] of Object.entries(legacyGuideKeys)) {
+    for (const [current, previous] of Object.entries(legacyColorKeys)) {
      assert.ok(Object.hasOwn(parsed.colors, current));
      assert.equal(Object.hasOwn(parsed.colors, previous), false);
     }
     // Restore key names only; the upstream hash still checks exact values and order.
     legacy.colors = Object.fromEntries(Object.entries(legacy.colors)
-     .map(([key, value]) => [legacyGuideKeys[key] ?? key, value]));
+     .map(([key, value]) => [legacyColorKeys[key] ?? key, value]));
     if (filename === 'lilac.json') {
      assert.equal(parsed.type, 'light');
      assert.equal(parsed.colors['inputValidation.infoBackground'], '#dedbf5');

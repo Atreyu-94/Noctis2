@@ -128,8 +128,8 @@ export default (syntax: TokenRule[]): Theme => ({
     // Welcome Page
     // ---------------------------
     "walkThrough.embeddedEditorBackground": "#f9f1e1",
-    "welcomePage.buttonBackground": "#f9f1e1",
-    "welcomePage.buttonHoverBackground": "#e1e0d0",
+    "welcomePage.tileBackground": "#f9f1e1",
+    "welcomePage.tileHoverBackground": "#e1e0d0",
     // ---------------------------
     // Input Control
     // ---------------------------
