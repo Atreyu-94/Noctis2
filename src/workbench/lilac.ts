@@ -1,6 +1,6 @@
 import type { Theme, TokenRule } from '../types.js';
 export default (syntax: TokenRule[]): Theme => ({
-  name: "Noctis Lilac",
+  name: "Noctis2 Lilac",
   type: "dark",
   colors: {
     // ---------------------------

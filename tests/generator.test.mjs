@@ -17,7 +17,7 @@ const run = directory => spawnSync(process.execPath, ['dist/build.js', directory
 
 test('all 11 themes preserve upstream palettes and original TextMate rules', async () => {
  assert.equal(baseline.themes.length, 11);
- assert.deepEqual(manifest.contributes.themes, baseline.themes.map(({sha256, ...entry}) => entry));
+ assert.deepEqual(manifest.contributes.themes, baseline.themes.map(({sha256, ...entry}) => ({...entry, label: entry.label.replace(/^Noctis\b/, 'Noctis2')})));
  const directory = await mkdtemp(join(tmpdir(), 'noctis2-equivalence-'));
  try {
   for (let pass = 0; pass < 2; pass++) {
@@ -29,6 +29,8 @@ test('all 11 themes preserve upstream palettes and original TextMate rules', asy
     const generated = await readFile(join(directory, filename), 'utf8');
     const parsed = JSON.parse(generated);
     const { semanticHighlighting, semanticTokenColors, ...legacy } = parsed;
+    assert.equal(parsed.name, entry.label.replace(/^Noctis\b/, 'Noctis2'));
+    legacy.name = entry.label;
     legacy.tokenColors = legacy.tokenColors.slice(0, 19);
     assert.equal(hash(JSON.stringify(legacy, null, 3)), entry.sha256, `${filename}: upstream palette or legacy rule changed`);
     assert.equal(semanticHighlighting, true);

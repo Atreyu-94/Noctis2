@@ -1,6 +1,6 @@
 {
     "name": "noctis",
-    "displayName": "Noctis",
+    "displayName": "Noctis2",
     "description": "Noctis is a collection of light & dark themes with a well balanced blend of warm and cold colors",
     "version": "10.43.3",
     "publisher": "liviuschera",
@@ -44,57 +44,57 @@
     "contributes": {
         "themes": [
             {
-                "label": "Noctis Lux",
+                "label": "Noctis2 Lux",
                 "uiTheme": "vs",
                 "path": "./themes/lux.json"
             },
             {
-                "label": "Noctis Hibernus",
+                "label": "Noctis2 Hibernus",
                 "uiTheme": "vs",
                 "path": "./themes/hibernus.json"
             },
             {
-                "label": "Noctis Lilac",
+                "label": "Noctis2 Lilac",
                 "uiTheme": "vs",
                 "path": "./themes/lilac.json"
             },
             {
-                "label": "Noctis",
+                "label": "Noctis2",
                 "uiTheme": "vs-dark",
                 "path": "./themes/noctis.json"
             },
             {
-                "label": "Noctis Azureus",
+                "label": "Noctis2 Azureus",
                 "uiTheme": "vs-dark",
                 "path": "./themes/azureus.json"
             },
             {
-                "label": "Noctis Bordo",
+                "label": "Noctis2 Bordo",
                 "uiTheme": "vs-dark",
                 "path": "./themes/bordo.json"
             },
             {
-                "label": "Noctis Obscuro",
+                "label": "Noctis2 Obscuro",
                 "uiTheme": "vs-dark",
                 "path": "./themes/obscuro.json"
             },
             {
-                "label": "Noctis Sereno",
+                "label": "Noctis2 Sereno",
                 "uiTheme": "vs-dark",
                 "path": "./themes/sereno.json"
             },
             {
-                "label": "Noctis Uva",
+                "label": "Noctis2 Uva",
                 "uiTheme": "vs-dark",
                 "path": "./themes/uva.json"
             },
             {
-                "label": "Noctis Viola",
+                "label": "Noctis2 Viola",
                 "uiTheme": "vs-dark",
                 "path": "./themes/viola.json"
             },
             {
-                "label": "Noctis Minimus",
+                "label": "Noctis2 Minimus",
                 "uiTheme": "vs-dark",
                 "path": "./themes/minimus.json"
             }
