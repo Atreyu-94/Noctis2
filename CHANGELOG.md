@@ -1,5 +1,16 @@
 # Change Log
 
+## Unreleased (Noctis2)
+
+- Establish the independent `atreyu-94.noctis2` development identity at version `0.1.0`; no release has been published.
+- Migrate the generator to TypeScript and add semantic highlighting with Typst/Tinymist and Julia refinements while preserving all 11 palettes.
+- Require VS Code 1.81, migrate workbench color keys and correct the two Lilac metadata/validation defects using existing colors.
+- Retain the original graphics, MIT license, copyright notice and upstream credits.
+
+**Upstream Noctis history**
+
+The versions and links below belong to the original Noctis project.
+
 ## **10.43.3**
 
 -   fix readme

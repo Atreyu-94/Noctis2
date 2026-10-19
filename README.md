@@ -1,6 +1,10 @@
 # Noctis2 (personal fork)
 
-Personal, independent fork of Noctis by Liviu Schera. This branch includes a verified TypeScript migration and palette-preserving semantic highlighting with Typst/Tinymist and Julia refinements. No new extension release has been published. Visible theme names use the Noctis2 prefix; package identity and publisher metadata remain pending a separate distribution step.
+Noctis2 is a personal, independent fork of [Noctis by Liviu Schera](https://github.com/liviuschera/noctis), maintained by [Atreyu-94](https://github.com/Atreyu-94). It preserves the 11 original palettes and adds semantic highlighting and Typst/Julia refinements. It is not an official Noctis release.
+
+The development identity is `atreyu-94.noctis2`, version `0.1.0`, requiring VS Code `^1.81.0`. The publisher identifier is configured locally; its registration and availability in Marketplace or Open VSX have not been verified. No Noctis2 release has been published.
+
+The original artwork is retained while a future visual identity is studied. [LICENSE.md](LICENSE.md) retains the MIT license and original copyright notice.
 
 <p align="center">
    <img width="170" src="/images/logo.png" />
@@ -28,6 +32,8 @@ Noctis comes in 11 versions, 8 are dark and 3 are light.
 -   _Noctis Lux'_ background is a very saturated very light warm orange
 -   _Noctis Hibernus'_ background is a very unsaturated very light cold bluish cyan
 -   _Noctis Lilac's_ background is a very unsaturated very light cold blue
+
+The screenshots below are inherited from upstream Noctis and do not show the new semantic-highlighting rules.
 
 <div align="center">
 
@@ -75,7 +81,11 @@ Noctis comes in 11 versions, 8 are dark and 3 are light.
 
 </div>
 
-## Supported Languages
+## Language highlighting
+
+The theme supplies colors and styles; language extensions supply grammars and any semantic tokens. Local checks cover Typst/Tinymist, Julia, TypeScript, Python, JSON and Markdown. Julia uses TextMate in the tested installation; standalone Typst Code Mode has TextMate coverage, with grammar limitations for emphasis. Python web coverage is limited to Pylance partial mode. JSON and Markdown were checked through TextMate rather than semantic tokens.
+
+The following list is inherited from upstream Noctis and is not a claim that every language has been revalidated in this fork.
 
 -   Apex (requires [Salesforce Extension Pack](https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode) extension)
 -   C/C++
@@ -138,8 +148,6 @@ Noctis comes in 11 versions, 8 are dark and 3 are light.
     -   Apache Conf (requires [Apache Conf](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-apache) extension)
     -   TOML (requires [Better TOML](https://marketplace.visualstudio.com/items?itemName=bungcip.better-toml) extension)
 
-I plan on adding support for new languages in the upcoming releases. Please feel free to open an issue if you'd like a new language supported or if you think something is off.
-
 ## Syntax colors
 
 The color names were matched using the excellent online tools [Name that Color](http://chir.ag/projects/name-that-color) and [Color Name & Hue](http://www.color-blindness.com/color-name-hue/)
@@ -163,11 +171,11 @@ The color names were matched using the excellent online tools [Name that Color](
 
 ## Installation
 
-Noctis can be installed by clicking on Ctrl + Shift + X on Windows or ⇧ + ⌘ + X on Mac and then searching for "Noctis".
+No Noctis2 VSIX candidate has been prepared yet. When a candidate is available, use **Extensions: Install from VSIX...** in an isolated profile, then select one of the eleven **Noctis2** themes with **Preferences: Color Theme**. Packaging and public distribution remain separate steps.
 
-## How to contribute
+## Development
 
-Beginning with v7.21.0 the theme building process has been simplified. I started off with the idea used in [Lucy](https://marketplace.visualstudio.com/items?itemName=juliettepretot.lucy-vscode) theme and came up with this theme generator powered by Node.js. This will allow me or any contributor to easily add/suggest new theme variants or changes to the existing ones. In `./src/` folder you will find:
+Upstream Noctis introduced its Node.js theme generator in v7.21.0, inspired by [Lucy](https://marketplace.visualstudio.com/items?itemName=juliettepretot.lucy-vscode). Noctis2 migrates that generator to TypeScript. In `./src/` you will find:
 
 -   `syntax.ts` &rarr; syntax tokens based on the language grammar installed
 -   `colors.ts` &rarr; the colors used for syntax highlighting
@@ -177,7 +185,9 @@ After you make a change in any of the above files you need to use `npm run build
 
 Happy hacking!
 
-## Contributors
+## Upstream contributors
+
+The original Noctis themes and palettes are by [Liviu Schera](https://github.com/liviuschera). The contributors below are credited for their work on upstream Noctis.
 
 |                                                                                                                   |                                                          |
 | ----------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
