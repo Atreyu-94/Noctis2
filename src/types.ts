@@ -14,3 +14,11 @@ export interface Theme {
    tokenColors: TokenRule[];
 }
 export type ThemeFactory = (syntax: TokenRule[]) => Theme;
+
+export interface SemanticStyle {
+   foreground?: Color;
+   bold?: boolean;
+   italic?: boolean;
+   underline?: boolean;
+}
+export type SemanticRules = Record<string, Color | SemanticStyle>;

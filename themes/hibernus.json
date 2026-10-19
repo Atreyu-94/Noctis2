@@ -1105,5 +1105,33 @@
             "fontStyle": "strikethrough"
          }
       }
-   ]
+   ],
+   "semanticHighlighting": true,
+   "semanticTokenColors": {
+      "namespace": "#b3694d",
+      "type": "#b3694d",
+      "class": "#b3694d",
+      "interface": "#b3694d",
+      "struct": "#b3694d",
+      "enum": "#b3694d",
+      "typeParameter": "#b3694d",
+      "parameter": "#fa8900",
+      "variable": "#fa8900",
+      "property": "#b3694d",
+      "enumMember": "#a88c00",
+      "variable.readonly": "#a88c00",
+      "property.readonly": "#a88c00",
+      "function": "#0095a8",
+      "method": "#00bdd6",
+      "function.declaration": "#e64100",
+      "method.declaration": "#e64100",
+      "macro": "#0094f0",
+      "decorator": "#0094f0",
+      "comment": "#8ca6a6",
+      "string": "#00b368",
+      "number": "#5842ff",
+      "keyword": "#ff5792",
+      "operator": "#ff5792",
+      "regexp": "#009456"
+   }
 }

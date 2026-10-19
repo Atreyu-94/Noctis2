@@ -15,7 +15,7 @@ const manifest = JSON.parse(await readFile(new URL('../package.json', import.met
 const hash = text => createHash('sha256').update(text.replace(/\r\n/g, '\n')).digest('hex');
 const run = directory => spawnSync(process.execPath, ['dist/build.js', directory], {cwd:root, encoding:'utf8'});
 
-test('all 11 generated themes match the pinned upstream bytes and manifest', async () => {
+test('all 11 themes preserve upstream palettes and original TextMate rules', async () => {
  assert.equal(baseline.themes.length, 11);
  assert.deepEqual(manifest.contributes.themes, baseline.themes.map(({sha256, ...entry}) => entry));
  const directory = await mkdtemp(join(tmpdir(), 'noctis2-equivalence-'));
@@ -27,8 +27,12 @@ test('all 11 generated themes match the pinned upstream bytes and manifest', asy
    for (const entry of baseline.themes) {
     const filename = entry.path.split('/').at(-1);
     const generated = await readFile(join(directory, filename), 'utf8');
-    assert.equal(hash(generated), entry.sha256, `${filename}: upstream mismatch`);
-    assert.equal(hash(await readFile(join(root, entry.path), 'utf8')), entry.sha256, `${filename}: checked-in mismatch`);
+    const parsed = JSON.parse(generated);
+    const { semanticHighlighting, semanticTokenColors, ...legacy } = parsed;
+    assert.equal(hash(JSON.stringify(legacy, null, 3)), entry.sha256, `${filename}: upstream palette or legacy rule changed`);
+    assert.equal(semanticHighlighting, true);
+    assert.ok(Object.keys(semanticTokenColors).length > 0);
+    assert.deepEqual(JSON.parse(await readFile(join(root, entry.path), 'utf8')), parsed, `${filename}: stale generated file`);
     const theme = JSON.parse(generated);
     // TODO: Fix upstream Lilac type mismatch in a separate visual change.
     assert.equal(theme.type, filename === 'lilac.json' ? 'dark' : entry.uiTheme === 'vs' ? 'light' : 'dark');
