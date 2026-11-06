@@ -1,5 +1,5 @@
 {
-   "name": "Noctis Uva",
+   "name": "Noctis2 Uva",
    "type": "dark",
    "colors": {
       "selection.background": "#7a70c277",
@@ -14,7 +14,6 @@
       "badge.background": "#998ef1",
       "badge.foreground": "#171523",
       "activityBar.background": "#292640",
-      "activityBar.dropBackground": "#7a70c265",
       "activityBar.border": "#171523",
       "activityBar.foreground": "#6e67a8",
       "activityBar.inactiveForeground": "#6e67a877",
@@ -87,8 +86,8 @@
       "textPreformat.foreground": "#ffc180",
       "textSeparator.foreground": "#292640",
       "walkThrough.embeddedEditorBackground": "#292640",
-      "welcomePage.buttonBackground": "#1f1d30",
-      "welcomePage.buttonHoverBackground": "#2f2c49",
+      "welcomePage.tileBackground": "#1f1d30",
+      "welcomePage.tileHoverBackground": "#2f2c49",
       "input.background": "#1f1d30",
       "input.border": "#27274e",
       "input.foreground": "#CDD3DE",
@@ -130,8 +129,8 @@
       "editor.rangeHighlightBackground": "#49d6e922",
       "editorLink.activeForeground": "#14a5ff",
       "editorWhitespace.foreground": "#ffffff21",
-      "editorIndentGuide.background": "#383450",
-      "editorIndentGuide.activeBackground": "#595289",
+      "editorIndentGuide.background1": "#383450",
+      "editorIndentGuide.activeBackground1": "#595289",
       "editorBracketMatch.background": "#6e67a822",
       "editorBracketMatch.border": "#6e67a8",
       "editorRuler.foreground": "#473856",
@@ -1103,6 +1102,244 @@
          "settings": {
             "fontStyle": "strikethrough"
          }
+      },
+      {
+         "name": "Markdown strong emphasis",
+         "scope": [
+            "markup.bold.markdown markup.italic.markdown",
+            "markup.italic.markdown markup.bold.markdown"
+         ],
+         "settings": {
+            "fontStyle": "bold italic"
+         }
+      },
+      {
+         "name": "Julia interpolation",
+         "scope": [
+            "variable.interpolation.julia"
+         ],
+         "settings": {
+            "foreground": "#16b673"
+         }
+      },
+      {
+         "name": "Typst text",
+         "scope": [
+            "source.typst",
+            "source.typst-code"
+         ],
+         "settings": {
+            "foreground": "#c5c2d6"
+         }
+      },
+      {
+         "name": "Typst headings",
+         "scope": [
+            "markup.heading.typst"
+         ],
+         "settings": {
+            "foreground": "#49ace9",
+            "fontStyle": "bold"
+         }
+      },
+      {
+         "name": "Typst labels",
+         "scope": [
+            "string.other.label.typst"
+         ],
+         "settings": {
+            "foreground": "#d5971a"
+         }
+      },
+      {
+         "name": "Typst references",
+         "scope": [
+            "string.other.reference.typst",
+            "markup.other.reference.typst"
+         ],
+         "settings": {
+            "foreground": "#49ace9"
+         }
+      },
+      {
+         "name": "Typst raw",
+         "scope": [
+            "markup.raw.inline.typst",
+            "markup.raw.block.typst",
+            "markup.other.raw.typst"
+         ],
+         "settings": {
+            "foreground": "#49e9a6"
+         }
+      },
+      {
+         "name": "Typst math text",
+         "scope": [
+            "markup.math.typst"
+         ],
+         "settings": {
+            "foreground": "#49e9a6"
+         }
+      },
+      {
+         "name": "Typst math delimiters",
+         "scope": [
+            "punctuation.definition.string.begin.math.typst",
+            "punctuation.definition.string.end.math.typst",
+            "punctuation.definition.math.typst"
+         ],
+         "settings": {
+            "foreground": "#49e9a6"
+         }
+      },
+      {
+         "name": "Typst math operators",
+         "scope": [
+            "punctuation.math.operator.typst",
+            "keyword.operator.math.typst"
+         ],
+         "settings": {
+            "foreground": "#df769b"
+         }
+      },
+      {
+         "name": "Typst math punctuation",
+         "scope": [
+            "markup.math.typst markup.content.brace.typst",
+            "markup.math.typst meta.brace.round.typst",
+            "markup.math.typst punctuation.separator.comma.typst"
+         ],
+         "settings": {
+            "foreground": "#49ace9"
+         }
+      },
+      {
+         "name": "Typst emphasis",
+         "scope": [
+            "markup.italic.typst"
+         ],
+         "settings": {
+            "fontStyle": "italic"
+         }
+      },
+      {
+         "name": "Typst strong",
+         "scope": [
+            "markup.bold.typst"
+         ],
+         "settings": {
+            "fontStyle": "bold"
+         }
+      },
+      {
+         "name": "Typst strong emphasis",
+         "scope": [
+            "markup.bold.typst markup.italic.typst",
+            "markup.italic.typst markup.bold.typst"
+         ],
+         "settings": {
+            "fontStyle": "bold italic"
+         }
       }
-   ]
+   ],
+   "semanticHighlighting": true,
+   "semanticTokenColors": {
+      "namespace": "#d67e5c",
+      "type": "#d67e5c",
+      "class": "#d67e5c",
+      "interface": "#d67e5c",
+      "struct": "#d67e5c",
+      "enum": "#d67e5c",
+      "typeParameter": "#d67e5c",
+      "parameter": "#e4b781",
+      "variable": "#e4b781",
+      "property": "#d67e5c",
+      "enumMember": "#d5971a",
+      "variable.readonly": "#d5971a",
+      "property.readonly": "#d5971a",
+      "function": "#16a3b6",
+      "method": "#49d6e9",
+      "function.declaration": "#e66533",
+      "method.declaration": "#e66533",
+      "macro": "#49ace9",
+      "decorator": "#49ace9",
+      "comment": "#716c93",
+      "string": "#49e9a6",
+      "number": "#7060eb",
+      "keyword": "#df769b",
+      "operator": "#df769b",
+      "regexp": "#16b673",
+      "bool:typst": "#7060eb",
+      "punct:typst": "#c5c2d6",
+      "escape:typst": "#49ace9",
+      "link:typst": {
+         "foreground": "#49ace9",
+         "underline": true
+      },
+      "raw:typst": "#49e9a6",
+      "label:typst": "#d5971a",
+      "ref:typst": "#49ace9",
+      "heading:typst": {
+         "foreground": "#49ace9",
+         "bold": true
+      },
+      "marker:typst": "#df769b",
+      "term:typst": {
+         "foreground": "#d67e5c",
+         "bold": true
+      },
+      "delim:typst": "#c5c2d6",
+      "pol:typst": "#e4b781",
+      "error:typst": "#e3541c",
+      "text.math:typst": "#49e9a6",
+      "delim.math:typst": "#49e9a6",
+      "operator.math:typst": "#df769b",
+      "punct.math:typst": "#49ace9",
+      "*.strong:typst": {
+         "bold": true
+      },
+      "*.emph:typst": {
+         "italic": true
+      },
+      "*.strong.emph:typst": {
+         "bold": true,
+         "italic": true
+      },
+      "bool:typst-code": "#7060eb",
+      "punct:typst-code": "#c5c2d6",
+      "escape:typst-code": "#49ace9",
+      "link:typst-code": {
+         "foreground": "#49ace9",
+         "underline": true
+      },
+      "raw:typst-code": "#49e9a6",
+      "label:typst-code": "#d5971a",
+      "ref:typst-code": "#49ace9",
+      "heading:typst-code": {
+         "foreground": "#49ace9",
+         "bold": true
+      },
+      "marker:typst-code": "#df769b",
+      "term:typst-code": {
+         "foreground": "#d67e5c",
+         "bold": true
+      },
+      "delim:typst-code": "#c5c2d6",
+      "pol:typst-code": "#e4b781",
+      "error:typst-code": "#e3541c",
+      "text.math:typst-code": "#49e9a6",
+      "delim.math:typst-code": "#49e9a6",
+      "operator.math:typst-code": "#df769b",
+      "punct.math:typst-code": "#49ace9",
+      "*.strong:typst-code": {
+         "bold": true
+      },
+      "*.emph:typst-code": {
+         "italic": true
+      },
+      "*.strong.emph:typst-code": {
+         "bold": true,
+         "italic": true
+      }
+   }
 }

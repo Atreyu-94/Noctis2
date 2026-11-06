@@ -1,5 +1,6 @@
-export default syntax => ({
-  name: "Noctis Minimus",
+import type { Theme, TokenRule } from '../types.js';
+export default (syntax: TokenRule[]): Theme => ({
+  name: "Noctis2 Minimus",
   type: "dark",
   colors: {
     // ---------------------------
@@ -23,7 +24,6 @@ export default syntax => ({
     // Activity Bar
     // ---------------------------
     "activityBar.background": "#1b2932",
-    "activityBar.dropBackground": "#6496b465",
     "activityBar.border": "#101213",
     "activityBar.foreground": "#496d83",
     "activityBar.inactiveForeground": "#496d8377",
@@ -130,8 +130,8 @@ export default syntax => ({
     // Welcome Page
     // ---------------------------
     "walkThrough.embeddedEditorBackground": "#1b2932",
-    "welcomePage.buttonBackground": "#0e1920",
-    "welcomePage.buttonHoverBackground": "#202e37",
+    "welcomePage.tileBackground": "#0e1920",
+    "welcomePage.tileHoverBackground": "#202e37",
     // ---------------------------
     // Input Control
     // ---------------------------
@@ -185,8 +185,8 @@ export default syntax => ({
     "editor.rangeHighlightBackground": "#72b7c022",
     "editorLink.activeForeground": "#649fc4",
     "editorWhitespace.foreground": "#ffffff21",
-    "editorIndentGuide.background": "#2f404b",
-    "editorIndentGuide.activeBackground": "#405f72",
+    "editorIndentGuide.background1": "#2f404b",
+    "editorIndentGuide.activeBackground1": "#405f72",
     "editorBracketMatch.background": "#496d8322",
     "editorBracketMatch.border": "#496d83",
     "editorRuler.foreground": "#334652",

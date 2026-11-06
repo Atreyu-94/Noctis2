@@ -1,0 +1,85 @@
+{
+  "commit": "4a82370b2c064e36726c23e94f27ed3782bd6ecd",
+  "normalization": "CRLF to LF only",
+  "themes": [
+    {
+      "label": "Noctis Lux",
+      "uiTheme": "vs",
+      "path": "./themes/lux.json",
+      "sha256": "adfc405f421f039cf908b7e8402ee300e303698ba7475bd3206803bec0f95534"
+    },
+    {
+      "label": "Noctis Hibernus",
+      "uiTheme": "vs",
+      "path": "./themes/hibernus.json",
+      "sha256": "53aaa4864b08e54f3c26fedf5ae669a1fea7555132ad99b216c1aa2368887999"
+    },
+    {
+      "label": "Noctis Lilac",
+      "uiTheme": "vs",
+      "path": "./themes/lilac.json",
+      "sha256": "e93a8c483d4b61fd6e4476b83166c6c408ba47c10ad24149130eb28b11078e70"
+    },
+    {
+      "label": "Noctis",
+      "uiTheme": "vs-dark",
+      "path": "./themes/noctis.json",
+      "sha256": "31cea9faeb7c0d96277b7f57487a119ee98844a4f9169187e91bf8a8cd0c9b17"
+    },
+    {
+      "label": "Noctis Azureus",
+      "uiTheme": "vs-dark",
+      "path": "./themes/azureus.json",
+      "sha256": "402820379eef82f29eafe9cb8a7a1193e77bcd92c49c8eaeceae3e9ed0647e3a"
+    },
+    {
+      "label": "Noctis Bordo",
+      "uiTheme": "vs-dark",
+      "path": "./themes/bordo.json",
+      "sha256": "2bd5eb365fd99379e7ae145e28704240f9a961ff160f0fedcbc573f8ac07a083"
+    },
+    {
+      "label": "Noctis Obscuro",
+      "uiTheme": "vs-dark",
+      "path": "./themes/obscuro.json",
+      "sha256": "d9c60ead6797dd1f7d1085236fb5a20adbcf8a5030c731dad45846827501d66e"
+    },
+    {
+      "label": "Noctis Sereno",
+      "uiTheme": "vs-dark",
+      "path": "./themes/sereno.json",
+      "sha256": "92de3b13869cd547b95f91ce9c36c0b05b2332cc95cf3f0596c1dade33c97e0a"
+    },
+    {
+      "label": "Noctis Uva",
+      "uiTheme": "vs-dark",
+      "path": "./themes/uva.json",
+      "sha256": "e91952ce46d01a8325f203fc3780b067fbb5cb202e6c1d922ad2f526c8e4c46d"
+    },
+    {
+      "label": "Noctis Viola",
+      "uiTheme": "vs-dark",
+      "path": "./themes/viola.json",
+      "sha256": "cda1c1b5bb5460e1cb0625fe3783372237c40f3683da28369d369b948b51e5a9"
+    },
+    {
+      "label": "Noctis Minimus",
+      "uiTheme": "vs-dark",
+      "path": "./themes/minimus.json",
+      "sha256": "b784342b482591ca728ce8f1d7558639f6eb1a66367acbb7ea9f01eb2c23d782"
+    }
+  ],
+  "legacyActivityBarDropBackground": {
+    "lux.json": "#0099ad65",
+    "hibernus.json": "#0099ad65",
+    "lilac.json": "#7060eb65",
+    "noctis.json": "#929ea065",
+    "azureus.json": "#61a6d165",
+    "bordo.json": "#bb778f65",
+    "obscuro.json": "#929ea065",
+    "sereno.json": "#929ea065",
+    "uva.json": "#7a70c265",
+    "viola.json": "#996bc765",
+    "minimus.json": "#6496b465"
+  }
+}

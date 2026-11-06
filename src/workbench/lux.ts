@@ -1,5 +1,6 @@
-export default (syntax) => ({
-  name: "Noctis Lux",
+import type { Theme, TokenRule } from '../types.js';
+export default (syntax: TokenRule[]): Theme => ({
+  name: "Noctis2 Lux",
   type: "light",
   colors: {
     //  // ---------------------------
@@ -23,7 +24,6 @@ export default (syntax) => ({
     // Activity Bar
     // ---------------------------
     "activityBar.background": "#fef8ec",
-    "activityBar.dropBackground": "#0099ad65",
     "activityBar.foreground": "#0099ad",
     "activityBar.border": "#ece2c600",
     "activityBarBadge.background": "#0099ad",
@@ -127,8 +127,8 @@ export default (syntax) => ({
     // Welcome Page
     // ---------------------------
     "walkThrough.embeddedEditorBackground": "#f9f1e1",
-    "welcomePage.buttonBackground": "#f9f1e1",
-    "welcomePage.buttonHoverBackground": "#e1e0d0",
+    "welcomePage.tileBackground": "#f9f1e1",
+    "welcomePage.tileHoverBackground": "#e1e0d0",
     // ---------------------------
     // Input Control
     // ---------------------------
@@ -185,8 +185,8 @@ export default (syntax) => ({
     "editor.rangeHighlightBackground": "#f1e9d5a1",
     "editorLink.activeForeground": "#14a5ff",
     "editorWhitespace.foreground": "#d3cec5bb",
-    "editorIndentGuide.background": "#d3cec5aa",
-    "editorIndentGuide.activeBackground": "#88adc3",
+    "editorIndentGuide.background1": "#d3cec5aa",
+    "editorIndentGuide.activeBackground1": "#88adc3",
     "editorBracketMatch.background": "#0099ad20",
     "editorBracketMatch.border": "#0099ad",
     "editorRuler.foreground": "#f1e6d0",

@@ -1,6 +1,6 @@
 {
-   "name": "Noctis Lilac",
-   "type": "dark",
+   "name": "Noctis2 Lilac",
+   "type": "light",
    "colors": {
       "selection.background": "#b4adebbb",
       "descriptionForeground": "#908ea4",
@@ -14,7 +14,6 @@
       "badge.background": "#7060eb",
       "badge.foreground": "#f2f1f8",
       "activityBar.background": "#f2f1f8",
-      "activityBar.dropBackground": "#7060eb65",
       "activityBar.foreground": "#7060eb",
       "activityBar.border": "#ece2c600",
       "activityBarBadge.background": "#7060eb",
@@ -85,8 +84,8 @@
       "textPreformat.foreground": "#e9a149",
       "textSeparator.foreground": "#edecf8",
       "walkThrough.embeddedEditorBackground": "#edecf8",
-      "welcomePage.buttonBackground": "#edecf8",
-      "welcomePage.buttonHoverBackground": "#e2dff6",
+      "welcomePage.tileBackground": "#edecf8",
+      "welcomePage.tileHoverBackground": "#e2dff6",
       "input.background": "#f2f1f8",
       "input.border": "#dedbf5",
       "input.foreground": "#666284",
@@ -94,7 +93,7 @@
       "inputOption.activeBorder": "#7060eb",
       "inputValidation.errorBackground": "#ff400041",
       "inputValidation.errorBorder": "#ff4000",
-      "inputValidation.infoBackground": "#00c6ea599ff",
+      "inputValidation.infoBackground": "#dedbf5",
       "inputValidation.infoBorder": "#00c6e0",
       "inputValidation.warningBackground": "#ffa587cc",
       "inputValidation.warningBorder": "#ffa487",
@@ -131,8 +130,8 @@
       "editor.rangeHighlightBackground": "#f1e9d5a1",
       "editorLink.activeForeground": "#14a5ff",
       "editorWhitespace.foreground": "#c3c1d7bb",
-      "editorIndentGuide.background": "#c3c1d7aa",
-      "editorIndentGuide.activeBackground": "#9f99cc",
+      "editorIndentGuide.background1": "#c3c1d7aa",
+      "editorIndentGuide.activeBackground1": "#9f99cc",
       "editorBracketMatch.background": "#7060eb20",
       "editorBracketMatch.border": "#7060eb",
       "editorRuler.foreground": "#d4d0f1",
@@ -1104,6 +1103,244 @@
          "settings": {
             "fontStyle": "strikethrough"
          }
+      },
+      {
+         "name": "Markdown strong emphasis",
+         "scope": [
+            "markup.bold.markdown markup.italic.markdown",
+            "markup.italic.markdown markup.bold.markdown"
+         ],
+         "settings": {
+            "fontStyle": "bold italic"
+         }
+      },
+      {
+         "name": "Julia interpolation",
+         "scope": [
+            "variable.interpolation.julia"
+         ],
+         "settings": {
+            "foreground": "#009456"
+         }
+      },
+      {
+         "name": "Typst text",
+         "scope": [
+            "source.typst",
+            "source.typst-code"
+         ],
+         "settings": {
+            "foreground": "#0c006b"
+         }
+      },
+      {
+         "name": "Typst headings",
+         "scope": [
+            "markup.heading.typst"
+         ],
+         "settings": {
+            "foreground": "#0094f0",
+            "fontStyle": "bold"
+         }
+      },
+      {
+         "name": "Typst labels",
+         "scope": [
+            "string.other.label.typst"
+         ],
+         "settings": {
+            "foreground": "#a88c00"
+         }
+      },
+      {
+         "name": "Typst references",
+         "scope": [
+            "string.other.reference.typst",
+            "markup.other.reference.typst"
+         ],
+         "settings": {
+            "foreground": "#0094f0"
+         }
+      },
+      {
+         "name": "Typst raw",
+         "scope": [
+            "markup.raw.inline.typst",
+            "markup.raw.block.typst",
+            "markup.other.raw.typst"
+         ],
+         "settings": {
+            "foreground": "#00b368"
+         }
+      },
+      {
+         "name": "Typst math text",
+         "scope": [
+            "markup.math.typst"
+         ],
+         "settings": {
+            "foreground": "#00b368"
+         }
+      },
+      {
+         "name": "Typst math delimiters",
+         "scope": [
+            "punctuation.definition.string.begin.math.typst",
+            "punctuation.definition.string.end.math.typst",
+            "punctuation.definition.math.typst"
+         ],
+         "settings": {
+            "foreground": "#00b368"
+         }
+      },
+      {
+         "name": "Typst math operators",
+         "scope": [
+            "punctuation.math.operator.typst",
+            "keyword.operator.math.typst"
+         ],
+         "settings": {
+            "foreground": "#ff5792"
+         }
+      },
+      {
+         "name": "Typst math punctuation",
+         "scope": [
+            "markup.math.typst markup.content.brace.typst",
+            "markup.math.typst meta.brace.round.typst",
+            "markup.math.typst punctuation.separator.comma.typst"
+         ],
+         "settings": {
+            "foreground": "#0094f0"
+         }
+      },
+      {
+         "name": "Typst emphasis",
+         "scope": [
+            "markup.italic.typst"
+         ],
+         "settings": {
+            "fontStyle": "italic"
+         }
+      },
+      {
+         "name": "Typst strong",
+         "scope": [
+            "markup.bold.typst"
+         ],
+         "settings": {
+            "fontStyle": "bold"
+         }
+      },
+      {
+         "name": "Typst strong emphasis",
+         "scope": [
+            "markup.bold.typst markup.italic.typst",
+            "markup.italic.typst markup.bold.typst"
+         ],
+         "settings": {
+            "fontStyle": "bold italic"
+         }
       }
-   ]
+   ],
+   "semanticHighlighting": true,
+   "semanticTokenColors": {
+      "namespace": "#b3694d",
+      "type": "#b3694d",
+      "class": "#b3694d",
+      "interface": "#b3694d",
+      "struct": "#b3694d",
+      "enum": "#b3694d",
+      "typeParameter": "#b3694d",
+      "parameter": "#fa8900",
+      "variable": "#fa8900",
+      "property": "#b3694d",
+      "enumMember": "#a88c00",
+      "variable.readonly": "#a88c00",
+      "property.readonly": "#a88c00",
+      "function": "#0095a8",
+      "method": "#00bdd6",
+      "function.declaration": "#e64100",
+      "method.declaration": "#e64100",
+      "macro": "#0094f0",
+      "decorator": "#0094f0",
+      "comment": "#9995b7",
+      "string": "#00b368",
+      "number": "#5842ff",
+      "keyword": "#ff5792",
+      "operator": "#ff5792",
+      "regexp": "#009456",
+      "bool:typst": "#5842ff",
+      "punct:typst": "#0c006b",
+      "escape:typst": "#0094f0",
+      "link:typst": {
+         "foreground": "#0094f0",
+         "underline": true
+      },
+      "raw:typst": "#00b368",
+      "label:typst": "#a88c00",
+      "ref:typst": "#0094f0",
+      "heading:typst": {
+         "foreground": "#0094f0",
+         "bold": true
+      },
+      "marker:typst": "#ff5792",
+      "term:typst": {
+         "foreground": "#b3694d",
+         "bold": true
+      },
+      "delim:typst": "#0c006b",
+      "pol:typst": "#fa8900",
+      "error:typst": "#ff530f",
+      "text.math:typst": "#00b368",
+      "delim.math:typst": "#00b368",
+      "operator.math:typst": "#ff5792",
+      "punct.math:typst": "#0094f0",
+      "*.strong:typst": {
+         "bold": true
+      },
+      "*.emph:typst": {
+         "italic": true
+      },
+      "*.strong.emph:typst": {
+         "bold": true,
+         "italic": true
+      },
+      "bool:typst-code": "#5842ff",
+      "punct:typst-code": "#0c006b",
+      "escape:typst-code": "#0094f0",
+      "link:typst-code": {
+         "foreground": "#0094f0",
+         "underline": true
+      },
+      "raw:typst-code": "#00b368",
+      "label:typst-code": "#a88c00",
+      "ref:typst-code": "#0094f0",
+      "heading:typst-code": {
+         "foreground": "#0094f0",
+         "bold": true
+      },
+      "marker:typst-code": "#ff5792",
+      "term:typst-code": {
+         "foreground": "#b3694d",
+         "bold": true
+      },
+      "delim:typst-code": "#0c006b",
+      "pol:typst-code": "#fa8900",
+      "error:typst-code": "#ff530f",
+      "text.math:typst-code": "#00b368",
+      "delim.math:typst-code": "#00b368",
+      "operator.math:typst-code": "#ff5792",
+      "punct.math:typst-code": "#0094f0",
+      "*.strong:typst-code": {
+         "bold": true
+      },
+      "*.emph:typst-code": {
+         "italic": true
+      },
+      "*.strong.emph:typst-code": {
+         "bold": true,
+         "italic": true
+      }
+   }
 }

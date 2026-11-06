@@ -1,6 +1,10 @@
-.gitignore
-src/**/*
-palette.css
-JavaScript.js
-TypeScript.ts
-vscodecustom.css
+# Include only distributable theme resources.
+**
+!package.json
+!README.md
+!CHANGELOG.md
+!LICENSE.md
+!themes/**
+!images/[!._]*.png
+!images/color-previews/*.svg
+!images/noctis2.svg

@@ -1,3 +1,4 @@
+import type { TokenRule } from './types.js';
 export default [
     {
         name: "COMMENT",
@@ -819,4 +820,4 @@ export default [
             fontStyle: "strikethrough",
         },
     },
-];
+] satisfies TokenRule[];

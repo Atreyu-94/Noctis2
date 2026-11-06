@@ -1,5 +1,6 @@
-export default syntax => ({
-  name: "Noctis Bordo",
+import type { Theme, TokenRule } from '../types.js';
+export default (syntax: TokenRule[]): Theme => ({
+  name: "Noctis2 Bordo",
   type: "dark",
   colors: {
     // ---------------------------
@@ -23,7 +24,6 @@ export default syntax => ({
     // Activity Bar
     // ---------------------------
     "activityBar.background": "#322a2d",
-    "activityBar.dropBackground": "#bb778f65",
     "activityBar.border": "#1f191b",
     "activityBar.foreground": "#997582",
     "activityBar.inactiveForeground": "#99758277",
@@ -129,8 +129,8 @@ export default syntax => ({
     // Welcome Page
     // ---------------------------
     "walkThrough.embeddedEditorBackground": "#322a2d",
-    "welcomePage.buttonBackground": "#272022",
-    "welcomePage.buttonHoverBackground": "#413036",
+    "welcomePage.tileBackground": "#272022",
+    "welcomePage.tileHoverBackground": "#413036",
     // ---------------------------
     // Input Control
     // ---------------------------
@@ -184,8 +184,8 @@ export default syntax => ({
     "editor.rangeHighlightBackground": "#49d6e922",
     "editorLink.activeForeground": "#14a5ff",
     "editorWhitespace.foreground": "#ffccde21",
-    "editorIndentGuide.background": "#48373d",
-    "editorIndentGuide.activeBackground": "#7f5362",
+    "editorIndentGuide.background1": "#48373d",
+    "editorIndentGuide.activeBackground1": "#7f5362",
     "editorBracketMatch.background": "#99758222",
     "editorBracketMatch.border": "#997582",
     "editorRuler.foreground": "#593a46",

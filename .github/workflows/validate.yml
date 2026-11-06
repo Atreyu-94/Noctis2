@@ -1,0 +1,67 @@
+name: Validate and package themes
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+defaults:
+  run:
+    shell: pwsh
+jobs:
+  check:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
+        with:
+          node-version: '26.8.1'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npm audit --audit-level=moderate
+      - run: npm run check
+      - run: npm run build
+      - run: node scripts/audit-compatibility.mjs --strict
+      - run: git diff --exit-code -- themes
+
+  package:
+    needs: check
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          clean: true
+          persist-credentials: false
+      - name: Require a clean checkout
+        run: |
+          $status = git status --porcelain --untracked-files=all
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          if ($status) { throw 'Packaging requires a clean checkout.' }
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
+        with:
+          node-version: '26.8.1'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npm run check
+      - run: npm run build
+      - run: node scripts/audit-compatibility.mjs --strict
+      - name: Verify generated themes and tracked inputs
+        run: git diff --exit-code
+      - name: Package the VSIX candidate
+        run: npm run package:vsix -- --out "$env:RUNNER_TEMP/noctis2.vsix"
+      - name: Inspect packaged resources
+        run: npm run inspect:vsix -- "$env:RUNNER_TEMP/noctis2.vsix" "$env:RUNNER_TEMP/vsix-report.json"
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
+        with:
+          name: noctis2-vsix-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/noctis2.vsix
+            ${{ runner.temp }}/vsix-report.json
+          if-no-files-found: error
+          retention-days: 14

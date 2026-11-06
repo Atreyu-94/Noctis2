@@ -1,12 +1,17 @@
 {
-    "name": "noctis",
-    "displayName": "Noctis",
-    "description": "Noctis is a collection of light & dark themes with a well balanced blend of warm and cold colors",
-    "version": "10.43.3",
-    "publisher": "liviuschera",
-    "icon": "images/logo.png",
+    "name": "noctis2",
+    "displayName": "Noctis2",
+    "description": "11 light and dark themes with semantic highlighting and Typst/Julia refinements. An independent fork of Noctis by Liviu Schera.",
+    "version": "0.1.1",
+    "publisher": "atreyu-94",
+    "author": {
+        "name": "Atreyu-94",
+        "url": "https://github.com/Atreyu-94"
+    },
+    "license": "SEE LICENSE IN LICENSE.md",
+    "icon": "images/noctis2.png",
     "engines": {
-        "vscode": "^1.43.0"
+        "vscode": "^1.81.0"
     },
     "extensionKind": [
         "ui",
@@ -18,88 +23,110 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/liviuschera/noctis"
+        "url": "https://github.com/Atreyu-94/Noctis2.git"
     },
+    "homepage": "https://github.com/Atreyu-94/Noctis2#readme",
     "scripts": {
-        "build": "node src/build.mjs",
-        "release:major---": "npm run build && git add . && git commit -m 🆕10.0.0🆕 && npm version major & vsce publish && git push",
-        "release:minor": "npm run build && git add . && git commit -m 10.43.0 && npm version minor & vsce publish && git push",
-        "release:patch": "npm run build && git add . && git commit -m 10.43.3 && npm version patch & vsce publish && git push"
+        "typecheck": "tsc --noEmit",
+        "compile": "tsc",
+        "build": "npm run compile && node dist/build.js",
+        "test": "npm run compile && node --test tests/*.test.mjs",
+        "check": "npm run typecheck && npm test",
+        "audit:compatibility": "node scripts/audit-compatibility.mjs",
+        "inspect:tinymist": "node scripts/inspect-tinymist.mjs",
+        "test:languages": "npm run build && node scripts/validate-languages.mjs",
+        "package:vsix": "vsce package --no-dependencies",
+        "inspect:vsix": "node scripts/inspect-vsix.mjs"
     },
     "categories": [
-        "Themes",
-        "Other"
+        "Themes"
     ],
     "keywords": [
+        "noctis2",
         "noctis",
-        "blue",
-        "azure",
         "semantic",
-        "italic",
-        "bold"
+        "typst",
+        "tinymist",
+        "julia",
+        "dark",
+        "light"
     ],
     "contributes": {
         "themes": [
             {
-                "label": "Noctis Lux",
+                "label": "Noctis2 Lux",
                 "uiTheme": "vs",
                 "path": "./themes/lux.json"
             },
             {
-                "label": "Noctis Hibernus",
+                "label": "Noctis2 Hibernus",
                 "uiTheme": "vs",
                 "path": "./themes/hibernus.json"
             },
             {
-                "label": "Noctis Lilac",
+                "label": "Noctis2 Lilac",
                 "uiTheme": "vs",
                 "path": "./themes/lilac.json"
             },
             {
-                "label": "Noctis",
+                "label": "Noctis2",
                 "uiTheme": "vs-dark",
                 "path": "./themes/noctis.json"
             },
             {
-                "label": "Noctis Azureus",
+                "label": "Noctis2 Azureus",
                 "uiTheme": "vs-dark",
                 "path": "./themes/azureus.json"
             },
             {
-                "label": "Noctis Bordo",
+                "label": "Noctis2 Bordo",
                 "uiTheme": "vs-dark",
                 "path": "./themes/bordo.json"
             },
             {
-                "label": "Noctis Obscuro",
+                "label": "Noctis2 Obscuro",
                 "uiTheme": "vs-dark",
                 "path": "./themes/obscuro.json"
             },
             {
-                "label": "Noctis Sereno",
+                "label": "Noctis2 Sereno",
                 "uiTheme": "vs-dark",
                 "path": "./themes/sereno.json"
             },
             {
-                "label": "Noctis Uva",
+                "label": "Noctis2 Uva",
                 "uiTheme": "vs-dark",
                 "path": "./themes/uva.json"
             },
             {
-                "label": "Noctis Viola",
+                "label": "Noctis2 Viola",
                 "uiTheme": "vs-dark",
                 "path": "./themes/viola.json"
             },
             {
-                "label": "Noctis Minimus",
+                "label": "Noctis2 Minimus",
                 "uiTheme": "vs-dark",
                 "path": "./themes/minimus.json"
             }
         ]
     },
-    "__metadata": {
-        "id": "d4e2a48f-0b88-4540-92c5-a4ab4dd2c813",
-        "publisherId": "676e5383-8870-48a9-80bb-67ae23e9228c",
-        "publisherDisplayName": "Liviu Schera"
+    "type": "module",
+    "overrides": {
+        "@vscode/vsce": {
+            "minimatch": "11.0.1"
+        },
+        "@azure/identity": {
+            "@azure/msal-node": "7.1.0"
+        }
+    },
+    "devDependencies": {
+        "@types/node": "26.6.5",
+        "@vscode/vsce": "4.0.0",
+        "sax": "1.6.1",
+        "typescript": "7.0.2",
+        "vscode-oniguruma": "2.0.1",
+        "vscode-textmate": "9.3.2",
+        "yauzl": "3.4.0",
+        "yazl": "2.5.1"
     }
 }

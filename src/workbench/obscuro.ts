@@ -1,5 +1,6 @@
-export default (syntax) => ({
-  name: "Noctis Obscuro",
+import type { Theme, TokenRule } from '../types.js';
+export default (syntax: TokenRule[]): Theme => ({
+  name: "Noctis2 Obscuro",
   type: "dark",
   colors: {
     // ---------------------------
@@ -23,7 +24,6 @@ export default (syntax) => ({
     // Activity Bar
     // ---------------------------
     "activityBar.background": "#031417",
-    "activityBar.dropBackground": "#929ea065",
     "activityBar.border": "#0f1415",
     "activityBar.foreground": "#169fb1",
     "activityBar.inactiveForeground": "#169fb177",
@@ -129,8 +129,8 @@ export default (syntax) => ({
     // Welcome Page
     // ---------------------------
     "walkThrough.embeddedEditorBackground": "#031417",
-    "welcomePage.buttonBackground": "#052529",
-    "welcomePage.buttonHoverBackground": "#062e32",
+    "welcomePage.tileBackground": "#052529",
+    "welcomePage.tileHoverBackground": "#062e32",
     // ---------------------------
     // Input Control
     // ---------------------------
@@ -184,8 +184,8 @@ export default (syntax) => ({
     "editor.rangeHighlightBackground": "#083d44a1",
     "editorLink.activeForeground": "#14a5ff",
     "editorWhitespace.foreground": "#ffffff21",
-    "editorIndentGuide.background": "#223b3f",
-    "editorIndentGuide.activeBackground": "#3e6f74",
+    "editorIndentGuide.background1": "#223b3f",
+    "editorIndentGuide.activeBackground1": "#3e6f74",
     "editorBracketMatch.background": "#169fb122",
     "editorBracketMatch.border": "#169fb1",
     "editorRuler.foreground": "#243f42",

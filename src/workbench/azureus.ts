@@ -1,5 +1,6 @@
-export default syntax => ({
-  name: "Noctis Azureus",
+import type { Theme, TokenRule } from '../types.js';
+export default (syntax: TokenRule[]): Theme => ({
+  name: "Noctis2 Azureus",
   type: "dark",
   colors: {
     // ---------------------------
@@ -23,7 +24,6 @@ export default syntax => ({
     // Activity Bar
     // ---------------------------
     "activityBar.background": "#07273b",
-    "activityBar.dropBackground": "#61a6d165",
     "activityBar.border": "#0f1315",
     "activityBar.foreground": "#1679b6",
     "activityBar.inactiveForeground": "#1679b677",
@@ -129,8 +129,8 @@ export default syntax => ({
     // Welcome Page
     // ---------------------------
     "walkThrough.embeddedEditorBackground": "#07273b",
-    "welcomePage.buttonBackground": "#051b29",
-    "welcomePage.buttonHoverBackground": "#09334e",
+    "welcomePage.tileBackground": "#051b29",
+    "welcomePage.tileHoverBackground": "#09334e",
     // ---------------------------
     // Input Control
     // ---------------------------
@@ -184,8 +184,8 @@ export default syntax => ({
     "editor.rangeHighlightBackground": "#49d6e922",
     "editorLink.activeForeground": "#14a5ff",
     "editorWhitespace.foreground": "#ffffff21",
-    "editorIndentGuide.background": "#183c53",
-    "editorIndentGuide.activeBackground": "#28658a",
+    "editorIndentGuide.background1": "#183c53",
+    "editorIndentGuide.activeBackground1": "#28658a",
     "editorBracketMatch.background": "#1679b622",
     "editorBracketMatch.border": "#1679b6",
     "editorRuler.foreground": "#1a425b",

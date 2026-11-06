@@ -1,5 +1,6 @@
-export default syntax => ({
-  name: "Noctis Hibernus",
+import type { Theme, TokenRule } from '../types.js';
+export default (syntax: TokenRule[]): Theme => ({
+  name: "Noctis2 Hibernus",
   type: "light",
   colors: {
     // ---------------------------
@@ -23,7 +24,6 @@ export default syntax => ({
     // Activity Bar
     // ---------------------------
     "activityBar.background": "#f4f6f6",
-    "activityBar.dropBackground": "#0099ad65",
     "activityBar.foreground": "#0099ad",
     "activityBar.border": "#ece2c600",
     "activityBarBadge.background": "#0099ad",
@@ -127,8 +127,8 @@ export default syntax => ({
     // Welcome Page
     // ---------------------------
     "walkThrough.embeddedEditorBackground": "#e7f2f3",
-    "welcomePage.buttonBackground": "#e7f2f3",
-    "welcomePage.buttonHoverBackground": "#caedf2",
+    "welcomePage.tileBackground": "#e7f2f3",
+    "welcomePage.tileHoverBackground": "#caedf2",
     // ---------------------------
     // Input Control
     // ---------------------------
@@ -185,8 +185,8 @@ export default syntax => ({
     "editor.rangeHighlightBackground": "#f1e9d5a1",
     "editorLink.activeForeground": "#14a5ff",
     "editorWhitespace.foreground": "#c1d4d7bb",
-    "editorIndentGuide.background": "#c1d4d7aa",
-    "editorIndentGuide.activeBackground": "#88bcc3",
+    "editorIndentGuide.background1": "#c1d4d7aa",
+    "editorIndentGuide.activeBackground1": "#88bcc3",
     "editorBracketMatch.background": "#0099ad20",
     "editorBracketMatch.border": "#0099ad",
     "editorRuler.foreground": "#d0edf1",

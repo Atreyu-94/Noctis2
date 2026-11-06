@@ -1,6 +1,7 @@
-export default (syntax) => ({
-  name: "Noctis Lilac",
-  type: "dark",
+import type { Theme, TokenRule } from '../types.js';
+export default (syntax: TokenRule[]): Theme => ({
+  name: "Noctis2 Lilac",
+  type: "light",
   colors: {
     // ---------------------------
     // Editor Base Colors
@@ -23,7 +24,6 @@ export default (syntax) => ({
     // Activity Bar
     // ---------------------------
     "activityBar.background": "#f2f1f8",
-    "activityBar.dropBackground": "#7060eb65",
     "activityBar.foreground": "#7060eb",
     "activityBar.border": "#ece2c600",
     "activityBarBadge.background": "#7060eb",
@@ -127,8 +127,8 @@ export default (syntax) => ({
     // Welcome Page
     // ---------------------------
     "walkThrough.embeddedEditorBackground": "#edecf8",
-    "welcomePage.buttonBackground": "#edecf8",
-    "welcomePage.buttonHoverBackground": "#e2dff6",
+    "welcomePage.tileBackground": "#edecf8",
+    "welcomePage.tileHoverBackground": "#e2dff6",
     // ---------------------------
     // Input Control
     // ---------------------------
@@ -139,7 +139,7 @@ export default (syntax) => ({
     "inputOption.activeBorder": "#7060eb",
     "inputValidation.errorBackground": "#ff400041",
     "inputValidation.errorBorder": "#ff4000",
-    "inputValidation.infoBackground": "#00c6ea599ff",
+    "inputValidation.infoBackground": "#dedbf5",
     "inputValidation.infoBorder": "#00c6e0",
     "inputValidation.warningBackground": "#ffa587cc",
     "inputValidation.warningBorder": "#ffa487",
@@ -185,8 +185,8 @@ export default (syntax) => ({
     "editor.rangeHighlightBackground": "#f1e9d5a1",
     "editorLink.activeForeground": "#14a5ff",
     "editorWhitespace.foreground": "#c3c1d7bb",
-    "editorIndentGuide.background": "#c3c1d7aa",
-    "editorIndentGuide.activeBackground": "#9f99cc",
+    "editorIndentGuide.background1": "#c3c1d7aa",
+    "editorIndentGuide.activeBackground1": "#9f99cc",
     "editorBracketMatch.background": "#7060eb20",
     "editorBracketMatch.border": "#7060eb",
     "editorRuler.foreground": "#d4d0f1",
