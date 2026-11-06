@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="images/noctis2.svg">
+    <img src="images/noctis2.png" alt="Noctis2 artwork" width="256" height="256">
+  </a>
+</p>
+
 # Noctis2
 
 An independent fork of [Noctis](https://github.com/liviuschera/noctis). Thank you to **Liviu Schera and the upstream contributors** for the original themes, palettes and artwork that make this fork possible.
