@@ -1,6 +1,13 @@
 # Changelog
 
-## 0.1.0 (unreleased)
+## 0.1.1 (unreleased)
+
+- Update the packaging dependency to fix the minimatch denial-of-service advisory GHSA-g3hv-75wg-m249.
+- Pin CI actions to immutable commits and check dependencies for known vulnerabilities.
+- Bound VSIX inspection memory usage and validate XML identity structurally, rejecting ambiguous identities and DTDs.
+- Add regression tests for malformed and oversized packages. Theme colors and visual assets are unchanged.
+
+## 0.1.0
 
 - Establish the independent `atreyu-94.noctis2` identity.
 - Migrate the generator to TypeScript; add semantic highlighting and Typst/Julia refinements while preserving all 11 palettes.
