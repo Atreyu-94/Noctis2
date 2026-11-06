@@ -51,4 +51,4 @@ AI tools have assisted with code, documentation and validation work in this fork
 
 ## License and credits
 
-[MIT](LICENSE.md), retaining **Copyright (c) 2018 Liviu Schera** and the original license terms. Original artwork is retained. See the [upstream project](https://github.com/liviuschera/noctis) for its contributors and history.
+[MIT](LICENSE.md), retaining **Copyright (c) 2018 Liviu Schera** and the original license terms. Original artwork is retained; the Noctis2 icon adapts its palette and orbital motif with a distinctive 2. See the [upstream project](https://github.com/liviuschera/noctis) for its contributors and history.

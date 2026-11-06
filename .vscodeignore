@@ -7,3 +7,4 @@
 !themes/**
 !images/[!._]*.png
 !images/color-previews/*.svg
+!images/noctis2.svg

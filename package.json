@@ -9,7 +9,7 @@
         "url": "https://github.com/Atreyu-94"
     },
     "license": "SEE LICENSE IN LICENSE.md",
-    "icon": "images/logo.png",
+    "icon": "images/noctis2.png",
     "engines": {
         "vscode": "^1.81.0"
     },
