@@ -1,7 +1,7 @@
 {
     "name": "noctis2",
     "displayName": "Noctis2",
-    "description": "Personal fork of Noctis by Liviu Schera, preserving 11 palettes with semantic highlighting and Typst/Julia refinements.",
+    "description": "11 light and dark themes with semantic highlighting and Typst/Julia refinements. An independent fork of Noctis by Liviu Schera.",
     "version": "0.1.0",
     "publisher": "atreyu-94",
     "author": {
