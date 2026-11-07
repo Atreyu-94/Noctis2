@@ -51,6 +51,23 @@ npm run package:vsix -- --out noctis2.vsix
 
 Edit `src/` and rebuild to regenerate `themes/`. See [CHANGELOG.md](CHANGELOG.md) for changes.
 
+## Publishing releases
+
+Publishing a stable GitHub release in `Atreyu-94/Noctis2` triggers `.github/workflows/publish.yml`.
+The tag must be `vX.Y.Z`, match `package.json`, and point to a commit already merged into `master` with successful validation CI.
+Attach that CI run's exact VSIX as `noctis2-X.Y.Z.vsix` and its unchanged `vsix-report.json` to the draft release **before** publishing it.
+The workflow compares both attachments against the CI artifacts, verifies SHA-256 and inspects the package against the tagged sources. It does not rebuild the VSIX.
+CI artifacts must still be available (currently 14 days); an expired or missing artifact stops publication.
+
+Marketplace uses Trusted Publishing for owner `Atreyu-94`, repository `Noctis2`, workflow `publish.yml`, with no environment. No PAT is required.
+Open VSX stays disabled unless the repository variable `OPENVSX_PUBLISH_ENABLED` is exactly `true`.
+Enable it only after namespace ownership is verified and an Open VSX trusted publisher for `atreyu-94.noctis2` authorizes the same repository and workflow, without an environment.
+
+For verification or recovery, run **Publish verified release** manually on `master` with the existing release tag.
+The default only verifies the attachments; select `publish` to publish them. Both destinations use the same verified artifact and skip an already-published version on retries.
+They run independently, so a failure in one registry does not prevent the other from publishing. Re-run failed jobs after resolving the cause.
+GitHub releases created by another workflow using `GITHUB_TOKEN` do not trigger this release workflow; use its explicit dispatch in that automation instead.
+
 ## AI assistance
 
 AI tools have assisted with code, documentation and validation work in this fork. The maintainer makes every effort to keep it working correctly, but errors may remain. The software is provided "as is", without warranty, under the MIT license; users are responsible for assessing its suitability and use it at their own risk. This disclosure applies only to Noctis2, not the original Noctis project.

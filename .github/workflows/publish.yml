@@ -1,0 +1,101 @@
+name: Publish verified release
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing stable release tag (vX.Y.Z)
+        required: true
+        type: string
+      publish:
+        description: Publish after verification (false only verifies the assets)
+        default: false
+        type: boolean
+permissions:
+  contents: read
+concurrency:
+  group: publish-${{ github.event.release.tag_name || inputs.tag }}
+  cancel-in-progress: false
+defaults:
+  run:
+    shell: pwsh
+jobs:
+  verify:
+    if: github.repository == 'Atreyu-94/Noctis2' && (github.event_name == 'release' || github.ref == 'refs/heads/master')
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      actions: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
+        with:
+          node-version: '26.8.1'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - name: Verify release against successful CI and tagged sources
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ github.event.release.tag_name || inputs.tag }}
+        run: node scripts/verify-release.mjs "$env:RELEASE_TAG" "$env:RUNNER_TEMP/verified"
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
+        with:
+          name: verified-release
+          path: |
+            ${{ runner.temp }}/verified/noctis2.vsix
+            ${{ runner.temp }}/verified/vsix-report.json
+          if-no-files-found: error
+          retention-days: 14
+
+  marketplace:
+    needs: verify
+    if: github.event_name == 'release' || inputs.publish
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
+        with:
+          node-version: '26.8.1'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8
+        with:
+          name: verified-release
+          path: ${{ runner.temp }}/publish
+      - name: Publish exact VSIX using Marketplace OIDC
+        run: npx --no-install vsce publish --oidc --packagePath "$env:RUNNER_TEMP/publish/noctis2.vsix" --skip-duplicate
+
+  openvsx:
+    needs: verify
+    if: vars.OPENVSX_PUBLISH_ENABLED == 'true' && (github.event_name == 'release' || inputs.publish)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
+        with:
+          node-version: '26.8.1'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8
+        with:
+          name: verified-release
+          path: ${{ runner.temp }}/publish
+      - name: Publish exact VSIX using Open VSX trusted publishing
+        run: npx --no-install ovsx publish "$env:RUNNER_TEMP/publish/noctis2.vsix" --trusted-publishing --skip-duplicate
