@@ -1,0 +1,14 @@
+// Indented Sass with nested selectors and a reusable mixin.
+$accent: #49e9a6
+$spacing: 1.25rem
+@mixin panel($padding)
+  padding: $padding
+  border: 1px solid $accent
+.observations
+  @include panel($spacing)
+  display: grid
+  gap: $spacing
+  &__target
+    color: $accent
+    &:hover
+      text-decoration: underline

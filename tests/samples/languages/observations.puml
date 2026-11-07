@@ -1,0 +1,17 @@
+@startuml
+' Sequence diagram for a fictional calibration service.
+title Nightly observation report
+actor Observer
+participant "Observation store" as Store
+participant Calibrator
+Observer -> Store: load("Vega")
+activate Store
+Store --> Observer: exposure = 12.5
+deactivate Store
+Observer -> Calibrator: calibrate(12.5, 1.5)
+alt positive exposure
+  Calibrator --> Observer: 18.75
+else invalid measurement
+  Calibrator --> Observer: error
+end
+@enduml

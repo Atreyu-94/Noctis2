@@ -1,0 +1,19 @@
+= Observatory report
+:toc:
+:author: Night crew
+
+// Compare prose, attributes, links, tables and fenced code.
+== Calibration
+The *Vega* exposure is _12.5 seconds_; use `scale = 1.5`.
+See https://example.org[the observing guide].
+
+|===
+|Target |Exposure
+|Vega |12.5
+|Rigel |8.0
+|===
+
+[source,python]
+----
+total = sum(value * 1.5 for value in [12.5, 8.0])
+----

@@ -1,0 +1,13 @@
+{{! Render observations with escaped values and branch helpers. }}
+<section class="observations">
+  <h1>{{title}}</h1>
+  {{#if observations}}
+    <ul>
+    {{#each observations}}
+      <li data-index="{{@index}}">
+        <strong>{{this.target}}</strong>: {{this.exposure}}s
+      </li>
+    {{/each}}
+    </ul>
+  {{else}}<p>No observations yet.</p>{{/if}}
+</section>

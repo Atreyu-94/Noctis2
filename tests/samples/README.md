@@ -2,14 +2,23 @@
 
 Open `languages/` in VS Code, Zed or Neovim and compare the same source files
 across all eleven Noctis2 variants. These fictional observatory examples combine
-meaningful code and documents with varied syntax. They require no network access
-or downloaded data and contain no deliberately broken syntax.
+meaningful code and documents with varied syntax. The 62 files cover the 61
+language/dialect cases in Noctis's original support list plus Typst. No sample
+fetches external data. Some examples need their language toolchain, framework
+or template host to execute; they are highlighting fixtures, not a universal
+compilation suite. Configuration files are examples, not deployment instructions.
 
 `catalog.json` is the shared list of language IDs, filenames and covered syntax.
-All three ports' language tests use it to locate samples. It contains no expected
+All three ports' language tests use it to locate their selected samples. It contains no expected
 colors: native scopes/captures and assertions belong to each editor's tests,
 and expected colors come from the core. Adding a sample does not establish
 support in every grammar, language server or editor.
+
+The table below describes the original eight-file cross-editor matrix. The
+catalogue additionally inventories C/C++, .NET, JVM, functional languages,
+web templates/styles, configuration formats and the other original Noctis
+languages. Neovim and Zed currently test those original eight samples only;
+the expanded compatibility matrix belongs to the VS Code port.
 
 | File | Purpose | Optional execution |
 | --- | --- | --- |

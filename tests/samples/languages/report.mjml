@@ -1,0 +1,15 @@
+<mjml>
+  <!-- Responsive email fixture; compile using MJML tooling. -->
+  <mj-head>
+    <mj-title>Nightly observation report</mj-title>
+    <mj-attributes><mj-text font-family="sans-serif" color="#052529" /></mj-attributes>
+  </mj-head>
+  <mj-body background-color="#f8f8f8">
+    <mj-section><mj-column>
+      <mj-text font-size="24px"><strong>Vega &amp; Rigel</strong></mj-text>
+      <mj-divider border-color="#49e9a6" />
+      <mj-text>Total exposure: <em>30.75 seconds</em>.</mj-text>
+      <mj-button href="https://example.org">Open report</mj-button>
+    </mj-column></mj-section>
+  </mj-body>
+</mjml>

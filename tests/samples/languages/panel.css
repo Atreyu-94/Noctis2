@@ -1,0 +1,13 @@
+/* Observatory dashboard, including responsive and interaction states. */
+:root { --accent: #49e9a6; --spacing: 1.25rem; }
+.observations {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: var(--spacing);
+  color: var(--accent);
+}
+.observations > article[data-active="true"]::before { content: "★ "; }
+button:hover, button:focus-visible { outline: 2px solid currentColor; }
+@media (max-width: 40rem) {
+  .observations { grid-template-columns: 1fr; }
+}

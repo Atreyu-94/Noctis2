@@ -1,0 +1,13 @@
+<%# Render a supplied observations array. %>
+<section class="observations">
+  <h1><%= title %></h1>
+  <% if (observations.length > 0) { %>
+    <ul>
+    <% observations.forEach((item, index) => { %>
+      <li data-index="<%= index %>">
+        <strong><%= item.target %></strong>: <%= item.exposure.toFixed(2) %>s
+      </li>
+    <% }); %>
+    </ul>
+  <% } else { %><p>No observations yet.</p><% } %>
+</section>

@@ -8,7 +8,7 @@ for (const [language, entry] of Object.entries(catalog)) {
   assert.match(language, /^[a-z]+$/);
   assert.ok(entry && typeof entry === 'object');
   assert.equal(typeof entry.file, 'string');
-  assert.match(entry.file, /^[a-z][a-z-]*\.[a-z]+$/);
+  assert.match(entry.file, /^[a-z][a-z-]*(?:\.[a-z][a-z0-9]*)+$/);
   assert.ok(Array.isArray(entry.features) && entry.features.length > 0);
   assert.ok(entry.features.every(value => typeof value === 'string' && value.length > 0));
 }

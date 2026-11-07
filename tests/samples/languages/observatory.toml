@@ -1,0 +1,14 @@
+# Nested configuration with dates, arrays and inline tables.
+title = "Noctis2 observatory"
+night = 2026-11-06T20:00:00Z
+[calibration]
+scale = 1.5
+enabled = true
+bands = ["visible", "infrared"]
+limits = { minimum = 0, maximum = 120 }
+[[observations]]
+target = "Vega"
+exposure = 12.5
+[[observations]]
+target = "Rigel"
+exposure = 8.0

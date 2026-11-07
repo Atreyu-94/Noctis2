@@ -100,7 +100,8 @@ def style_for(syntax, capture):
 
 report = {'engine': 'tree-sitter-0.25.2-with-zed-queries', 'zedRuntime': False,
           'lockSha256': inputs['lockSha256'], 'results': [], 'injectionGaps': {}, 'parseErrors': {}}
-for language, sample in catalog.items():
+for language in expectations:
+    sample = catalog[language]
     source = (ROOT / 'tests/samples/languages' / sample['file']).read_bytes()
     found, gaps, errors = captures(language, source)
     report['injectionGaps'][language] = gaps

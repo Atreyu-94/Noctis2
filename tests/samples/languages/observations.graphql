@@ -1,0 +1,15 @@
+# Query document with variables, aliases, directives and fragments.
+query NightlyReport($night: ID!, $includeNotes: Boolean! = true) {
+  session(id: $night) {
+    id
+    targets: observations(limit: 20) {
+      ...Measurement
+      notes @include(if: $includeNotes)
+    }
+  }
+}
+fragment Measurement on Observation {
+  target
+  exposure
+  calibrated(scale: 1.5)
+}

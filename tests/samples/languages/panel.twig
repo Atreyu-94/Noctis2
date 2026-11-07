@@ -1,0 +1,12 @@
+{# Twig fixture: values are supplied by a host application. #}
+<section class="observations">
+  <h1>{{ title|default('Tonight') }}</h1>
+  {% for item in observations %}
+    {% if item.exposure > 0 %}
+      <article class="target" data-index="{{ loop.index }}">
+        <strong>{{ item.target|escape }}</strong>
+        <span>{{ (item.exposure * 1.5)|number_format(2) }} seconds</span>
+      </article>
+    {% endif %}
+  {% else %}<p>No observations yet.</p>{% endfor %}
+</section>

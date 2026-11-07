@@ -21,7 +21,8 @@ local function position(lines, probe)
   return rows[1] - 1, col - 1
 end
 
-for language, sample in pairs(catalog) do
+for language in pairs(expectations) do
+  local sample = assert(catalog[language], language .. ': missing sample')
   local filetype = language == 'tsx' and 'typescriptreact' or language
   vim.cmd.edit(vim.fn.fnameescape(root .. '/tests/samples/languages/' .. sample.file))
   local buf = vim.api.nvim_get_current_buf()

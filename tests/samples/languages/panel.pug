@@ -1,0 +1,15 @@
+//- Indentation, attributes and embedded JavaScript expressions.
+doctype html
+html(lang="en")
+  head
+    title= title
+  body
+    main.observations
+      h1 Tonight's observations
+      if observations.length
+        each item, index in observations
+          article.target(data-index=index)
+            strong= item.target
+            span #{item.exposure.toFixed(2)} seconds
+      else
+        p No observations yet.

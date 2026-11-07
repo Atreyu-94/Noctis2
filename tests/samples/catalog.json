@@ -1,10 +1,580 @@
 {
-  "python": { "file": "simulation.py", "features": ["decorators", "types", "classes", "interpolation", "exceptions", "comprehensions"] },
-  "julia": { "file": "analysis.jl", "features": ["parametric types", "macros", "broadcasting", "symbols", "matrices", "docstrings"] },
-  "typescript": { "file": "catalog.ts", "features": ["generics", "interfaces", "enums", "classes", "unions", "regex", "optional chaining"] },
-  "tsx": { "file": "components.tsx", "features": ["JSX tags", "attributes", "entities", "embedded expressions", "JSX comments"] },
-  "typst": { "file": "report.typ", "features": ["math", "references", "labels", "emphasis", "tables", "code", "raw blocks"] },
-  "markdown": { "file": "notes.md", "features": ["headings", "nested emphasis", "code fences", "tables", "HTML", "links", "lists"] },
-  "json": { "file": "observatory.json", "features": ["objects", "arrays", "null", "booleans", "exponents", "escapes", "Unicode"] },
-  "lua": { "file": "configuration.lua", "features": ["tables", "metatables", "methods", "closures", "annotations", "long strings", "patterns"] }
+  "python": {
+    "file": "simulation.py",
+    "features": [
+      "decorators",
+      "types",
+      "classes",
+      "interpolation",
+      "exceptions",
+      "comprehensions"
+    ]
+  },
+  "julia": {
+    "file": "analysis.jl",
+    "features": [
+      "parametric types",
+      "macros",
+      "broadcasting",
+      "symbols",
+      "matrices",
+      "docstrings"
+    ]
+  },
+  "typescript": {
+    "file": "catalog.ts",
+    "features": [
+      "generics",
+      "interfaces",
+      "enums",
+      "classes",
+      "unions",
+      "regex",
+      "optional chaining"
+    ]
+  },
+  "tsx": {
+    "file": "components.tsx",
+    "features": [
+      "JSX tags",
+      "attributes",
+      "entities",
+      "embedded expressions",
+      "JSX comments"
+    ]
+  },
+  "typst": {
+    "file": "report.typ",
+    "features": [
+      "math",
+      "references",
+      "labels",
+      "emphasis",
+      "tables",
+      "code",
+      "raw blocks"
+    ]
+  },
+  "markdown": {
+    "file": "notes.md",
+    "features": [
+      "headings",
+      "nested emphasis",
+      "code fences",
+      "tables",
+      "HTML",
+      "links",
+      "lists"
+    ]
+  },
+  "json": {
+    "file": "observatory.json",
+    "features": [
+      "objects",
+      "arrays",
+      "null",
+      "booleans",
+      "exponents",
+      "escapes",
+      "Unicode"
+    ]
+  },
+  "lua": {
+    "file": "configuration.lua",
+    "features": [
+      "tables",
+      "metatables",
+      "methods",
+      "closures",
+      "annotations",
+      "long strings",
+      "patterns"
+    ]
+  },
+  "apex": {
+    "file": "observations.cls",
+    "features": [
+      "classes",
+      "fields",
+      "generics",
+      "loops"
+    ]
+  },
+  "c": {
+    "file": "observations.c",
+    "features": [
+      "preprocessor",
+      "pointers",
+      "structs",
+      "format strings"
+    ]
+  },
+  "cpp": {
+    "file": "observations.cpp",
+    "features": [
+      "templates",
+      "lambdas",
+      "references",
+      "containers"
+    ]
+  },
+  "csharp": {
+    "file": "observations.cs",
+    "features": [
+      "records",
+      "LINQ",
+      "interpolation",
+      "types"
+    ]
+  },
+  "clojure": {
+    "file": "observations.clj",
+    "features": [
+      "keywords",
+      "maps",
+      "macros",
+      "anonymous functions"
+    ]
+  },
+  "coffeescript": {
+    "file": "observations.coffee",
+    "features": [
+      "classes",
+      "comprehensions",
+      "interpolation",
+      "closures"
+    ]
+  },
+  "crystal": {
+    "file": "observations.cr",
+    "features": [
+      "records",
+      "types",
+      "blocks",
+      "interpolation"
+    ]
+  },
+  "css": {
+    "file": "panel.css",
+    "features": [
+      "custom properties",
+      "selectors",
+      "pseudo-elements",
+      "media queries"
+    ]
+  },
+  "sass": {
+    "file": "panel.sass",
+    "features": [
+      "variables",
+      "mixins",
+      "nesting",
+      "indentation"
+    ]
+  },
+  "scss": {
+    "file": "panel.scss",
+    "features": [
+      "variables",
+      "mixins",
+      "nesting",
+      "selectors"
+    ]
+  },
+  "gherkin": {
+    "file": "observations.feature",
+    "features": [
+      "tags",
+      "steps",
+      "examples",
+      "placeholders"
+    ]
+  },
+  "dart": {
+    "file": "observations.dart",
+    "features": [
+      "classes",
+      "named arguments",
+      "lambdas",
+      "interpolation"
+    ]
+  },
+  "elm": {
+    "file": "observations.elm",
+    "features": [
+      "types",
+      "pipelines",
+      "lambdas",
+      "imports"
+    ]
+  },
+  "elixir": {
+    "file": "observations.ex",
+    "features": [
+      "modules",
+      "atoms",
+      "pipelines",
+      "captures"
+    ]
+  },
+  "erlang": {
+    "file": "observatory.erl",
+    "features": [
+      "macros",
+      "guards",
+      "tuples",
+      "binaries"
+    ]
+  },
+  "fsharp": {
+    "file": "observations.fs",
+    "features": [
+      "records",
+      "pipelines",
+      "lists",
+      "format strings"
+    ]
+  },
+  "go": {
+    "file": "observations.go",
+    "features": [
+      "structs",
+      "slices",
+      "loops",
+      "format strings"
+    ]
+  },
+  "graphql": {
+    "file": "observations.graphql",
+    "features": [
+      "variables",
+      "aliases",
+      "directives",
+      "fragments"
+    ]
+  },
+  "groovy": {
+    "file": "observations.groovy",
+    "features": [
+      "closures",
+      "maps",
+      "interpolation",
+      "assertions"
+    ]
+  },
+  "haskell": {
+    "file": "observations.hs",
+    "features": [
+      "records",
+      "types",
+      "patterns",
+      "comprehensions"
+    ]
+  },
+  "hlsl": {
+    "file": "observations.hlsl",
+    "features": [
+      "buffers",
+      "semantics",
+      "resources",
+      "vector operations"
+    ]
+  },
+  "html": {
+    "file": "panel.html",
+    "features": [
+      "tags",
+      "attributes",
+      "entities",
+      "embedded CSS and JS"
+    ]
+  },
+  "ejs": {
+    "file": "panel.ejs",
+    "features": [
+      "HTML",
+      "embedded JavaScript",
+      "escaped output",
+      "comments"
+    ]
+  },
+  "handlebars": {
+    "file": "panel.hbs",
+    "features": [
+      "helpers",
+      "blocks",
+      "paths",
+      "HTML"
+    ]
+  },
+  "pug": {
+    "file": "panel.pug",
+    "features": [
+      "indentation",
+      "attributes",
+      "iteration",
+      "interpolation"
+    ]
+  },
+  "java": {
+    "file": "observations.java",
+    "features": [
+      "records",
+      "generics",
+      "streams",
+      "lambdas"
+    ]
+  },
+  "javascript": {
+    "file": "observations.js",
+    "features": [
+      "classes",
+      "private fields",
+      "destructuring",
+      "interpolation"
+    ]
+  },
+  "jsx": {
+    "file": "panel.jsx",
+    "features": [
+      "components",
+      "attributes",
+      "expressions",
+      "JSX comments"
+    ]
+  },
+  "kotlin": {
+    "file": "observations.kt",
+    "features": [
+      "data classes",
+      "lambdas",
+      "nullable access",
+      "interpolation"
+    ]
+  },
+  "asciidoc": {
+    "file": "report.adoc",
+    "features": [
+      "headings",
+      "attributes",
+      "tables",
+      "source blocks"
+    ]
+  },
+  "latex": {
+    "file": "report.tex",
+    "features": [
+      "commands",
+      "environments",
+      "math",
+      "references"
+    ]
+  },
+  "mjml": {
+    "file": "report.mjml",
+    "features": [
+      "components",
+      "attributes",
+      "HTML",
+      "entities"
+    ]
+  },
+  "nim": {
+    "file": "observations.nim",
+    "features": [
+      "objects",
+      "procedures",
+      "macros",
+      "interpolation"
+    ]
+  },
+  "objectivec": {
+    "file": "observations.m",
+    "features": [
+      "directives",
+      "messages",
+      "literals",
+      "boxed values"
+    ]
+  },
+  "ocaml": {
+    "file": "observations.ml",
+    "features": [
+      "records",
+      "optional arguments",
+      "pipelines",
+      "format strings"
+    ]
+  },
+  "php": {
+    "file": "observations.php",
+    "features": [
+      "typed properties",
+      "closures",
+      "interpolation",
+      "arrays"
+    ]
+  },
+  "blade": {
+    "file": "panel.blade.php",
+    "features": [
+      "directives",
+      "PHP expressions",
+      "HTML",
+      "comments"
+    ]
+  },
+  "twig": {
+    "file": "panel.twig",
+    "features": [
+      "filters",
+      "loops",
+      "conditions",
+      "HTML"
+    ]
+  },
+  "plantuml": {
+    "file": "observations.puml",
+    "features": [
+      "participants",
+      "arrows",
+      "alternatives",
+      "comments"
+    ]
+  },
+  "powershell": {
+    "file": "observations.ps1",
+    "features": [
+      "attributes",
+      "parameters",
+      "pipelines",
+      "interpolation"
+    ]
+  },
+  "r": {
+    "file": "observations.r",
+    "features": [
+      "data frames",
+      "vectors",
+      "functions",
+      "missing values"
+    ]
+  },
+  "reason": {
+    "file": "observations.re",
+    "features": [
+      "records",
+      "patterns",
+      "labelled arguments",
+      "lists"
+    ]
+  },
+  "ruby": {
+    "file": "observations.rb",
+    "features": [
+      "structs",
+      "keywords",
+      "blocks",
+      "interpolation"
+    ]
+  },
+  "rust": {
+    "file": "observations.rs",
+    "features": [
+      "lifetimes",
+      "borrowing",
+      "iterators",
+      "macros"
+    ]
+  },
+  "scala": {
+    "file": "observations.scala",
+    "features": [
+      "case classes",
+      "lambdas",
+      "collections",
+      "interpolation"
+    ]
+  },
+  "sql": {
+    "file": "observations.sql",
+    "features": [
+      "CTEs",
+      "window functions",
+      "case expressions",
+      "null"
+    ]
+  },
+  "shell": {
+    "file": "observations.sh",
+    "features": [
+      "arrays",
+      "expansions",
+      "arithmetic",
+      "heredocs"
+    ]
+  },
+  "swift": {
+    "file": "observations.swift",
+    "features": [
+      "structs",
+      "closures",
+      "key paths",
+      "interpolation"
+    ]
+  },
+  "terraform": {
+    "file": "observations.tf",
+    "features": [
+      "variables",
+      "validation",
+      "for expressions",
+      "objects"
+    ]
+  },
+  "vala": {
+    "file": "observations.vala",
+    "features": [
+      "properties",
+      "constructors",
+      "messages",
+      "format strings"
+    ]
+  },
+  "visualbasic": {
+    "file": "observations.vb",
+    "features": [
+      "tuples",
+      "lambdas",
+      "LINQ",
+      "interpolation"
+    ]
+  },
+  "zig": {
+    "file": "observations.zig",
+    "features": [
+      "imports",
+      "structs",
+      "slices",
+      "format strings"
+    ]
+  },
+  "apache": {
+    "file": "observatory.conf",
+    "features": [
+      "directives",
+      "sections",
+      "regex",
+      "quoted values"
+    ]
+  },
+  "toml": {
+    "file": "observatory.toml",
+    "features": [
+      "tables",
+      "arrays",
+      "dates",
+      "inline objects"
+    ]
+  }
 }
