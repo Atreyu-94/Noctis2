@@ -29,7 +29,9 @@ The theme has no mandatory language-extension dependencies. Language extensions 
 
 For Typst, use [Tinymist](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist); for Julia, use the [Julia extension](https://marketplace.visualstudio.com/items?itemName=julialang.language-julia). Checked versions: Tinymist **0.15.10**, Julia extension **1.249.2** and Julia **1.13.0**.
 
-Checks cover Typst, Julia, TypeScript, Python, JSON and Markdown. Julia used TextMate highlighting in the tested setup; standalone Typst Code Mode has grammar limits for emphasis. Python web checks used Pylance partial mode; JSON and Markdown checks used TextMate.
+Noctis2 retains the original 19 TextMate rules and 550 distinct selectors in all eleven variants. The compatibility suite covers all 61 language/dialect cases declared by [Noctis 10.43.3](https://github.com/liviuschera/noctis/tree/4a82370b2c064e36726c23e94f27ed3782bd6ecd): it compares the original and current themes using real, pinned TextMate grammars and shared samples. See the [sample catalogue and test commands](../../tests/samples/README.md).
+
+The expanded matrix checks TextMate colors and styles, not every language server or visual rendering. Noctis2 enables semantic highlighting, so a provider can intentionally produce colors different from the original TextMate-only theme. Optional embedded grammar gaps are recorded in the test report. Provider-specific checks separately cover Typst, Julia, TypeScript, TSX, Python, JSON, Markdown and Lua. Julia used TextMate highlighting in the tested setup; standalone Typst Code Mode has grammar limits for emphasis. Python web checks used Pylance partial mode.
 
 ## Validation and limits
 

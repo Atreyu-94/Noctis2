@@ -1,0 +1,185 @@
+{
+  "apex": {
+    "grammar": "apex"
+  },
+  "c": {
+    "grammar": "c"
+  },
+  "cpp": {
+    "grammar": "cpp"
+  },
+  "csharp": {
+    "grammar": "csharp"
+  },
+  "clojure": {
+    "grammar": "clojure"
+  },
+  "coffeescript": {
+    "grammar": "coffee"
+  },
+  "crystal": {
+    "grammar": "crystal"
+  },
+  "css": {
+    "grammar": "css"
+  },
+  "sass": {
+    "grammar": "sass"
+  },
+  "scss": {
+    "grammar": "scss"
+  },
+  "gherkin": {
+    "grammar": "gherkin"
+  },
+  "dart": {
+    "grammar": "dart"
+  },
+  "elm": {
+    "grammar": "elm"
+  },
+  "elixir": {
+    "grammar": "elixir"
+  },
+  "erlang": {
+    "grammar": "erlang"
+  },
+  "fsharp": {
+    "grammar": "fsharp"
+  },
+  "go": {
+    "grammar": "go"
+  },
+  "graphql": {
+    "grammar": "graphql"
+  },
+  "groovy": {
+    "grammar": "groovy"
+  },
+  "haskell": {
+    "grammar": "haskell"
+  },
+  "hlsl": {
+    "grammar": "hlsl"
+  },
+  "html": {
+    "grammar": "html"
+  },
+  "ejs": {
+    "grammar": "external"
+  },
+  "handlebars": {
+    "grammar": "handlebars"
+  },
+  "pug": {
+    "grammar": "pug"
+  },
+  "java": {
+    "grammar": "java"
+  },
+  "javascript": {
+    "grammar": "javascript"
+  },
+  "json": {
+    "grammar": "json"
+  },
+  "jsx": {
+    "grammar": "jsx"
+  },
+  "typescript": {
+    "grammar": "typescript"
+  },
+  "tsx": {
+    "grammar": "tsx"
+  },
+  "julia": {
+    "grammar": "julia"
+  },
+  "kotlin": {
+    "grammar": "kotlin"
+  },
+  "lua": {
+    "grammar": "lua"
+  },
+  "asciidoc": {
+    "grammar": "asciidoc"
+  },
+  "latex": {
+    "grammar": "latex"
+  },
+  "markdown": {
+    "grammar": "markdown"
+  },
+  "mjml": {
+    "grammar": "external"
+  },
+  "nim": {
+    "grammar": "nim"
+  },
+  "objectivec": {
+    "grammar": "objective-c"
+  },
+  "ocaml": {
+    "grammar": "ocaml"
+  },
+  "php": {
+    "grammar": "php"
+  },
+  "blade": {
+    "grammar": "blade"
+  },
+  "twig": {
+    "grammar": "twig"
+  },
+  "plantuml": {
+    "grammar": "external"
+  },
+  "powershell": {
+    "grammar": "powershell"
+  },
+  "python": {
+    "grammar": "python"
+  },
+  "r": {
+    "grammar": "r"
+  },
+  "reason": {
+    "grammar": "external"
+  },
+  "ruby": {
+    "grammar": "ruby"
+  },
+  "rust": {
+    "grammar": "rust"
+  },
+  "scala": {
+    "grammar": "scala"
+  },
+  "sql": {
+    "grammar": "sql"
+  },
+  "shell": {
+    "grammar": "shellscript"
+  },
+  "swift": {
+    "grammar": "swift"
+  },
+  "terraform": {
+    "grammar": "terraform"
+  },
+  "vala": {
+    "grammar": "vala"
+  },
+  "visualbasic": {
+    "grammar": "vb"
+  },
+  "zig": {
+    "grammar": "zig"
+  },
+  "apache": {
+    "grammar": "apache"
+  },
+  "toml": {
+    "grammar": "toml"
+  }
+}

@@ -30,6 +30,10 @@ jobs:
       - run: npm run build
       - run: node ports/vscode/scripts/audit-compatibility.mjs --strict
       - run: git diff --exit-code -- ports/vscode/themes ports/zed/themes ports/neovim/colors ports/neovim/lua/noctis2/generated
+      - name: Prepare pinned original Noctis themes and extra TextMate grammars
+        run: npm run prepare:languages:upstream
+      - name: Compare all original languages across eleven variants
+        run: node ports/vscode/scripts/validate-upstream-languages.mjs
       - name: Prepare pinned native language grammars
         run: npm run prepare:languages:native
       - name: Test samples with native Neovim queries
@@ -43,6 +47,7 @@ jobs:
             test-results/neovim-language-validation.json
             test-results/zed-language-validation.json
             test-results/native-languages/inputs.json
+            test-results/upstream-language-validation.json
           if-no-files-found: error
           retention-days: 14
 

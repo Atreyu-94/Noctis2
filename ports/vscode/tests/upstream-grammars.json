@@ -1,0 +1,19 @@
+{
+  "upstream": "4a82370b2c064e36726c23e94f27ed3782bd6ecd",
+  "shikiVersion": "4.6.0",
+  "optionalMissingScopes": [
+    "source.asm", "source.x86", "source.x86_64", "source.arm",
+    "source.js.regexp", "source.c++", "source.js.jquery", "source.sassdoc",
+    "text.elixir", "source.ignore", "source.twig", "source.yang",
+    "source.postscript", "text.slim", "text.html.javadoc", "source.less",
+    "source.asy", "source.cpp.embedded.latex", "text.tex.markdown_latex_combined",
+    "source.asymptote", "source.dot", "source.kconfig", "source.dts",
+    "text.plain", "text.html.php", "source.scss"
+  ],
+  "external": {
+    "ejs": { "repo": "Digitalbrainstem/ejs-grammar", "rev": "4b2e0c8a36027ef5c3f83d01d42990d1dbe47c41", "files": ["syntaxes/ejs.json", "syntaxes/ejs-nested.json"] },
+    "mjml": { "repo": "attilabuti/vscode-mjml", "rev": "716b1f122575b2ca2b0b9700b8136dd9cf63db68", "files": ["syntaxes/MJML.tmLanguage"] },
+    "reason": { "repo": "reasonml-editor/vscode-reasonml", "rev": "cfe243cb714415a6d782d39c547b69fd74462179", "files": ["syntaxes/reason.json"] },
+    "plantuml": { "repo": "qjebbs/vscode-plantuml", "rev": "7bc1758ed73dc269f5721d78c6c6c01f461d7cb0", "files": ["syntaxes/plantuml.yaml-tmLanguage"] }
+  }
+}

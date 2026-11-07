@@ -19,7 +19,9 @@
     "prepare:languages:native": "pwsh -NoProfile -File tooling/prepare-native-languages.ps1",
     "test:languages:neovim": "npm run build && node tooling/validate-native-languages.mjs neovim",
     "test:languages:zed": "npm run build && node tooling/validate-native-languages.mjs zed",
-    "test:languages:tinymist": "npm run build && node tooling/validate-native-languages.mjs tinymist"
+    "test:languages:tinymist": "npm run build && node tooling/validate-native-languages.mjs tinymist",
+    "prepare:languages:upstream": "node ports/vscode/scripts/prepare-upstream-languages.mjs",
+    "test:languages:upstream": "npm run build && node ports/vscode/scripts/validate-upstream-languages.mjs"
   },
   "overrides": {
     "@vscode/vsce": {
@@ -30,6 +32,7 @@
     }
   },
   "devDependencies": {
+    "@shikijs/langs": "4.6.0",
     "@types/node": "26.6.5",
     "@vscode/vsce": "4.1.0",
     "ajv": "8.20.0",
@@ -38,6 +41,7 @@
     "typescript": "7.0.2",
     "vscode-oniguruma": "2.0.1",
     "vscode-textmate": "9.3.2",
+    "yaml": "2.9.1",
     "yauzl": "3.4.0",
     "yazl": "2.5.1"
   }

@@ -43,6 +43,37 @@ set `VSCODE_EXTENSIONS` to include Python, JSON, Markdown, TypeScript, TSX and L
 `npm run inspect:tinymist` uses `TINYMIST_BIN` to inspect actual semantic tokens.
 These checks do not replace visual review in Zed or Neovim.
 
+### Original Noctis compatibility (VS Code)
+
+Run `npm run prepare:languages:upstream`, then `npm run test:languages:upstream`.
+Preparation downloads the pinned original themes/README and four additional
+grammars to `test-results/upstream-languages/`. The other grammars come from the
+exact development dependency `@shikijs/langs@4.6.0` (real TextMate definitions).
+The runner uses VS Code's `vscode-textmate` and Oniguruma, not Shiki's renderer.
+
+The matrix must account for every upstream README entry. C/C++, Sass/SCSS and
+TypeScript/TSX have separate fixtures; Markup and Other are category headings.
+This gives 61 original cases, plus the separately tested Typst sample. For each
+original case and all eleven variants, the test compares foreground, background
+and font style at every non-whitespace UTF-16 position. Only the already
+documented Julia interpolation and combined Markdown emphasis changes are
+permitted. It also requires nontrivial grammar scopes and multiple colors,
+so identical plain-text fallback cannot count as a successful language test.
+
+The report `test-results/upstream-language-validation.json` records sample and
+grammar hashes, root scopes, character counts, intentional changes and missing
+optional grammar references. Sources are fixed in
+`ports/vscode/tests/upstream-grammars.json`; the per-language mapping is in
+`ports/vscode/tests/upstream-languages.json`. EJS is injected into HTML as its
+extension specifies. MJML, ReasonML and PlantUML use their extension grammars.
+
+This tests these specific fixtures and grammar versions, not every provider or
+editor rendering. Optional references to assembly, SassDoc, legacy scope names
+and other embedded formats remain listed gaps; they are not silently replaced
+by unrelated grammars. The exact gap inventory is checked for changes. The
+expanded suite does not run language servers, compile all samples or establish
+visual acceptance. The existing eight-language provider checks remain separate.
+
 ### Native grammar and provider checks
 
 Run `npm run prepare:languages:native` once before the native grammar checks.
