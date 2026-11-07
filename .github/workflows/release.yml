@@ -45,7 +45,7 @@ jobs:
           CREATE_RELEASE: ${{ github.event_name == 'push' || inputs.create }}
         run: |
           $mode = if ($env:CREATE_RELEASE -eq 'true') { 'create' } else { 'prepare' }
-          node scripts/verify-release.mjs "$env:RELEASE_TAG" "$env:RUNNER_TEMP/release" $mode
+          node ports/vscode/scripts/verify-release.mjs "$env:RELEASE_TAG" "$env:RUNNER_TEMP/release" $mode
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
         with:
           name: prepared-release

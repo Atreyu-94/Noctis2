@@ -1,0 +1,193 @@
+{
+  "python": [
+    {
+      "id": "function",
+      "line": "def summarize(observations: list[Observation]) -> dict[str, float]:",
+      "token": "summarize",
+      "capture": "function.definition",
+      "role": "functionDeclaration"
+    },
+    {
+      "id": "number",
+      "line": "SCALE: Final = 2",
+      "token": "2",
+      "capture": "number",
+      "role": "number"
+    },
+    {
+      "id": "boolean",
+      "line": "enabled = True",
+      "token": "True",
+      "capture": "boolean",
+      "role": "boolean"
+    }
+  ],
+  "julia": [
+    {
+      "id": "macro",
+      "line": "    @info text",
+      "token": "@info",
+      "capture": "function.macro",
+      "role": "macro"
+    },
+    {
+      "id": "function",
+      "line": "function nightly_report()",
+      "token": "nightly_report",
+      "capture": "function.definition",
+      "role": "functionDeclaration"
+    },
+    {
+      "id": "number",
+      "line": "const SCALE = 2",
+      "token": "2",
+      "capture": "number",
+      "role": "number"
+    }
+  ],
+  "typescript": [
+    {
+      "id": "function",
+      "line": "    export function mapValue<T>(value: T, transform: Mapper<T>): T {",
+      "token": "mapValue",
+      "capture": "function",
+      "role": "function"
+    },
+    {
+      "id": "type",
+      "line": "    export interface Point {",
+      "token": "Point",
+      "capture": "type",
+      "role": "type"
+    },
+    {
+      "id": "number",
+      "line": "        y = 2;",
+      "token": "2",
+      "capture": "number",
+      "role": "number"
+    }
+  ],
+  "tsx": [
+    {
+      "id": "tag",
+      "line": "        <section className=\"observations\">",
+      "token": "section",
+      "capture": "tag.jsx",
+      "role": "tag"
+    },
+    {
+      "id": "attribute",
+      "line": "        <section className=\"observations\">",
+      "token": "className",
+      "capture": "attribute.jsx",
+      "role": "attribute"
+    },
+    {
+      "id": "number",
+      "line": "console.log(JSON.stringify(panel, null, 2));",
+      "token": "2",
+      "capture": "number",
+      "role": "number"
+    }
+  ],
+  "typst": [
+    {
+      "id": "heading",
+      "line": "= Notation <intro>",
+      "token": "Notation",
+      "capture": "title",
+      "role": "heading"
+    },
+    {
+      "id": "boolean",
+      "line": "#let enabled = true",
+      "token": "true",
+      "capture": "boolean",
+      "role": "boolean"
+    },
+    {
+      "id": "function",
+      "line": "#let twice(x) = x * 2",
+      "token": "twice",
+      "capture": "function",
+      "role": "function"
+    }
+  ],
+  "markdown": [
+    {
+      "id": "strong",
+      "line": "Plain text with **strong**, *emphasis*, and ***both***.",
+      "token": "strong",
+      "capture": "emphasis.strong.markup",
+      "role": "strong"
+    },
+    {
+      "id": "italic",
+      "line": "Plain text with **strong**, *emphasis*, and ***both***.",
+      "token": "emphasis",
+      "capture": "emphasis.markup",
+      "role": "emphasis"
+    },
+    {
+      "id": "injected-function",
+      "line": "    def double(self, value: int) -> int:",
+      "token": "double",
+      "capture": "function.definition",
+      "role": "functionDeclaration"
+    },
+    {
+      "id": "injected-number",
+      "line": "{\"enabled\": true, \"count\": 42, \"name\": \"sample\"}",
+      "token": "42",
+      "capture": "number",
+      "role": "number"
+    }
+  ],
+  "json": [
+    {
+      "id": "number",
+      "line": "    \"count\": 42,",
+      "token": "42",
+      "capture": "number",
+      "role": "number"
+    },
+    {
+      "id": "boolean",
+      "line": "    \"enabled\": true,",
+      "token": "true",
+      "capture": "boolean",
+      "role": "boolean"
+    },
+    {
+      "id": "string",
+      "line": "    \"name\": \"Noctis2 observatory\",",
+      "token": "Noctis2 observatory",
+      "capture": "string",
+      "role": "string"
+    }
+  ],
+  "lua": [
+    {
+      "id": "function",
+      "line": "function Observatory.new(name)",
+      "token": "new",
+      "capture": "function.definition",
+      "role": "functionDeclaration"
+    },
+    {
+      "id": "number",
+      "line": "local DEFAULT_EXPOSURE = 2.5",
+      "token": "2.5",
+      "capture": "number",
+      "role": "number"
+    },
+    {
+      "id": "string",
+      "line": "local telescope = Observatory.new(\"North dome\")",
+      "token": "North dome",
+      "capture": "string",
+      "role": "string"
+    }
+  ]
+}

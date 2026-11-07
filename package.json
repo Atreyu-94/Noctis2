@@ -1,133 +1,44 @@
 {
-    "name": "noctis2",
-    "displayName": "Noctis2",
-    "description": "11 light and dark themes with semantic highlighting and Typst/Julia refinements. An independent fork of Noctis by Liviu Schera.",
-    "version": "0.1.1",
-    "publisher": "atreyu-94",
-    "author": {
-        "name": "Atreyu-94",
-        "url": "https://github.com/Atreyu-94"
+  "name": "noctis2-workspace",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "compile": "tsc",
+    "build": "npm run compile && node dist/tooling/build.js",
+    "test": "npm run compile && node --test tests/*.test.mjs core/tests/*.test.mjs ports/*/tests/*.test.mjs",
+    "check": "npm run typecheck && npm test",
+    "audit:compatibility": "node ports/vscode/scripts/audit-compatibility.mjs",
+    "inspect:tinymist": "node ports/vscode/scripts/inspect-tinymist.mjs",
+    "test:languages": "npm run build && node ports/vscode/scripts/validate-languages.mjs",
+    "package:vsix": "node ports/vscode/scripts/package-vsix.mjs",
+    "inspect:vsix": "node ports/vscode/scripts/inspect-vsix.mjs",
+    "check:generated": "npm run build && git diff --exit-code -- ports/vscode/themes ports/zed/themes ports/neovim/colors ports/neovim/lua/noctis2/generated",
+    "package:ports": "node tooling/package-ports.mjs",
+    "prepare:languages:native": "pwsh -NoProfile -File tooling/prepare-native-languages.ps1",
+    "test:languages:neovim": "npm run build && node tooling/validate-native-languages.mjs neovim",
+    "test:languages:zed": "npm run build && node tooling/validate-native-languages.mjs zed",
+    "test:languages:tinymist": "npm run build && node tooling/validate-native-languages.mjs tinymist"
+  },
+  "overrides": {
+    "@vscode/vsce": {
+      "minimatch": "11.0.1"
     },
-    "license": "SEE LICENSE IN LICENSE.md",
-    "icon": "images/noctis2.png",
-    "engines": {
-        "vscode": "^1.81.0"
-    },
-    "extensionKind": [
-        "ui",
-        "workspace"
-    ],
-    "galleryBanner": {
-        "color": "#052529",
-        "theme": "dark"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Atreyu-94/Noctis2.git"
-    },
-    "homepage": "https://github.com/Atreyu-94/Noctis2#readme",
-    "scripts": {
-        "typecheck": "tsc --noEmit",
-        "compile": "tsc",
-        "build": "npm run compile && node dist/build.js",
-        "test": "npm run compile && node --test tests/*.test.mjs",
-        "check": "npm run typecheck && npm test",
-        "audit:compatibility": "node scripts/audit-compatibility.mjs",
-        "inspect:tinymist": "node scripts/inspect-tinymist.mjs",
-        "test:languages": "npm run build && node scripts/validate-languages.mjs",
-        "package:vsix": "vsce package --no-dependencies",
-        "inspect:vsix": "node scripts/inspect-vsix.mjs"
-    },
-    "categories": [
-        "Themes"
-    ],
-    "keywords": [
-        "noctis2",
-        "noctis",
-        "semantic",
-        "typst",
-        "tinymist",
-        "julia",
-        "dark",
-        "light"
-    ],
-    "contributes": {
-        "themes": [
-            {
-                "label": "Noctis2 Lux",
-                "uiTheme": "vs",
-                "path": "./themes/lux.json"
-            },
-            {
-                "label": "Noctis2 Hibernus",
-                "uiTheme": "vs",
-                "path": "./themes/hibernus.json"
-            },
-            {
-                "label": "Noctis2 Lilac",
-                "uiTheme": "vs",
-                "path": "./themes/lilac.json"
-            },
-            {
-                "label": "Noctis2",
-                "uiTheme": "vs-dark",
-                "path": "./themes/noctis.json"
-            },
-            {
-                "label": "Noctis2 Azureus",
-                "uiTheme": "vs-dark",
-                "path": "./themes/azureus.json"
-            },
-            {
-                "label": "Noctis2 Bordo",
-                "uiTheme": "vs-dark",
-                "path": "./themes/bordo.json"
-            },
-            {
-                "label": "Noctis2 Obscuro",
-                "uiTheme": "vs-dark",
-                "path": "./themes/obscuro.json"
-            },
-            {
-                "label": "Noctis2 Sereno",
-                "uiTheme": "vs-dark",
-                "path": "./themes/sereno.json"
-            },
-            {
-                "label": "Noctis2 Uva",
-                "uiTheme": "vs-dark",
-                "path": "./themes/uva.json"
-            },
-            {
-                "label": "Noctis2 Viola",
-                "uiTheme": "vs-dark",
-                "path": "./themes/viola.json"
-            },
-            {
-                "label": "Noctis2 Minimus",
-                "uiTheme": "vs-dark",
-                "path": "./themes/minimus.json"
-            }
-        ]
-    },
-    "type": "module",
-    "overrides": {
-        "@vscode/vsce": {
-            "minimatch": "11.0.1"
-        },
-        "@azure/identity": {
-            "@azure/msal-node": "7.1.0"
-        }
-    },
-    "devDependencies": {
-        "@types/node": "26.6.5",
-        "@vscode/vsce": "4.1.0",
-        "ovsx": "1.3.0",
-        "sax": "1.6.1",
-        "typescript": "7.0.2",
-        "vscode-oniguruma": "2.0.1",
-        "vscode-textmate": "9.3.2",
-        "yauzl": "3.4.0",
-        "yazl": "2.5.1"
+    "@azure/identity": {
+      "@azure/msal-node": "7.1.0"
     }
+  },
+  "devDependencies": {
+    "@types/node": "26.6.5",
+    "@vscode/vsce": "4.1.0",
+    "ajv": "8.20.0",
+    "ovsx": "1.3.0",
+    "sax": "1.6.1",
+    "typescript": "7.0.2",
+    "vscode-oniguruma": "2.0.1",
+    "vscode-textmate": "9.3.2",
+    "yauzl": "3.4.0",
+    "yazl": "2.5.1"
+  }
 }

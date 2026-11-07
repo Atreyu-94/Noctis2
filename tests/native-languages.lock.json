@@ -1,0 +1,136 @@
+{
+  "providers": {
+    "neovim": {
+      "repo": "nvim-treesitter/nvim-treesitter",
+      "rev": "915f2bd3d4e2a33704bfc476b5137e9befa82f3d"
+    },
+    "zed": {
+      "repo": "zed-industries/zed",
+      "rev": "c84af5b99cbc366d675064e52b23664a015b6e35"
+    },
+    "zed_typst": {
+      "repo": "zed-extensions/typst",
+      "rev": "289ce597dfb8a639d03ef533ba60b4d79bd29dfa"
+    },
+    "zed_lua": {
+      "repo": "zed-extensions/lua",
+      "rev": "ce3fde1f675b32ce2de032e32609aba18cbf8121"
+    },
+    "zed_julia": {
+      "repo": "JuliaEditorSupport/zed-julia",
+      "rev": "3cad44202aa10226570497c624adcf1f60662dd9"
+    }
+  },
+  "neovim": {
+    "python": {
+      "repo": "tree-sitter/tree-sitter-python",
+      "rev": "293fdc02038ee2bf0e2e206711b69c90ac0d413f",
+      "subdir": ""
+    },
+    "julia": {
+      "repo": "tree-sitter-grammars/tree-sitter-julia",
+      "rev": "9b92fddcedb55003b32601238653b121bc46f544",
+      "subdir": ""
+    },
+    "typescript": {
+      "repo": "tree-sitter/tree-sitter-typescript",
+      "rev": "75b3874edb2dc714fb1fd77a32013d0f8699989f",
+      "subdir": "typescript"
+    },
+    "tsx": {
+      "repo": "tree-sitter/tree-sitter-typescript",
+      "rev": "75b3874edb2dc714fb1fd77a32013d0f8699989f",
+      "subdir": "tsx"
+    },
+    "typst": {
+      "repo": "uben0/tree-sitter-typst",
+      "rev": "46cf4ded12ee974a70bf8457263b67ad7ee0379d",
+      "subdir": ""
+    },
+    "markdown": {
+      "repo": "tree-sitter-grammars/tree-sitter-markdown",
+      "rev": "41ff24a6c775492c543b09228aeb98d1cd2b3a0f",
+      "subdir": "tree-sitter-markdown"
+    },
+    "markdown_inline": {
+      "repo": "tree-sitter-grammars/tree-sitter-markdown",
+      "rev": "41ff24a6c775492c543b09228aeb98d1cd2b3a0f",
+      "subdir": "tree-sitter-markdown-inline"
+    },
+    "lua": {
+      "repo": "tree-sitter-grammars/tree-sitter-lua",
+      "rev": "10fe0054734eec83049514ea2e718b2a56acd0c9",
+      "subdir": ""
+    },
+    "json": {
+      "repo": "tree-sitter/tree-sitter-json",
+      "rev": "254c42a6476413b776221e03982ac8ae159eeb72",
+      "subdir": ""
+    }
+  },
+  "zed": {
+    "python": {
+      "repo": "tree-sitter/tree-sitter-python",
+      "rev": "293fdc02038ee2bf0e2e206711b69c90ac0d413f",
+      "subdir": "",
+      "provider": "zed",
+      "queries": "crates/grammars/src/python"
+    },
+    "julia": {
+      "repo": "tree-sitter/tree-sitter-julia",
+      "rev": "e0f9dcd180fdcfcfa8d79a3531e11d99e79321d3",
+      "subdir": "",
+      "provider": "zed_julia",
+      "queries": "languages/julia"
+    },
+    "typescript": {
+      "repo": "zed-industries/tree-sitter-typescript",
+      "rev": "e2c53597d6a5d9cf7bbe8dccde576fe1e46c5899",
+      "subdir": "typescript",
+      "provider": "zed",
+      "queries": "crates/grammars/src/typescript"
+    },
+    "tsx": {
+      "repo": "zed-industries/tree-sitter-typescript",
+      "rev": "e2c53597d6a5d9cf7bbe8dccde576fe1e46c5899",
+      "subdir": "tsx",
+      "provider": "zed",
+      "queries": "crates/grammars/src/tsx"
+    },
+    "typst": {
+      "repo": "uben0/tree-sitter-typst",
+      "rev": "abe60cbed7986ee475d93f816c1be287f220c5d8",
+      "subdir": "",
+      "provider": "zed_typst",
+      "queries": "languages/typst"
+    },
+    "markdown": {
+      "repo": "zed-industries/tree-sitter-markdown",
+      "rev": "b596e737286780d7bfa9fcddceaeeb754574b352",
+      "subdir": "tree-sitter-markdown",
+      "provider": "zed",
+      "queries": "crates/grammars/src/markdown"
+    },
+    "markdown_inline": {
+      "repo": "zed-industries/tree-sitter-markdown",
+      "rev": "b596e737286780d7bfa9fcddceaeeb754574b352",
+      "subdir": "tree-sitter-markdown-inline",
+      "provider": "zed",
+      "queries": "crates/grammars/src/markdown-inline"
+    },
+    "lua": {
+      "repo": "tree-sitter-grammars/tree-sitter-lua",
+      "rev": "10fe0054734eec83049514ea2e718b2a56acd0c9",
+      "subdir": "",
+      "provider": "zed_lua",
+      "queries": "languages/lua"
+    },
+    "json": {
+      "repo": "tree-sitter/tree-sitter-json",
+      "rev": "ee35a6ebefcef0c5c416c0d1ccec7370cfca5a24",
+      "subdir": "",
+      "provider": "zed",
+      "queries": "crates/grammars/src/json"
+    }
+  }
+}

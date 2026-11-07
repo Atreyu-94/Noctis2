@@ -7,9 +7,15 @@
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
     "noEmitOnError": true,
-    "rootDir": "src",
+    "rootDir": ".",
     "outDir": "dist",
-    "types": ["node"]
+    "types": [
+      "node"
+    ]
   },
-  "include": ["src/**/*.ts"]
+  "include": [
+    "core/src/**/*.ts",
+    "ports/*/src/**/*.ts",
+    "tooling/**/*.ts"
+  ]
 }

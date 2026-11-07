@@ -1,0 +1,23 @@
+*noctis2.txt*  Shared Noctis2 palettes for Neovim
+
+INSTALLATION                                             *noctis2-install*
+Add ports/neovim to 'runtimepath', then :colorscheme noctis2.
+The monorepo root is not a Neovim plugin root. No Node runtime is required.
+
+CONFIGURATION                                            *noctis2-setup*
+>
+  require('noctis2').setup({
+    variant = 'noctis', transparent = false,
+    italic = true, bold = true, overrides = {},
+  })
+  vim.cmd.colorscheme('noctis2')
+<
+Use :colorscheme noctis2-<variant> for an explicit variant.
+Variants: noctis, lux, hibernus, lilac, azureus, obscuro, sereno, minimus,
+bordo, uva, viola. Setup updates existing options; reload to apply changes.
+Overrides replace individual highlight groups and are applied last.
+
+Native syntax, Tree-sitter and LSP groups are provided. Install language parsers
+and servers separately. Alpha is precomposited against each destination surface.
+
+vim:tw=78:ts=8:noet:ft=help:norl:

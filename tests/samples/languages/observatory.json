@@ -1,0 +1,31 @@
+{
+    "name": "Noctis2 observatory",
+    "enabled": true,
+    "missing": null,
+    "count": 42,
+    "ratio": -1.5e2,
+    "items": ["alpha", "beta"],
+    "nested": {
+        "escaped": "line\nnext",
+        "path": "C:\\sample"
+    },
+    "location": { "latitude": 20.9674, "longitude": -89.5926, "altitude_m": 12 },
+    "session": {
+        "started_at": "2026-11-06T23:00:00Z",
+        "operator": "Sample observer",
+        "calibrated": true,
+        "cloud_cover": 0.125,
+        "calibration_offset": 5e-1,
+        "filters": ["visible", "infrared"],
+        "observations": [
+            { "id": "OBS-001", "target": "Vega", "exposure_s": 2.5, "readings": [12, 13.5, 14] },
+            { "id": "OBS-002", "target": "Deneb", "exposure_s": 4, "readings": [8, 9, 10] },
+            { "id": "OBS-003", "target": "Altair", "exposure_s": 1.5, "readings": [15, 16.5, 18] }
+        ],
+        "warnings": [],
+        "next_session": null,
+        "observer_note": "Compare \"raw\" and calibrated values.\nUnits: photons/s.",
+        "symbol": "\u03bb",
+        "complete": false
+    }
+}

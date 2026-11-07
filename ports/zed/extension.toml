@@ -1,0 +1,7 @@
+id = "noctis2-theme"
+name = "Noctis2"
+version = "0.1.0"
+schema_version = 1
+authors = ["Atreyu-94"]
+description = "Eleven light and dark Noctis2 variants. An independent fork of Noctis by Liviu Schera."
+repository = "https://github.com/Atreyu-94/Noctis2"

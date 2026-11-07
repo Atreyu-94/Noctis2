@@ -1,0 +1,10 @@
+{
+  "python": { "file": "simulation.py", "features": ["decorators", "types", "classes", "interpolation", "exceptions", "comprehensions"] },
+  "julia": { "file": "analysis.jl", "features": ["parametric types", "macros", "broadcasting", "symbols", "matrices", "docstrings"] },
+  "typescript": { "file": "catalog.ts", "features": ["generics", "interfaces", "enums", "classes", "unions", "regex", "optional chaining"] },
+  "tsx": { "file": "components.tsx", "features": ["JSX tags", "attributes", "entities", "embedded expressions", "JSX comments"] },
+  "typst": { "file": "report.typ", "features": ["math", "references", "labels", "emphasis", "tables", "code", "raw blocks"] },
+  "markdown": { "file": "notes.md", "features": ["headings", "nested emphasis", "code fences", "tables", "HTML", "links", "lists"] },
+  "json": { "file": "observatory.json", "features": ["objects", "arrays", "null", "booleans", "exponents", "escapes", "Unicode"] },
+  "lua": { "file": "configuration.lua", "features": ["tables", "metatables", "methods", "closures", "annotations", "long strings", "patterns"] }
+}

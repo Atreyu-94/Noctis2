@@ -1,0 +1,102 @@
+{
+    "name": "noctis2",
+    "displayName": "Noctis2",
+    "description": "11 light and dark themes with semantic highlighting and Typst/Julia refinements. An independent fork of Noctis by Liviu Schera.",
+    "version": "0.1.1",
+    "publisher": "atreyu-94",
+    "author": {
+        "name": "Atreyu-94",
+        "url": "https://github.com/Atreyu-94"
+    },
+    "license": "SEE LICENSE IN LICENSE.md",
+    "icon": "images/noctis2.png",
+    "engines": {
+        "vscode": "^1.81.0"
+    },
+    "extensionKind": [
+        "ui",
+        "workspace"
+    ],
+    "galleryBanner": {
+        "color": "#052529",
+        "theme": "dark"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Atreyu-94/Noctis2.git"
+    },
+    "homepage": "https://github.com/Atreyu-94/Noctis2#readme",
+    "categories": [
+        "Themes"
+    ],
+    "keywords": [
+        "noctis2",
+        "noctis",
+        "semantic",
+        "typst",
+        "tinymist",
+        "julia",
+        "dark",
+        "light"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Noctis2 Lux",
+                "uiTheme": "vs",
+                "path": "./themes/lux.json"
+            },
+            {
+                "label": "Noctis2 Hibernus",
+                "uiTheme": "vs",
+                "path": "./themes/hibernus.json"
+            },
+            {
+                "label": "Noctis2 Lilac",
+                "uiTheme": "vs",
+                "path": "./themes/lilac.json"
+            },
+            {
+                "label": "Noctis2",
+                "uiTheme": "vs-dark",
+                "path": "./themes/noctis.json"
+            },
+            {
+                "label": "Noctis2 Azureus",
+                "uiTheme": "vs-dark",
+                "path": "./themes/azureus.json"
+            },
+            {
+                "label": "Noctis2 Bordo",
+                "uiTheme": "vs-dark",
+                "path": "./themes/bordo.json"
+            },
+            {
+                "label": "Noctis2 Obscuro",
+                "uiTheme": "vs-dark",
+                "path": "./themes/obscuro.json"
+            },
+            {
+                "label": "Noctis2 Sereno",
+                "uiTheme": "vs-dark",
+                "path": "./themes/sereno.json"
+            },
+            {
+                "label": "Noctis2 Uva",
+                "uiTheme": "vs-dark",
+                "path": "./themes/uva.json"
+            },
+            {
+                "label": "Noctis2 Viola",
+                "uiTheme": "vs-dark",
+                "path": "./themes/viola.json"
+            },
+            {
+                "label": "Noctis2 Minimus",
+                "uiTheme": "vs-dark",
+                "path": "./themes/minimus.json"
+            }
+        ]
+    },
+    "type": "module"
+}
