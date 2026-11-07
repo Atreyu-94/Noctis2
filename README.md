@@ -53,20 +53,27 @@ Edit `src/` and rebuild to regenerate `themes/`. See [CHANGELOG.md](CHANGELOG.md
 
 ## Publishing releases
 
-Publishing a stable GitHub release in `Atreyu-94/Noctis2` triggers `.github/workflows/publish.yml`.
-The tag must be `vX.Y.Z`, match `package.json`, and point to a commit already merged into `master` with successful validation CI.
-Attach that CI run's exact VSIX as `noctis2-X.Y.Z.vsix` and its unchanged `vsix-report.json` to the draft release **before** publishing it.
-The workflow compares both attachments against the CI artifacts, verifies SHA-256 and inspects the package against the tagged sources. It does not rebuild the VSIX.
-CI artifacts must still be available (currently 14 days); an expired or missing artifact stops publication.
+Update `package.json`, its lockfile and the dated `CHANGELOG.md` entry, then merge the version commit into `master`.
+Push a stable tag `vX.Y.Z` pointing to that commit in `Atreyu-94/Noctis2`; it must match the package version.
+The **Create release from verified tag** workflow waits up to 15 minutes for that commit's successful master CI, downloads its exact VSIX and report, and validates the hash and packaged contents against the tagged sources.
+It creates a draft release with `noctis2-X.Y.Z.vsix`, `vsix-report.json` and notes from the changelog, downloads and checks the attachments, and publishes the release.
+It then dispatches **Publish verified release**, which repeats the checks before sending the same VSIX to the galleries. Neither workflow rebuilds the package.
+GitHub's `GITHUB_TOKEN` is sufficient; the explicit dispatch handles GitHub's suppression of release events created by that token.
+CI artifacts must still be available (currently 14 days); expired/missing artifacts, failed CI, version mismatches or tags outside `master` stop the process.
+Push tags using your Git client or another identity that triggers Actions; tags created by a workflow with `GITHUB_TOKEN` require explicitly dispatching the creation workflow.
 
 Marketplace uses Trusted Publishing for owner `Atreyu-94`, repository `Noctis2`, workflow `publish.yml`, with no environment. No PAT is required.
 Open VSX stays disabled unless the repository variable `OPENVSX_PUBLISH_ENABLED` is exactly `true`.
 Enable it only after namespace ownership is verified and an Open VSX trusted publisher for `atreyu-94.noctis2` authorizes the same repository and workflow, without an environment.
 
-For verification or recovery, run **Publish verified release** manually on `master` with the existing release tag.
+For a read-only rehearsal, run **Create release from verified tag** manually on `master` with an existing stable tag; its default prepares downloadable files without creating a release or publishing.
+Select `create` to resume the full flow. Retries can complete missing attachments in a draft; existing attachments are never overwritten, and an existing published release must already contain the matching files.
+No tags or published history are rewritten. Release creation and gallery publishing have separate workflow results: a created release is not proof that a gallery accepted it.
+
+For gallery verification or recovery, run **Publish verified release** manually on `master` with the existing release tag.
 The default only verifies the attachments; select `publish` to publish them. Both destinations use the same verified artifact and skip an already-published version on retries.
 They run independently, so a failure in one registry does not prevent the other from publishing. Re-run failed jobs after resolving the cause.
-GitHub releases created by another workflow using `GITHUB_TOKEN` do not trigger this release workflow; use its explicit dispatch in that automation instead.
+Publishing a release manually also triggers **Publish verified release**; in that case attach the exact CI VSIX and report before publishing the draft.
 
 ## AI assistance
 

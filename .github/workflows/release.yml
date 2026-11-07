@@ -1,0 +1,64 @@
+name: Create release from verified tag
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Stable tag already merged into master (vX.Y.Z)
+        required: true
+        type: string
+      create:
+        description: Create/publish the release and dispatch gallery publishing (false only prepares files)
+        default: false
+        type: boolean
+permissions:
+  contents: read
+concurrency:
+  group: release-${{ inputs.tag || github.ref_name }}
+  cancel-in-progress: false
+defaults:
+  run:
+    shell: pwsh
+jobs:
+  release:
+    if: github.repository == 'Atreyu-94/Noctis2' && (github.event_name == 'push' || github.ref == 'refs/heads/master')
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    permissions:
+      contents: write
+      actions: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
+        with:
+          node-version: '26.8.1'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - name: Prepare or create release from verified CI assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.tag || github.ref_name }}
+          CREATE_RELEASE: ${{ github.event_name == 'push' || inputs.create }}
+        run: |
+          $mode = if ($env:CREATE_RELEASE -eq 'true') { 'create' } else { 'prepare' }
+          node scripts/verify-release.mjs "$env:RELEASE_TAG" "$env:RUNNER_TEMP/release" $mode
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
+        with:
+          name: prepared-release
+          path: |
+            ${{ runner.temp }}/release/noctis2-*.vsix
+            ${{ runner.temp }}/release/vsix-report.json
+            ${{ runner.temp }}/release/release-notes.md
+          if-no-files-found: error
+          retention-days: 14
+      # GITHUB_TOKEN-created releases do not emit a new release workflow run.
+      - name: Dispatch existing Trusted Publishing workflow
+        if: github.event_name == 'push' || inputs.create
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.tag || github.ref_name }}
+        run: gh workflow run publish.yml --repo Atreyu-94/Noctis2 --ref master -f "tag=$env:RELEASE_TAG" -f publish=true
