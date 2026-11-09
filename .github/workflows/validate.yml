@@ -9,6 +9,9 @@ defaults:
   run:
     shell: pwsh
 jobs:
+  semantic:
+    uses: ./.github/workflows/semantic-providers.yml
+
   check:
     strategy:
       matrix:
@@ -52,7 +55,7 @@ jobs:
           retention-days: 14
 
   package:
-    needs: check
+    needs: [check, semantic]
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:

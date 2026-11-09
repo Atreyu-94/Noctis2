@@ -1,0 +1,109 @@
+{
+  "web": {
+    "languages": [
+      "javascript",
+      "jsx",
+      "typescript",
+      "tsx",
+      "html",
+      "twig",
+      "gherkin"
+    ],
+    "runtimes": []
+  },
+  "bundled": {
+    "languages": [
+      "lua",
+      "toml",
+      "terraform",
+      "typst",
+      "powershell"
+    ],
+    "runtimes": []
+  },
+  "python": {
+    "languages": [
+      "python"
+    ],
+    "runtimes": [
+      "python"
+    ]
+  },
+  "julia": {
+    "languages": [
+      "julia",
+      "julia-fatou",
+      "julia-jetls"
+    ],
+    "runtimes": [
+      "julia"
+    ],
+    "waitMs": 1800000
+  },
+  "native": {
+    "languages": [
+      "c",
+      "cpp",
+      "objectivec"
+    ],
+    "runtimes": [
+      "clangd"
+    ]
+  },
+  "rust": {
+    "languages": [
+      "rust"
+    ],
+    "runtimes": [
+      "rust"
+    ],
+    "waitMs": 300000
+  },
+  "dotnet": {
+    "languages": [
+      "csharp",
+      "fsharp",
+      "visualbasic"
+    ],
+    "runtimes": [
+      "dotnet"
+    ],
+    "waitMs": 300000
+  },
+  "jvm": {
+    "languages": [
+      "java",
+      "kotlin",
+      "scala"
+    ],
+    "runtimes": [
+      "jdk21"
+    ],
+    "waitMs": 600000
+  },
+  "ruby": {
+    "languages": [
+      "ruby"
+    ],
+    "runtimes": [
+      "ruby"
+    ],
+    "waitMs": 300000
+  },
+  "go": {
+    "languages": [
+      "go"
+    ],
+    "runtimes": [
+      "go"
+    ]
+  },
+  "dart": {
+    "languages": [
+      "dart"
+    ],
+    "runtimes": [
+      "dart"
+    ]
+  }
+}
