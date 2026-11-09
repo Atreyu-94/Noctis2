@@ -12,6 +12,14 @@ for id, appearance in pairs(variants) do
   assert(hl('@function').fg == color(t.syntax['function'].fg), id .. ': Treesitter')
   assert(hl('@tag.builtin').fg == color(t.syntax.tag.fg), id .. ': TSX builtin tag')
   assert(hl('@lsp.type.function').fg == color(t.syntax['function'].fg), id .. ': LSP')
+  for group, role in pairs({
+    ['@lsp.type.tomlArrayKey.toml'] = 'variable',
+    ['@lsp.type.tomlTableKey.toml'] = 'variable',
+    ['@lsp.type.recordClass.cs'] = 'type',
+    ['@lsp.type.record.java'] = 'type',
+  }) do
+    assert(hl(group).fg == color(t.syntax[role].fg), id .. ': ' .. group)
+  end
   assert(hl('Visual').bg == color(t.ui['selection.editor']), id .. ': selection')
   assert(hl('PmenuSel').bg == color(t.popupSelection), id .. ': popup selection')
   assert(vim.g.terminal_color_1 == t.ui['terminal.red'])

@@ -11,6 +11,11 @@ function M.groups()
   groups['@lsp.typemod.function.declaration'] = { link = 'Noctis2_functionDeclaration' }
   groups['@lsp.typemod.method.declaration'] = { link = 'Noctis2_methodDeclaration' }
   groups['@lsp.mod.deprecated'] = { strikethrough = true }
+  -- Provider-specific names stay scoped to their native filetypes.
+  groups['@lsp.type.tomlArrayKey.toml'] = { link = 'Noctis2_variable' }
+  groups['@lsp.type.tomlTableKey.toml'] = { link = 'Noctis2_variable' }
+  groups['@lsp.type.recordClass.cs'] = { link = 'Noctis2_type' }
+  groups['@lsp.type.record.java'] = { link = 'Noctis2_type' }
   -- Tinymist's custom token names must not affect other filetypes.
   for token, role in pairs({ bool = 'boolean', punct = 'punctuation', escape = 'escape', link = 'link', raw = 'raw', label = 'label', ref = 'reference', heading = 'heading', marker = 'keyword', term = 'term', delim = 'punctuation', pol = 'variable', error = 'invalid' }) do
     groups['@lsp.type.' .. token .. '.typst'] = { link = 'Noctis2_' .. role }
