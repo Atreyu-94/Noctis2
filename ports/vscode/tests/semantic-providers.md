@@ -37,7 +37,9 @@ The host activates each configured provider and calls the official
 including the range variants when needed. Reports retain the actual legend,
 raw data, decoded tokens, diagnostics, provider and VS Code versions, sample
 hashes, grammar locations and extension-contributed semantic types/scopes.
-Cancellation during C/C++ indexing is retried within a bounded window. A
+Cancellation during C/C++ indexing and Ionide's explicit `LoadedProjects`
+startup response are retried within the existing bounded window; each retry
+is retained in the capture. Other provider errors still fail the case. A
 timeout or empty response is reported, never turned into invented tokens.
 
 The validator merges captures by timestamp, rejects stale sample/provider data,

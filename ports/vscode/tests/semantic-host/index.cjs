@@ -71,9 +71,14 @@ exports.run = async () => {
             // JETLS can still compile its first analysis after registering LSP.
             result = await deadline(vscode.commands.executeCommand('vscode.provideDocumentSemanticTokens', uri), item.requestTimeoutMs ?? 45000, 'tokens');
           } catch (error) {
-            // C/C++ cancels requests while IntelliSense updates after opening a file.
-            if (!/cancel/i.test(String(error))) throw error;
-            (entry.cancelledRequests ??= []).push(String(error));
+            // C/C++ cancels while indexing; Ionide can register before its
+            // project has loaded. Retry only these observed startup responses.
+            const message = String(error);
+            if (/cancel/i.test(message)) (entry.cancelledRequests ??= []).push(message);
+            else if (item.provider === 'ionide.ionide-fsharp'
+              && /in LoadedProjects\. Have the projects loaded yet/.test(message)) {
+              (entry.projectLoadRetries ??= []).push(message);
+            } else throw error;
             await delay(1000);
             continue;
           }
