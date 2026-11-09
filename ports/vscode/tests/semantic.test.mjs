@@ -13,7 +13,7 @@ test('semantic colors and language additions use only their own palette, in all 
    assert.equal(rules[`delim.math:${language}`],palette.string,`${language}: math delimiters must use string green`);
   }
   for(const [selector,style] of Object.entries(rules)){
-   assert.match(selector,/^(?:\*|[a-zA-Z]+)(?:\.[a-zA-Z]+)*(?::typst(?:-code)?)?$/);
+   assert.match(selector,/^(?:\*|[a-zA-Z]+)(?:\.[a-zA-Z]+)*(?::(?:typst(?:-code)?|python))?$/);
    const color=typeof style==='string'?style:style.foreground;
    if(color!==undefined)assert.ok(allowed.has(color),`${selector}: color outside selected palette`);
   }

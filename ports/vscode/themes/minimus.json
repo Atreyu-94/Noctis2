@@ -1270,6 +1270,7 @@
       "keyword": "#c88da2",
       "operator": "#c88da2",
       "regexp": "#3f8d6c",
+      "string.escapeCharacter:python": "#5998c0",
       "bool:typst": "#7068b1",
       "punct:typst": "#c5cdd3",
       "escape:typst": "#5998c0",

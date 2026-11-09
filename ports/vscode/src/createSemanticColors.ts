@@ -15,6 +15,8 @@ export function createSemanticColors(p: Palette): SemanticRules {
       macro: s.macro.foreground, decorator: s.macro.foreground,
       comment: s.comment.foreground, string: s.string.foreground, number: s.number.foreground,
       keyword: s.keyword.foreground, operator: s.operator.foreground, regexp: s.regexp.foreground,
+      // Pylance's modifier needs an explicit rule: generic string wins over scope fallback.
+      'string.escapeCharacter:python': s.escape.foreground,
    };
    // Tinymist uses custom token types. Keep them scoped to its language IDs.
    for (const language of ['typst', 'typst-code']) {
