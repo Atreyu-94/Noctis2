@@ -45,3 +45,6 @@ Development: from the repository root run `npm run build -- neovim`. Edit native
 mappings in `lua/noctis2/`; edit colors in `../../core/src/`. Never hand-edit
 `lua/noctis2/generated/` or `colors/`. Tests require `nvim` on PATH or an `NVIM`
 environment variable pointing at its executable.
+
+Real-provider semantic checks and their scope are documented in
+[the native semantic test guide](../../tests/native-semantic.md).

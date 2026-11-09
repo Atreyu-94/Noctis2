@@ -1,0 +1,416 @@
+{
+  "c": [
+    {
+      "text": "SCALE",
+      "type": "macro",
+      "role": "macro"
+    },
+    {
+      "text": "total",
+      "type": "function",
+      "modifiers": [
+        "declaration"
+      ],
+      "role": "functionDeclaration"
+    },
+    {
+      "text": "target",
+      "type": "property",
+      "modifiers": [
+        "readonly"
+      ],
+      "role": "constant"
+    }
+  ],
+  "cpp": [
+    {
+      "text": "Observation",
+      "type": "class",
+      "role": "type"
+    },
+    {
+      "text": "total",
+      "type": "function",
+      "modifiers": [
+        "declaration"
+      ],
+      "role": "functionDeclaration"
+    },
+    {
+      "text": "item",
+      "type": "variable",
+      "modifiers": [
+        "readonly"
+      ],
+      "role": "constant"
+    }
+  ],
+  "objectivec": [
+    {
+      "text": "argc",
+      "type": "parameter",
+      "role": "parameter"
+    }
+  ],
+  "typst": [
+    {
+      "text": "true",
+      "type": "bool",
+      "role": "boolean"
+    },
+    {
+      "text": "@intro",
+      "type": "ref",
+      "role": "reference"
+    },
+    {
+      "text": "both",
+      "type": "text",
+      "modifiers": [
+        "strong",
+        "emph"
+      ],
+      "role": "strongEmphasis"
+    }
+  ],
+  "lua": [
+    {
+      "text": "name",
+      "type": "parameter",
+      "modifiers": [
+        "declaration"
+      ],
+      "role": "parameter"
+    }
+  ],
+  "rust": [
+    {
+      "text": "Observation",
+      "type": "struct",
+      "modifiers": [
+        "declaration"
+      ],
+      "role": "type"
+    }
+  ],
+  "go": [
+    {
+      "text": "Observation",
+      "type": "type",
+      "modifiers": [
+        "definition"
+      ],
+      "role": "type"
+    }
+  ],
+  "dart": [
+    {
+      "text": "Observation",
+      "type": "class",
+      "modifiers": [
+        "declaration"
+      ],
+      "role": "type"
+    }
+  ],
+  "julia-fatou": [
+    {
+      "text": "ThemeExample",
+      "type": "namespace",
+      "role": "namespace"
+    },
+    {
+      "text": "Sample",
+      "type": "type",
+      "role": "type"
+    },
+    {
+      "text": "twice",
+      "type": "function",
+      "role": "function"
+    },
+    {
+      "text": "@info",
+      "type": "macro",
+      "role": "macro"
+    }
+  ],
+  "julia-jetls": [
+    {
+      "text": "x",
+      "type": "parameter",
+      "modifiers": [
+        "definition"
+      ],
+      "role": "parameter"
+    },
+    {
+      "text": "T",
+      "type": "typeParameter",
+      "modifiers": [
+        "declaration"
+      ],
+      "role": "type"
+    },
+    {
+      "text": "text",
+      "type": "variable",
+      "modifiers": [
+        "declaration"
+      ],
+      "role": "variable"
+    },
+    {
+      "text": "Sample",
+      "type": "jetls.unspecified",
+      "modifiers": [
+        "declaration"
+      ],
+      "preserveSyntax": true
+    }
+  ],
+  "javascript": [
+    {
+      "text": "Observation",
+      "type": "class",
+      "modifiers": [
+        "declaration"
+      ],
+      "role": "type"
+    }
+  ],
+  "jsx": [
+    {
+      "text": "ObservationPanel",
+      "type": "function",
+      "modifiers": [
+        "declaration"
+      ],
+      "role": "functionDeclaration"
+    }
+  ],
+  "typescript": [
+    {
+      "text": "mapValue",
+      "type": "function",
+      "modifiers": [
+        "declaration"
+      ],
+      "role": "functionDeclaration"
+    },
+    {
+      "text": "label",
+      "type": "property",
+      "modifiers": [
+        "readonly"
+      ],
+      "role": "constant"
+    }
+  ],
+  "tsx": [
+    {
+      "text": "View",
+      "type": "type",
+      "modifiers": [
+        "declaration"
+      ],
+      "role": "type"
+    }
+  ],
+  "python": [
+    {
+      "text": "dataclasses",
+      "type": "namespace",
+      "role": "namespace"
+    },
+    {
+      "text": "self",
+      "type": "selfParameter",
+      "role": "parameter"
+    },
+    {
+      "text": "SCALE",
+      "type": "variable",
+      "modifiers": [
+        "readonly"
+      ],
+      "role": "constant"
+    }
+  ],
+  "toml": [
+    {
+      "text": "bands",
+      "type": "tomlArrayKey",
+      "modifiers": [],
+      "role": "variable"
+    }
+  ],
+  "terraform": [
+    {
+      "text": "variable",
+      "type": "type",
+      "role": "type"
+    },
+    {
+      "text": "type",
+      "type": "property",
+      "role": "property"
+    }
+  ],
+  "ruby": [
+    {
+      "text": "scale",
+      "type": "parameter",
+      "modifiers": [],
+      "role": "parameter"
+    }
+  ],
+  "kotlin": [
+    {
+      "text": "listOf",
+      "type": "function",
+      "modifiers": [],
+      "role": "function"
+    },
+    {
+      "text": "Observation",
+      "type": "class",
+      "modifiers": [
+        "declaration"
+      ],
+      "role": "type"
+    },
+    {
+      "text": "exposure",
+      "type": "property",
+      "modifiers": [
+        "readonly"
+      ],
+      "role": "constant"
+    }
+  ],
+  "html": [
+    {
+      "text": "count",
+      "type": "variable",
+      "modifiers": [
+        "readonly"
+      ],
+      "role": "constant"
+    }
+  ],
+  "twig": [
+    {
+      "text": "title",
+      "type": "variable",
+      "modifiers": [],
+      "role": "variable"
+    },
+    {
+      "text": "exposure",
+      "type": "property",
+      "modifiers": [],
+      "role": "property"
+    }
+  ],
+  "gherkin": [
+    {
+      "text": "Feature",
+      "type": "keyword",
+      "modifiers": [],
+      "role": "keyword"
+    },
+    {
+      "text": "<target>",
+      "type": "variable",
+      "modifiers": [],
+      "role": "variable"
+    }
+  ],
+  "csharp": [
+    {
+      "text": "Program",
+      "type": "class",
+      "modifiers": [
+        "static"
+      ],
+      "role": "type"
+    },
+    {
+      "text": "Observation",
+      "type": "recordClass",
+      "modifiers": [],
+      "role": "type"
+    }
+  ],
+  "fsharp": [
+    {
+      "text": "Observation",
+      "type": "type",
+      "modifiers": [
+        "definition"
+      ],
+      "role": "type"
+    },
+    {
+      "text": "Target",
+      "type": "property",
+      "modifiers": [
+        "readonly"
+      ],
+      "role": "constant"
+    }
+  ],
+  "visualbasic": [
+    {
+      "text": "scale",
+      "type": "variable",
+      "modifiers": [
+        "readonly"
+      ],
+      "role": "constant"
+    }
+  ],
+  "java": [
+    {
+      "text": "Observatory",
+      "type": "class",
+      "modifiers": [
+        "declaration"
+      ],
+      "role": "type"
+    },
+    {
+      "text": "Observation",
+      "type": "record",
+      "modifiers": [
+        "declaration"
+      ],
+      "role": "type"
+    }
+  ],
+  "scala": [
+    {
+      "text": "Observation",
+      "type": "class",
+      "modifiers": [],
+      "role": "type"
+    },
+    {
+      "text": "target",
+      "type": "variable",
+      "modifiers": [
+        "readonly"
+      ],
+      "role": "constant"
+    }
+  ],
+  "powershell": [
+    {
+      "text": "CmdletBinding",
+      "type": "decorator",
+      "modifiers": [],
+      "role": "macro"
+    }
+  ]
+}

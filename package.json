@@ -14,7 +14,7 @@
     "test:languages": "npm run build && node ports/vscode/scripts/validate-languages.mjs",
     "package:vsix": "node ports/vscode/scripts/package-vsix.mjs",
     "inspect:vsix": "node ports/vscode/scripts/inspect-vsix.mjs",
-    "check:generated": "npm run build && git diff --exit-code -- ports/vscode/themes ports/zed/themes ports/neovim/colors ports/neovim/lua/noctis2/generated",
+    "check:generated": "npm run build && git diff --exit-code -- ports/vscode/themes ports/zed/themes ports/zed/semantic-settings.json ports/neovim/colors ports/neovim/lua/noctis2/generated",
     "package:ports": "node tooling/package-ports.mjs",
     "prepare:languages:native": "pwsh -NoProfile -File tooling/prepare-native-languages.ps1",
     "test:languages:neovim": "npm run build && node tooling/validate-native-languages.mjs neovim",
@@ -23,7 +23,10 @@
     "prepare:languages:upstream": "node ports/vscode/scripts/prepare-upstream-languages.mjs",
     "test:languages:upstream": "npm run build && node ports/vscode/scripts/validate-upstream-languages.mjs",
     "capture:semantic": "pwsh -NoProfile -File ports/vscode/scripts/capture-semantic-providers.ps1",
-    "test:semantic:providers": "npm run build && node ports/vscode/scripts/validate-semantic-providers.mjs"
+    "test:semantic:providers": "npm run build && node ports/vscode/scripts/validate-semantic-providers.mjs",
+    "prepare:semantic:native": "pwsh -NoProfile -File tooling/prepare-native-semantic-runtimes.ps1",
+    "capture:semantic:native": "pwsh -NoProfile -File tooling/capture-native-semantic.ps1",
+    "test:semantic:native": "npm run compile && node tooling/validate-native-semantic.mjs"
   },
   "overrides": {
     "@vscode/vsce": {
@@ -38,6 +41,7 @@
     "@types/node": "26.6.5",
     "@vscode/vsce": "4.1.0",
     "ajv": "8.20.0",
+    "jsonc-parser": "3.3.1",
     "ovsx": "1.3.0",
     "sax": "1.6.1",
     "typescript": "7.0.2",

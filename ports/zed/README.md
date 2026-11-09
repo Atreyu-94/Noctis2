@@ -22,3 +22,19 @@ does not expose them; bold and italic are retained. Missing UI properties use
 Zed's native defaults for the selected light/dark appearance.
 
 See [Zed's theme documentation](https://zed.dev/docs/themes) for native installation.
+
+Real Zed LSP captures and the eleven-variant semantic style model are documented
+in [the native semantic test guide](../../tests/native-semantic.md). Model checks
+are distinct from visual renderer acceptance.
+Merge the generated [`semantic-settings.json`](semantic-settings.json) fragment
+into your Zed settings to use the tested semantic mappings. Preserve your other
+settings and any existing `global_lsp_settings` fields. The fragment enables
+`"semantic_tokens": "combined"` and supplies
+`global_lsp_settings.semantic_token_rules` for declarations, readonly symbols and
+provider-specific types. It references style names, so the same fragment follows
+all eleven variants without duplicating palette colors. It is also included in
+the native ZIP; installing the theme alone does not install these settings.
+
+These rules are global: remove or adapt them when switching to another theme.
+The settings can apply semantic modifier decorations such as strikethrough,
+independently of the more limited theme schema described above.
