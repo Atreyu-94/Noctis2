@@ -1,0 +1,226 @@
+{
+  "semantic_tokens": "combined",
+  "global_lsp_settings": {
+    "semantic_token_rules": [
+      {
+        "token_type": "jetls.unspecified"
+      },
+      {
+        "token_modifiers": [
+          "strong"
+        ],
+        "font_weight": "bold"
+      },
+      {
+        "token_modifiers": [
+          "emph"
+        ],
+        "font_style": "italic"
+      },
+      {
+        "token_modifiers": [
+          "deprecated"
+        ],
+        "strikethrough": true
+      },
+      {
+        "token_type": "variable",
+        "token_modifiers": [
+          "readonly"
+        ],
+        "style": [
+          "constant"
+        ]
+      },
+      {
+        "token_type": "property",
+        "token_modifiers": [
+          "readonly"
+        ],
+        "style": [
+          "constant"
+        ]
+      },
+      {
+        "token_type": "function",
+        "token_modifiers": [
+          "declaration"
+        ],
+        "style": [
+          "function.definition"
+        ]
+      },
+      {
+        "token_type": "method",
+        "token_modifiers": [
+          "declaration"
+        ],
+        "style": [
+          "function.method.definition"
+        ]
+      },
+      {
+        "token_type": "text",
+        "token_modifiers": [
+          "math"
+        ],
+        "style": [
+          "noctis2.math.text"
+        ]
+      },
+      {
+        "token_type": "delim",
+        "token_modifiers": [
+          "math"
+        ],
+        "style": [
+          "noctis2.math.text"
+        ]
+      },
+      {
+        "token_type": "punct",
+        "token_modifiers": [
+          "math"
+        ],
+        "style": [
+          "noctis2.math.punctuation"
+        ]
+      },
+      {
+        "token_type": "operator",
+        "token_modifiers": [
+          "math"
+        ],
+        "style": [
+          "operator"
+        ]
+      },
+      {
+        "token_type": "decorator",
+        "style": [
+          "function.macro"
+        ]
+      },
+      {
+        "token_type": "record",
+        "style": [
+          "type"
+        ]
+      },
+      {
+        "token_type": "recordClass",
+        "style": [
+          "type"
+        ]
+      },
+      {
+        "token_type": "recordStruct",
+        "style": [
+          "type"
+        ]
+      },
+      {
+        "token_type": "selfParameter",
+        "style": [
+          "variable.parameter"
+        ]
+      },
+      {
+        "token_type": "tomlArrayKey",
+        "style": [
+          "variable"
+        ]
+      },
+      {
+        "token_type": "tomlTableKey",
+        "style": [
+          "variable"
+        ]
+      },
+      {
+        "token_type": "regexp",
+        "style": [
+          "string.regex"
+        ]
+      },
+      {
+        "token_type": "bool",
+        "style": [
+          "boolean"
+        ]
+      },
+      {
+        "token_type": "punct",
+        "style": [
+          "punctuation"
+        ]
+      },
+      {
+        "token_type": "escape",
+        "style": [
+          "string.escape"
+        ]
+      },
+      {
+        "token_type": "link",
+        "style": [
+          "link_uri"
+        ]
+      },
+      {
+        "token_type": "raw",
+        "style": [
+          "text.literal"
+        ]
+      },
+      {
+        "token_type": "label",
+        "style": [
+          "label"
+        ]
+      },
+      {
+        "token_type": "ref",
+        "style": [
+          "link_text"
+        ]
+      },
+      {
+        "token_type": "heading",
+        "style": [
+          "title"
+        ]
+      },
+      {
+        "token_type": "marker",
+        "style": [
+          "keyword"
+        ]
+      },
+      {
+        "token_type": "term",
+        "style": [
+          "noctis2.term"
+        ]
+      },
+      {
+        "token_type": "delim",
+        "style": [
+          "punctuation"
+        ]
+      },
+      {
+        "token_type": "pol",
+        "style": [
+          "variable"
+        ]
+      },
+      {
+        "token_type": "error",
+        "style": [
+          "noctis2.invalid"
+        ]
+      }
+    ]
+  }
+}

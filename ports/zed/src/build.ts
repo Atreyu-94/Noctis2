@@ -2,6 +2,7 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { getTheme, variantIds } from '../../../core/src/index.js';
 import type { CoreTheme, Style } from '../../../core/src/index.js';
+import { renderSemanticSettings } from './semantic.js';
 
 function style(value: Style) {
    // Zed's theme schema has no underline/strike fields. Do not emit ignored keys.
@@ -34,6 +35,8 @@ export function renderTheme(t: CoreTheme) {
       'punctuation.list_marker': s.keyword, title: s.heading,
       'text.literal': s.raw, label: s.label, link_text: s.reference, link_uri: s.link,
       emphasis: s.emphasis, 'emphasis.strong': s.strong, embedded: s.text,
+      'noctis2.math.text': s.mathText, 'noctis2.math.punctuation': s.mathPunctuation,
+      'noctis2.term': s.term, 'noctis2.invalid': s.invalid,
    };
    const terminal = Object.fromEntries(
       ['black', 'red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white'].flatMap(name => {
@@ -81,4 +84,5 @@ export function renderFamily() {
 export async function build(root: string): Promise<void> {
    await mkdir(join(root, 'themes'), { recursive: true });
    await writeFile(join(root, 'themes/noctis2.json'), JSON.stringify(renderFamily(), null, 2) + '\n');
+   await writeFile(join(root, 'semantic-settings.json'), JSON.stringify(renderSemanticSettings(), null, 2) + '\n');
 }

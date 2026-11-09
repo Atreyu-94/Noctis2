@@ -8,7 +8,7 @@ const output = resolve(process.argv[2] ?? 'test-results/packages');
 await mkdir(output, { recursive: true });
 // Native resources only: neither archive requires the authoring toolchain.
 for (const [port, directories, files] of [
-  ['zed', ['themes'], ['extension.toml', 'README.md', 'LICENSE.md']],
+  ['zed', ['themes'], ['extension.toml', 'semantic-settings.json', 'README.md', 'LICENSE.md']],
   ['neovim', ['colors', 'lua', 'doc'], ['README.md', 'LICENSE.md']],
 ]) {
   const root = resolve('ports', port);
