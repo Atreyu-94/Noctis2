@@ -21,7 +21,9 @@
     "test:languages:zed": "npm run build && node tooling/validate-native-languages.mjs zed",
     "test:languages:tinymist": "npm run build && node tooling/validate-native-languages.mjs tinymist",
     "prepare:languages:upstream": "node ports/vscode/scripts/prepare-upstream-languages.mjs",
-    "test:languages:upstream": "npm run build && node ports/vscode/scripts/validate-upstream-languages.mjs"
+    "test:languages:upstream": "npm run build && node ports/vscode/scripts/validate-upstream-languages.mjs",
+    "capture:semantic": "pwsh -NoProfile -File ports/vscode/scripts/capture-semantic-providers.ps1",
+    "test:semantic:providers": "npm run build && node ports/vscode/scripts/validate-semantic-providers.mjs"
   },
   "overrides": {
     "@vscode/vsce": {

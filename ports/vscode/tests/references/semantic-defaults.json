@@ -1,0 +1,290 @@
+{
+  "source": "https://github.com/microsoft/vscode/blob/c4453f8ea430795f941c1b2ff6c9321135a74a02/src/vs/platform/theme/common/tokenClassificationRegistry.ts",
+  "rules": [
+    {
+      "selector": "comment",
+      "scopes": [
+        [
+          "comment"
+        ]
+      ]
+    },
+    {
+      "selector": "string",
+      "scopes": [
+        [
+          "string"
+        ]
+      ]
+    },
+    {
+      "selector": "keyword",
+      "scopes": [
+        [
+          "keyword.control"
+        ]
+      ]
+    },
+    {
+      "selector": "number",
+      "scopes": [
+        [
+          "constant.numeric"
+        ]
+      ]
+    },
+    {
+      "selector": "regexp",
+      "scopes": [
+        [
+          "constant.regexp"
+        ]
+      ]
+    },
+    {
+      "selector": "operator",
+      "scopes": [
+        [
+          "keyword.operator"
+        ]
+      ]
+    },
+    {
+      "selector": "namespace",
+      "scopes": [
+        [
+          "entity.name.namespace"
+        ]
+      ]
+    },
+    {
+      "selector": "type",
+      "scopes": [
+        [
+          "entity.name.type"
+        ],
+        [
+          "support.type"
+        ]
+      ]
+    },
+    {
+      "selector": "struct",
+      "scopes": [
+        [
+          "entity.name.type.struct"
+        ]
+      ]
+    },
+    {
+      "selector": "class",
+      "scopes": [
+        [
+          "entity.name.type.class"
+        ],
+        [
+          "support.class"
+        ]
+      ]
+    },
+    {
+      "selector": "interface",
+      "scopes": [
+        [
+          "entity.name.type.interface"
+        ]
+      ]
+    },
+    {
+      "selector": "enum",
+      "scopes": [
+        [
+          "entity.name.type.enum"
+        ]
+      ]
+    },
+    {
+      "selector": "typeParameter",
+      "scopes": [
+        [
+          "entity.name.type.parameter"
+        ]
+      ]
+    },
+    {
+      "selector": "function",
+      "scopes": [
+        [
+          "entity.name.function"
+        ],
+        [
+          "support.function"
+        ]
+      ]
+    },
+    {
+      "selector": "method",
+      "scopes": [
+        [
+          "entity.name.function.member"
+        ],
+        [
+          "support.function"
+        ]
+      ]
+    },
+    {
+      "selector": "macro",
+      "scopes": [
+        [
+          "entity.name.function.preprocessor"
+        ]
+      ]
+    },
+    {
+      "selector": "variable",
+      "scopes": [
+        [
+          "variable.other.readwrite"
+        ],
+        [
+          "entity.name.variable"
+        ]
+      ]
+    },
+    {
+      "selector": "parameter",
+      "scopes": [
+        [
+          "variable.parameter"
+        ]
+      ]
+    },
+    {
+      "selector": "property",
+      "scopes": [
+        [
+          "variable.other.property"
+        ]
+      ]
+    },
+    {
+      "selector": "enumMember",
+      "scopes": [
+        [
+          "variable.other.enummember"
+        ]
+      ]
+    },
+    {
+      "selector": "event",
+      "scopes": [
+        [
+          "variable.other.event"
+        ]
+      ]
+    },
+    {
+      "selector": "decorator",
+      "scopes": [
+        [
+          "entity.name.decorator"
+        ],
+        [
+          "entity.name.function"
+        ]
+      ]
+    },
+    {
+      "selector": "variable.readonly",
+      "scopes": [
+        [
+          "variable.other.constant"
+        ]
+      ]
+    },
+    {
+      "selector": "property.readonly",
+      "scopes": [
+        [
+          "variable.other.constant.property"
+        ]
+      ]
+    },
+    {
+      "selector": "type.defaultLibrary",
+      "scopes": [
+        [
+          "support.type"
+        ]
+      ]
+    },
+    {
+      "selector": "class.defaultLibrary",
+      "scopes": [
+        [
+          "support.class"
+        ]
+      ]
+    },
+    {
+      "selector": "interface.defaultLibrary",
+      "scopes": [
+        [
+          "support.class"
+        ]
+      ]
+    },
+    {
+      "selector": "variable.defaultLibrary",
+      "scopes": [
+        [
+          "support.variable"
+        ],
+        [
+          "support.other.variable"
+        ]
+      ]
+    },
+    {
+      "selector": "variable.defaultLibrary.readonly",
+      "scopes": [
+        [
+          "support.constant"
+        ]
+      ]
+    },
+    {
+      "selector": "property.defaultLibrary",
+      "scopes": [
+        [
+          "support.variable.property"
+        ]
+      ]
+    },
+    {
+      "selector": "property.defaultLibrary.readonly",
+      "scopes": [
+        [
+          "support.constant.property"
+        ]
+      ]
+    },
+    {
+      "selector": "function.defaultLibrary",
+      "scopes": [
+        [
+          "support.function"
+        ]
+      ]
+    },
+    {
+      "selector": "member.defaultLibrary",
+      "scopes": [
+        [
+          "support.function"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "vscode": "1.145.2",
+  "platform": "win32-x64",
+  "description": "Pinned VS Code, extension and primary runtime versions for Windows CI and the local audit. The complete provider inventory also includes unresolved cases; only semantic-ci.json selects required CI cases. Provider-managed transitive dependencies and runner tools are documented in semantic-providers.md.",
+  "extensions": {
+    "sumneko.lua": "3.19.2",
+    "salesforce.salesforcedx-vscode-apex": "68.8.0",
+    "ms-dotnettools.csharp": "2.160.4",
+    "betterthantomorrow.calva": "2.0.580",
+    "phil294.coffeesense": "1.15.0",
+    "crystal-lang-tools.crystal-lang": "0.9.8",
+    "syler.sass-indented": "1.8.33",
+    "cucumberopen.cucumber-official": "1.12.1",
+    "dart-code.dart-code": "3.146.0",
+    "elmtooling.elm-ls-vscode": "2.10.0",
+    "jakebecker.elixir-ls": "0.31.1",
+    "erlang-ls.erlang-ls": "0.0.46",
+    "ionide.ionide-fsharp": "8.1.0",
+    "golang.go": "0.58.0",
+    "graphql.vscode-graphql": "1.0.0",
+    "julientahon.groovy-vscode": "1.2.3",
+    "haskell.haskell": "2.8.3",
+    "timgjones.hlsltools": "1.1.303",
+    "digitalbrainstem.javascript-ejs-support": "1.3.3",
+    "andrejunges.handlebars": "0.4.1",
+    "amandeepmittal.pug": "1.0.1",
+    "redhat.java": "1.58.0",
+    "fwcd.kotlin": "0.2.36",
+    "asciidoctor.asciidoctor-vscode": "4.3.0",
+    "james-yu.latex-workshop": "10.20.0",
+    "mjmlio.vscode-mjml": "3.0.5",
+    "nimlang.nimlang": "1.8.1",
+    "llvm-vs-code-extensions.vscode-clangd": "0.6.0",
+    "ocamllabs.ocaml-platform": "2.4.0",
+    "bmewburn.vscode-intelephense-client": "1.18.5",
+    "laravel.vscode-laravel": "2.0.1",
+    "moetelo.twiggy": "26.10.1",
+    "jebbs.plantuml": "2.18.1",
+    "reditorsupport.r": "3.2.2",
+    "shopify.ruby-lsp": "0.10.8",
+    "rust-lang.rust-analyzer": "0.3.3105",
+    "scalameta.metals": "1.72.0",
+    "joe-re.sql-language-server": "1.7.1",
+    "mads-hartmann.bash-ide-vscode": "1.43.2",
+    "swiftlang.swift-vscode": "2.18.0",
+    "hashicorp.terraform": "2.40.1",
+    "prince781.vala": "1.1.0",
+    "dnakode.vbnet-language-support": "0.1.20",
+    "ziglang.vscode-zig": "0.7.0",
+    "mrmlnc.vscode-apache": "1.2.0",
+    "ms-python.python": "2026.10.0",
+    "ms-python.vscode-pylance": "2026.4.1",
+    "ms-python.vscode-python-envs": "1.42.0",
+    "julialang.language-julia": "1.250.2",
+    "myriad-dreamin.tinymist": "0.15.12",
+    "ms-vscode.cpptools": "1.35.6",
+    "ms-vscode.powershell": "2025.4.0",
+    "tamasfe.even-better-toml": "0.21.2",
+    "aviatesk.jetls-client": "2026.11.4",
+    "jolars.fatou": "0.26.1",
+    "ms-dotnettools.vscode-dotnet-runtime": "3.2.0",
+    "scala-lang.scala": "0.5.10"
+  },
+  "runtimes": {
+    "dart": {
+      "url": "https://storage.googleapis.com/dart-archive/channels/stable/release/3.13.7/sdk/dartsdk-windows-x64-release.zip",
+      "version": "3.13.7",
+      "sha256": "3b31d9f90b27861f29842d378f39f98ce9e60910042334f950ef5702f174fb81"
+    },
+    "ruby": {
+      "rbs": "3.10.0",
+      "url": "https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-4.0.9-1/rubyinstaller-4.0.9-1-x64.7z",
+      "prism": "1.8.2",
+      "version": "4.0.9-1",
+      "rubyLsp": "0.26.11",
+      "sha256": "1dc0715916251a13c4f6a550a3da1f2c726bff869371fd573a65234c008f47b4"
+    },
+    "go": {
+      "gopls": "0.24.0",
+      "url": "https://go.dev/dl/go1.27.3.windows-amd64.zip",
+      "version": "go1.27.3",
+      "sha256": "f26081f438319757f8a1b46d7d0b2c5ec7583d4038e485e0aa725cfde7885fff"
+    },
+    "clangd": {
+      "url": "https://github.com/clangd/clangd/releases/download/22.1.6/clangd-windows-22.1.6.zip",
+      "version": "22.1.6",
+      "sha256": "ce54f16e0b4fd76d450eeda9664420b195360b73febcfe40e661108fa57f2ce1"
+    },
+    "elm": {
+      "npmPackage": "elm@0.19.1-6",
+      "version": "0.19.1"
+    },
+    "jdk21": {
+      "url": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.13%2B9/OpenJDK21U-jdk_x64_windows_hotspot_21.0.13_9.zip",
+      "version": "21.0.13+9",
+      "sha256": "a4dbaa05fca4bd89d84584e58c459bd732efebb1722af80ab13c6516832004f9"
+    },
+    "clojureLsp": {
+      "url": "https://github.com/clojure-lsp/clojure-lsp/releases/download/2026.10.15-11.42.38/clojure-lsp-native-windows-amd64.zip",
+      "version": "2026.10.15-11.42.38",
+      "sha256": "63bb6567a2280a563a8de22c3eb833a69159e054b6545a29d25ab588c1b749b1"
+    },
+    "fatou": {
+      "version": "0.26.1",
+      "source": "bundled in jolars.fatou-0.26.1-win32-x64",
+      "sha256": "c4f6be03c7265561f9a99fdf66643fc0f030c04e23c84f6d895340d3a9956b12"
+    },
+    "jetls": {
+      "revision": "2026-11-04",
+      "julia": "1.13.2",
+      "source": "Pinned Pkg.Apps environment prepared outside VS Code for CI; local captures may also use the client-managed installation."
+    },
+    "julia": {
+      "version": "1.13.2",
+      "url": "https://julialang-s3.julialang.org/bin/winnt/x64/1.13/julia-1.13.2-win64.zip",
+      "sha256": "1c7d07bccc7ca19fce7fd0a73159b085d087ece9405d42735f33faa46b634fcd"
+    },
+    "dotnet": {
+      "version": "10.0.403",
+      "url": "https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.403/dotnet-sdk-10.0.403-win-x64.zip",
+      "sha512": "7a114c318fa7f1d9822991b534b2814d0e78386ceda816b371f5141acefe741d87ccb606ede06cadac8f9ac5070e32b708a67bbd1619ff5e5a7858a27874ef48"
+    },
+    "python": {
+      "version": "3.11.9",
+      "url": "https://www.python.org/ftp/python/3.11.9/python-3.11.9-embed-amd64.zip",
+      "sha256": "009d6bf7e3b2ddca3d784fa09f90fe54336d5b60f0e0f305c37f400bf83cfd3b"
+    },
+    "rust": {
+      "version": "1.99.1",
+      "components": [
+        "rust-src"
+      ]
+    }
+  },
+  "vscodeArchive": {
+    "url": "https://vscode.download.prss.microsoft.com/dbazure/download/stable/c4453f8ea430795f941c1b2ff6c9321135a74a02/VSCode-win32-x64-1.145.2.zip",
+    "sha256": "33cf166a751090fe7d244bf0e594e3c69c832d5ae2af1769140ad82a35ea1e0b"
+  }
+}

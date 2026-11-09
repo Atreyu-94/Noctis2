@@ -1,0 +1,482 @@
+{
+  "python": {
+    "provider": "ms-python.vscode-pylance",
+    "languageId": "python",
+    "supportExtensions": [
+      "ms-python.python",
+      "ms-python.vscode-python-envs"
+    ]
+  },
+  "julia": {
+    "provider": "julialang.language-julia",
+    "languageId": "julia",
+    "textmateOnly": true,
+    "note": "LanguageServer.jl does not implement semantic tokens; retain official TextMate grammar validation."
+  },
+  "typescript": {
+    "provider": "vscode.typescript-language-features",
+    "languageId": "typescript"
+  },
+  "tsx": {
+    "provider": "vscode.typescript-language-features",
+    "languageId": "typescriptreact"
+  },
+  "typst": {
+    "provider": "myriad-dreamin.tinymist",
+    "languageId": "typst"
+  },
+  "markdown": {
+    "provider": "vscode.markdown-language-features",
+    "languageId": "markdown"
+  },
+  "json": {
+    "provider": "vscode.json-language-features",
+    "languageId": "json"
+  },
+  "lua": {
+    "provider": "sumneko.lua",
+    "languageId": "lua",
+    "candidate": {
+      "name": "lua-language-server",
+      "url": "https://github.com/sumneko/lua-language-server",
+      "status": "not-tested",
+      "evidence": "https://github.com/microsoft/language-server-protocol/blob/gh-pages/_implementors/servers.md"
+    }
+  },
+  "apex": {
+    "provider": "salesforce.salesforcedx-vscode-apex",
+    "languageId": "apex",
+    "candidate": {
+      "name": "VS Code Apex extension",
+      "url": "https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode-apex",
+      "status": "not-tested",
+      "evidence": "https://github.com/microsoft/language-server-protocol/blob/gh-pages/_implementors/servers.md"
+    }
+  },
+  "c": {
+    "provider": "ms-vscode.cpptools",
+    "languageId": "c"
+  },
+  "cpp": {
+    "provider": "ms-vscode.cpptools",
+    "languageId": "cpp"
+  },
+  "csharp": {
+    "provider": "ms-dotnettools.csharp",
+    "languageId": "csharp",
+    "candidate": {
+      "name": "Roslyn Language Server",
+      "url": "https://github.com/dotnet/roslyn/tree/main/src/LanguageServer/roslyn-language-server",
+      "status": "not-tested",
+      "evidence": "https://github.com/microsoft/language-server-protocol/blob/gh-pages/_implementors/servers.md"
+    },
+    "waitMs": 90000
+  },
+  "clojure": {
+    "provider": "betterthantomorrow.calva",
+    "languageId": "clojure",
+    "candidate": {
+      "name": "clojure-lsp",
+      "url": "https://github.com/clojure-lsp/clojure-lsp",
+      "status": "not-tested",
+      "evidence": "https://github.com/microsoft/language-server-protocol/blob/gh-pages/_implementors/servers.md"
+    },
+    "waitMs": 90000
+  },
+  "coffeescript": {
+    "provider": "phil294.coffeesense",
+    "languageId": "coffeescript",
+    "candidate": {
+      "name": "CoffeeSense",
+      "url": "https://github.com/phil294/coffeesense/",
+      "status": "not-tested",
+      "evidence": "https://github.com/microsoft/language-server-protocol/blob/gh-pages/_implementors/servers.md"
+    }
+  },
+  "crystal": {
+    "provider": "crystal-lang-tools.crystal-lang",
+    "languageId": "crystal",
+    "candidate": {
+      "name": "Crystalline",
+      "url": "https://github.com/elbywan/crystalline",
+      "status": "not-tested",
+      "evidence": "https://github.com/microsoft/language-server-protocol/blob/gh-pages/_implementors/servers.md"
+    }
+  },
+  "css": {
+    "provider": "vscode.css-language-features",
+    "languageId": "css"
+  },
+  "sass": {
+    "provider": "syler.sass-indented",
+    "languageId": "sass"
+  },
+  "scss": {
+    "provider": "vscode.css-language-features",
+    "languageId": "scss"
+  },
+  "gherkin": {
+    "provider": "cucumberopen.cucumber-official",
+    "languageId": "cucumber",
+    "candidate": {
+      "name": "Cucumber Language Server",
+      "url": "https://github.com/cucumber/language-server",
+      "status": "not-tested",
+      "evidence": "https://github.com/microsoft/language-server-protocol/blob/gh-pages/_implementors/servers.md"
+    }
+  },
+  "dart": {
+    "provider": "dart-code.dart-code",
+    "languageId": "dart",
+    "candidate": {
+      "name": "Dart SDK",
+      "url": "https://github.com/dart-lang/sdk/blob/master/pkg/analysis_server/tool/lsp_spec/README.md",
+      "status": "not-tested",
+      "evidence": "https://github.com/microsoft/language-server-protocol/blob/gh-pages/_implementors/servers.md"
+    }
+  },
+  "elm": {
+    "provider": "elmtooling.elm-ls-vscode",
+    "languageId": "elm",
+    "candidate": {
+      "name": "elmLS",
+      "url": "https://github.com/elm-tooling/elm-language-server",
+      "status": "not-tested",
+      "evidence": "https://github.com/microsoft/language-server-protocol/blob/gh-pages/_implementors/servers.md"
+    }
+  },
+  "elixir": {
+    "provider": "jakebecker.elixir-ls",
+    "languageId": "elixir",
+    "candidate": {
+      "name": "elixir-ls",
+      "url": "https://github.com/elixir-lsp/elixir-ls",
+      "status": "not-tested",
+      "evidence": "https://github.com/microsoft/language-server-protocol/blob/gh-pages/_implementors/servers.md"
+    }
+  },
+  "erlang": {
+    "provider": "erlang-ls.erlang-ls",
+    "languageId": "erlang",
+    "candidate": {
+      "name": "erlang_ls",
+      "url": "https://github.com/erlang-ls/erlang_ls",
+      "status": "not-tested",
+      "evidence": "https://github.com/microsoft/language-server-protocol/blob/gh-pages/_implementors/servers.md"
+    }
+  },
+  "fsharp": {
+    "provider": "ionide.ionide-fsharp",
+    "supportExtensions": ["ms-dotnettools.csharp"],
+    "languageId": "fsharp",
+    "candidate": {
+      "name": "FsAutoComplete",
+      "url": "https://github.com/fsharp/FsAutoComplete",
+      "status": "not-tested",
+      "evidence": "https://github.com/microsoft/language-server-protocol/blob/gh-pages/_implementors/servers.md"
+    },
+    "waitMs": 90000
+  },
+  "go": {
+    "provider": "golang.go",
+    "languageId": "go",
+    "candidate": {
+      "name": "gopls",
+      "url": "https://github.com/golang/tools/tree/master/gopls",
+      "status": "not-tested",
+      "evidence": "https://github.com/microsoft/language-server-protocol/blob/gh-pages/_implementors/servers.md"
+    }
+  },
+  "graphql": {
+    "provider": "graphql.vscode-graphql",
+    "languageId": "graphql",
+    "candidate": {
+      "name": "Official GraphQL Language Server",
+      "url": "https://github.com/graphql/graphiql/tree/main/packages/graphql-language-service-server",
+      "status": "not-tested",
+      "evidence": "https://github.com/microsoft/language-server-protocol/blob/gh-pages/_implementors/servers.md"
+    }
+  },
+  "groovy": {
+    "provider": "julientahon.groovy-vscode",
+    "languageId": "groovy",
+    "candidate": {
+      "name": "groovy-language-server",
+      "url": "https://github.com/palantir/groovy-language-server/",
+      "status": "not-tested",
+      "evidence": "https://github.com/microsoft/language-server-protocol/blob/gh-pages/_implementors/servers.md"
+    }
+  },
+  "haskell": {
+    "provider": "haskell.haskell",
+    "languageId": "haskell",
+    "candidate": {
+      "name": "Haskell Language Server (HLS)",
+      "url": "https://github.com/haskell/haskell-language-server",
+      "status": "not-tested",
+      "evidence": "https://github.com/microsoft/language-server-protocol/blob/gh-pages/_implementors/servers.md"
+    }
+  },
+  "hlsl": {
+    "provider": "timgjones.hlsltools",
+    "languageId": "hlsl",
+    "candidate": {
+      "name": "HLSL Tools",
+      "url": "https://github.com/tgjones/HlslTools/tree/master/src/ShaderTools.LanguageServer",
+      "status": "not-tested",
+      "evidence": "https://github.com/microsoft/language-server-protocol/blob/gh-pages/_implementors/servers.md"
+    }
+  },
+  "html": {
+    "provider": "vscode.html-language-features",
+    "languageId": "html"
+  },
+  "ejs": {
+    "provider": "digitalbrainstem.javascript-ejs-support",
+    "languageId": "ejs"
+  },
+  "handlebars": {
+    "provider": "andrejunges.handlebars",
+    "languageId": "handlebars"
+  },
+  "pug": {
+    "provider": "amandeepmittal.pug",
+    "languageId": "jade"
+  },
+  "java": {
+    "provider": "redhat.java",
+    "languageId": "java",
+    "candidate": {
+      "name": "Java Compiler (javac) API-based Java support",
+      "url": "https://github.com/georgewfraser/vscode-javac",
+      "status": "not-tested",
+      "evidence": "https://github.com/microsoft/language-server-protocol/blob/gh-pages/_implementors/servers.md"
+    },
+    "waitMs": 90000
+  },
+  "javascript": {
+    "provider": "vscode.typescript-language-features",
+    "languageId": "javascript"
+  },
+  "jsx": {
+    "provider": "vscode.typescript-language-features",
+    "languageId": "javascriptreact"
+  },
+  "kotlin": {
+    "provider": "fwcd.kotlin",
+    "languageId": "kotlin",
+    "candidate": {
+      "name": "kotlin-language-server",
+      "url": "https://github.com/fwcd/kotlin-language-server",
+      "status": "not-tested",
+      "evidence": "https://github.com/microsoft/language-server-protocol/blob/gh-pages/_implementors/servers.md"
+    },
+    "waitMs": 90000
+  },
+  "asciidoc": {
+    "provider": "asciidoctor.asciidoctor-vscode",
+    "languageId": "asciidoc"
+  },
+  "latex": {
+    "provider": "james-yu.latex-workshop",
+    "languageId": "latex",
+    "candidate": {
+      "name": "texlab",
+      "url": "https://github.com/efoerster/texlab",
+      "status": "not-tested",
+      "evidence": "https://github.com/microsoft/language-server-protocol/blob/gh-pages/_implementors/servers.md"
+    }
+  },
+  "mjml": {
+    "provider": "mjmlio.vscode-mjml",
+    "languageId": "mjml"
+  },
+  "nim": {
+    "provider": "nimlang.nimlang",
+    "languageId": "nim",
+    "candidate": {
+      "name": "nimlsp",
+      "url": "https://github.com/PMunch/nimlsp",
+      "status": "not-tested",
+      "evidence": "https://github.com/microsoft/language-server-protocol/blob/gh-pages/_implementors/servers.md"
+    }
+  },
+  "objectivec": {
+    "provider": "llvm-vs-code-extensions.vscode-clangd",
+    "languageId": "objective-c"
+  },
+  "ocaml": {
+    "provider": "ocamllabs.ocaml-platform",
+    "languageId": "ocaml",
+    "candidate": {
+      "name": "ocamllsp",
+      "url": "https://github.com/ocaml/ocaml-lsp",
+      "status": "not-tested",
+      "evidence": "https://github.com/microsoft/language-server-protocol/blob/gh-pages/_implementors/servers.md"
+    }
+  },
+  "php": {
+    "provider": "bmewburn.vscode-intelephense-client",
+    "languageId": "php"
+  },
+  "blade": {
+    "provider": "laravel.vscode-laravel",
+    "languageId": "blade"
+  },
+  "twig": {
+    "provider": "moetelo.twiggy",
+    "languageId": "twig",
+    "candidate": {
+      "name": "Twig Language Server",
+      "url": "https://github.com/kaermorchen/twig-language-server/tree/master/packages/language-server",
+      "status": "not-tested",
+      "evidence": "https://github.com/microsoft/language-server-protocol/blob/gh-pages/_implementors/servers.md"
+    }
+  },
+  "plantuml": {
+    "provider": "jebbs.plantuml",
+    "languageId": "plantuml"
+  },
+  "powershell": {
+    "provider": "ms-vscode.powershell",
+    "languageId": "powershell"
+  },
+  "r": {
+    "provider": "reditorsupport.r",
+    "languageId": "r",
+    "candidate": {
+      "name": "R language server",
+      "url": "https://github.com/REditorSupport/languageserver",
+      "status": "not-tested",
+      "evidence": "https://github.com/microsoft/language-server-protocol/blob/gh-pages/_implementors/servers.md"
+    }
+  },
+  "reason": {
+    "provider": "ocamllabs.ocaml-platform",
+    "languageId": "reason"
+  },
+  "ruby": {
+    "provider": "shopify.ruby-lsp",
+    "languageId": "ruby",
+    "candidate": {
+      "name": "Ruby LSP",
+      "url": "https://github.com/Shopify/ruby-lsp",
+      "status": "not-tested",
+      "evidence": "https://github.com/microsoft/language-server-protocol/blob/gh-pages/_implementors/servers.md"
+    }
+  },
+  "rust": {
+    "provider": "rust-lang.rust-analyzer",
+    "languageId": "rust",
+    "candidate": {
+      "name": "Rust Analyzer",
+      "url": "https://github.com/rust-analyzer/rust-analyzer",
+      "status": "not-tested",
+      "evidence": "https://github.com/microsoft/language-server-protocol/blob/gh-pages/_implementors/servers.md"
+    },
+    "waitMs": 90000
+  },
+  "scala": {
+    "provider": "scalameta.metals",
+    "languageId": "scala",
+    "candidate": {
+      "name": "Metals",
+      "url": "https://github.com/scalameta/metals",
+      "status": "not-tested",
+      "evidence": "https://github.com/microsoft/language-server-protocol/blob/gh-pages/_implementors/servers.md"
+    },
+    "waitMs": 180000
+  },
+  "sql": {
+    "provider": "joe-re.sql-language-server",
+    "languageId": "sql",
+    "candidate": {
+      "name": "sqls",
+      "url": "https://github.com/lighttiger2505/sqls",
+      "status": "not-tested",
+      "evidence": "https://github.com/microsoft/language-server-protocol/blob/gh-pages/_implementors/servers.md"
+    }
+  },
+  "shell": {
+    "provider": "mads-hartmann.bash-ide-vscode",
+    "languageId": "shellscript",
+    "candidate": {
+      "name": "Bash Language Server",
+      "url": "https://github.com/mads-hartmann/bash-language-server",
+      "status": "not-tested",
+      "evidence": "https://github.com/microsoft/language-server-protocol/blob/gh-pages/_implementors/servers.md"
+    }
+  },
+  "swift": {
+    "provider": "swiftlang.swift-vscode",
+    "languageId": "swift",
+    "candidate": {
+      "name": "SourceKit-LSP",
+      "url": "https://github.com/apple/sourcekit-lsp",
+      "status": "not-tested",
+      "evidence": "https://github.com/microsoft/language-server-protocol/blob/gh-pages/_implementors/servers.md"
+    }
+  },
+  "terraform": {
+    "provider": "hashicorp.terraform",
+    "languageId": "terraform",
+    "candidate": {
+      "name": "terraform-ls",
+      "url": "https://github.com/hashicorp/terraform-ls",
+      "status": "not-tested",
+      "evidence": "https://github.com/microsoft/language-server-protocol/blob/gh-pages/_implementors/servers.md"
+    }
+  },
+  "vala": {
+    "provider": "prince781.vala",
+    "languageId": "vala",
+    "candidate": {
+      "name": "vala-language-server",
+      "url": "https://github.com/benwaffle/vala-language-server",
+      "status": "not-tested",
+      "evidence": "https://github.com/microsoft/language-server-protocol/blob/gh-pages/_implementors/servers.md"
+    }
+  },
+  "visualbasic": {
+    "provider": "dnakode.vbnet-language-support",
+    "languageId": "vb"
+  },
+  "zig": {
+    "provider": "ziglang.vscode-zig",
+    "languageId": "zig",
+    "candidate": {
+      "name": "zls",
+      "url": "https://github.com/zigtools/zls",
+      "status": "not-tested",
+      "evidence": "https://github.com/microsoft/language-server-protocol/blob/gh-pages/_implementors/servers.md"
+    }
+  },
+  "apache": {
+    "provider": "mrmlnc.vscode-apache",
+    "languageId": "apacheconf"
+  },
+  "toml": {
+    "provider": "tamasfe.even-better-toml",
+    "languageId": "toml"
+  },
+  "julia-jetls": {
+    "sample": "julia",
+    "provider": "aviatesk.jetls-client",
+    "languageId": "julia",
+    "waitMs": 600000,
+    "supportExtensions": [
+      "julialang.language-julia"
+    ],
+    "requiredSemantic": true
+  },
+  "julia-fatou": {
+    "sample": "julia",
+    "provider": "jolars.fatou",
+    "languageId": "julia",
+    "waitMs": 90000,
+    "supportExtensions": [
+      "julialang.language-julia"
+    ],
+    "requiredSemantic": true
+  }
+}

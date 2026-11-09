@@ -1,0 +1,7 @@
+{
+  "name": "noctis2-semantic-test-host",
+  "publisher": "noctis2-tests",
+  "version": "0.0.0",
+  "private": true,
+  "engines": { "vscode": "^1.81.0" }
+}
