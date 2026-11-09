@@ -241,7 +241,7 @@ if ($selected -contains 'scala') {
 }
 $documents = foreach ($language in $selected) {
     $file = switch ($language) { 'rust' { 'rust/src/main.rs' } 'elm' { 'elm/Observatory.elm' } default { $catalog[($matrix[$language].sample ?? $language)].file } }
-    @{ language = $language; languageId = $matrix[$language].languageId; file = $file; provider = $matrix[$language].provider; textmateOnly = [bool]$matrix[$language].textmateOnly; waitMs = [Math]::Max($MinimumWaitMs, ($matrix[$language].waitMs ?? 30000)) }
+    @{ language = $language; languageId = $matrix[$language].languageId; file = $file; provider = $matrix[$language].provider; textmateOnly = [bool]$matrix[$language].textmateOnly; waitMs = [Math]::Max($MinimumWaitMs, ($matrix[$language].waitMs ?? 30000)); requestTimeoutMs = ($matrix[$language].requestTimeoutMs ?? 45000) }
 }
 $reportFile = if ($Languages) { "$output/capture-$($selected -join '-').json" } else { "$output/capture.json" }
 $config = @{ runId = $RunId; workspace = $workspace; output = $reportFile; providers = @($documents.provider | Select-Object -Unique); documents = @($documents) }

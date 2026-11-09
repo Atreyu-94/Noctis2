@@ -265,7 +265,10 @@ environment and two precompile tasks. This avoids the client-managed installer's
 fixed fifteen-minute timeout. The client then launches that prepared server via
 its supported custom-command setting. The job allows thirty minutes for a
 provider response and forty minutes per host, within a sixty-minute job limit.
-Other groups use shorter response deadlines. Desktop visual acceptance and
+Individual JETLS token requests allow five minutes for the first analysis on
+a cold runner; other providers retain a 45-second request deadline. Registration
+alone does not mean that first analysis has finished compiling. Other groups
+use shorter overall response deadlines. Desktop visual acceptance and
 real LSP captures in Neovim/Zed remain separate from these VS Code tests.
 
 To reproduce one CI group locally on Windows (build the themes first):
@@ -288,7 +291,7 @@ not a self-contained grammar installation for revalidation on another machine.
 
 All eleven groups were prepared and captured locally using the pinned CI tools,
 isolated profiles and strict run IDs. Each semantic case passed all eleven
-variants. These are local results; the GitHub-hosted workflow has not yet run.
+variants. These local results alone do not establish a pass on GitHub-hosted runners.
 
 | Group | Token/variant checks |
 | --- | ---: |

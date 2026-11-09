@@ -68,7 +68,8 @@ exports.run = async () => {
         legend = await deadline(vscode.commands.executeCommand('vscode.provideDocumentSemanticTokensLegend', uri), 15000, 'legend');
         if (legend) {
           try {
-            result = await deadline(vscode.commands.executeCommand('vscode.provideDocumentSemanticTokens', uri), 45000, 'tokens');
+            // JETLS can still compile its first analysis after registering LSP.
+            result = await deadline(vscode.commands.executeCommand('vscode.provideDocumentSemanticTokens', uri), item.requestTimeoutMs ?? 45000, 'tokens');
           } catch (error) {
             // C/C++ cancels requests while IntelliSense updates after opening a file.
             if (!/cancel/i.test(String(error))) throw error;
@@ -81,7 +82,7 @@ exports.run = async () => {
           legend = await deadline(vscode.commands.executeCommand('vscode.provideDocumentRangeSemanticTokensLegend', uri), 15000, 'range legend');
           if (legend) {
             const range = new vscode.Range(document.positionAt(0), document.positionAt(text.length));
-            result = await deadline(vscode.commands.executeCommand('vscode.provideDocumentRangeSemanticTokens', uri, range), 45000, 'range tokens');
+            result = await deadline(vscode.commands.executeCommand('vscode.provideDocumentRangeSemanticTokens', uri, range), item.requestTimeoutMs ?? 45000, 'range tokens');
             mode = 'range';
           }
         }

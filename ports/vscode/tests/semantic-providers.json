@@ -464,6 +464,7 @@
     "provider": "aviatesk.jetls-client",
     "languageId": "julia",
     "waitMs": 600000,
+    "requestTimeoutMs": 300000,
     "supportExtensions": [
       "julialang.language-julia"
     ],
